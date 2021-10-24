@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./law-enforcement.css" />
+    <title>law-enforcement</title>
+  </head>
+  <body>
+    <div class="bodyLayout">
+      <div class="optionSelectorContainer">
+        <div class="optionSelector">
+          <label for="emergencyResponse">
+            <input
+              type="radio"
+              class="invisibleInput"
+              name="viewType"
+              id="emergencyResponse"
+            />
+
+            <span class="optionLabel">Emergency Response</span>
+            <div class="background"></div>
+          </label>
+          <label for="users">
+            <input
+              type="radio"
+              class="invisibleInput"
+              name="viewType"
+              id="users"
+            />
+            <span class="optionLabel">Users</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="clusters">
+        <div class="cluster" id="joburgCluster">
+          <div class="clusterName">Joburg Cluster</div>
+          <div class="clusterVr"></div>
+          <div class="clusterContact"></div>
+        </div>
+      </div>
+      <div class="stations"></div>
+    </div>
+    <script src="./law-enforcement.js"></script>
+  </body>
+</html>
