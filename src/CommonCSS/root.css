@@ -14,8 +14,11 @@
   /* Colors */
 
   --accent100: #e0e7ff20;
+
   --accent400: #e0e7ff;
+  --accent600: #93a6b9;
   --grey200: rgba(0, 0, 0, 0.1);
+  --grey400: #ededed;
   --grey500: #8c98a9;
   --grey600: #858585;
   --blue200: #012a9390;
@@ -23,11 +26,16 @@
 
   /* shadows */
 
-  --shadow200: 0px 3px 16px rgba(0, 0, 0, 0.3);
+  --shadow200: 0px 3px 4px rgba(0, 0, 0, 0.1);
   --shadow300: 0px 4px 9px rgba(0, 0, 0, 0.2);
 }
 
 body {
   width: 100%;
   height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }

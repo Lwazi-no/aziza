@@ -21,6 +21,7 @@ img {
   height: 100vh;
   background-color: white;
   position: relative;
+  padding: 0 1rem;
 }
 
 .topBar {
@@ -29,7 +30,6 @@ img {
   display: grid;
   grid-template-columns: 2fr 5fr 3fr;
   align-items: center;
-  padding: 0 1rem;
 }
 
 .logoContainer {
