@@ -14,14 +14,14 @@ function gotoOverview() {
 
 gotoOverview();
 
-var openUserMenu = () => {
-  openModal("loggedInUserPopup");
-};
+// var openUserMenu = () => {
+//   openModal("loggedInUserPopup");
+// };
 
 // open user menu
-// document.querySelector(".loggedInUser").addEventListener("click", function () {
-//   openModal("loggedInUserPopup");
-// });
+document.querySelector(".loggedInUser").addEventListener("click", function () {
+  openModal("loggedInUserPopup");
+});
 
 function logout() {
   window.location.href = "../index.html";
