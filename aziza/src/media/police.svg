@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="93" height="93" viewBox="0 0 93 93">
+  <g id="Group_9" data-name="Group 9" transform="translate(-563 -41)">
+    <g id="Group_8" data-name="Group 8" transform="translate(563 41)">
+      <path id="Union_1" data-name="Union 1" d="M35.649,74.4q-.955-.372-1.876-.805L13.236,79,18.8,57.849q-.1-.248-.2-.5L0,46.5,18.6,35.648q.156-.4.323-.795L13.236,13.236l21.618,5.689c.263-.111.527-.218.794-.322L46.5,0,57.351,18.6q.25.1.5.2L79,13.236l-5.4,20.537q.433.921.805,1.875L93,46.5,74.4,57.351q-.316.811-.676,1.6L79,79,58.95,73.721q-.788.361-1.6.677L46.5,93Z" transform="translate(0)" fill="#e5ce28"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="20.5" cy="20.5" r="20.5" transform="translate(26 26)" fill="#3956a3"/>
+      <text id="POL" transform="translate(32 52)" fill="#e5ce28" font-size="14" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="0" y="0">POL</tspan></text>
+    </g>
+  </g>
+</svg>

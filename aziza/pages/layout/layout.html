@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+      integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./layout.css" />
+    <title>Aziza</title>
+  </head>
+  <body>
+    <div class="bodyLayout">
+      <div class="topBar">
+        <div class="imageContainer logoContainer">
+          <img src="../../src/Media/logo.svg" alt="" />
+        </div>
+        <div class="searchWrapper gridCenter">
+          <div class="pageSearch">
+            <input type="search" name="pageSearch" id="pageSearch" />
+
+            <i class="fa fa-search searchIcon"></i>
+          </div>
+        </div>
+        <div class="rightContent">
+          <a href="#" class="actionBtn">Add users</a>
+          <div class="notificationIcon">
+            <i class="far fa-bell"></i>
+            <div class="newNotifications"></div>
+          </div>
+          <div class="loggedInUser" onclick="openUserMenu()">
+            <img src="../../src/media/man.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="sideNav">
+        <a href="#" onclick="gotoOverview()" class="navLink active">
+          <i class="fas fa-home navLink-Icon"></i>
+          <span class="navLink-Text">Overview</span>
+        </a>
+        <a href="#" onclick="gotoRescueCalls()" class="navLink">
+          <i class="fas fa-hand-paper navLink-Icon"></i>
+          <span class="navLink-Text">Rescue Calls</span>
+        </a>
+        <a href="#" onclick="gotoTrack()" class="navLink">
+          <i class="fas fa-map-marker-alt navLink-Icon"></i>
+          <span class="navLink-Text">Track</span>
+        </a>
+        <a href="#" onclick="gotoUsers()" class="navLink">
+          <i class="fas fa-users navLink-Icon"></i>
+          <span class="navLink-Text">Users</span>
+        </a>
+        <a href="#" onclick="gotoSettings()" class="navLink">
+          <i class="fas fa-cog navLink-Icon"></i>
+          <span class="navLink-Text">Settings</span>
+        </a>
+      </div>
+      <div class="contentCanvas"></div>
+
+      <!-- userpopup -->
+      <div class="modalContainer" id="loggedInUserPopup">
+        <div class="modal" id="userMenu">
+          <a href="#" class="subMenu-Item" onclick="logout()">
+            <i class="fa fa-logout"></i>
+            <span>Logout</span>
+          </a>
+          <a href="#" class="subMenu-Item" onclick="openProfile()">
+            <i class="fa fa-logout"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./layout.js"></script>
+  </body>
+</html>
