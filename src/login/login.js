@@ -1,5 +1,3 @@
-import { openModal, closeModal } from "../modules/popup.js";
-
 (function () {
   document.getElementById("forgotBtn").addEventListener("click", (e) => {
     openModal("passwordModal");
@@ -18,4 +16,4 @@ function login() {
   window.location.href = "./pages/layout/layout.html";
 }
 
-login();
+// login();

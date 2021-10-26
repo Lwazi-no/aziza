@@ -6,6 +6,8 @@
   grid-gap: 0.5rem;
   height: 100%;
   grid-template-rows: 50px 2fr 7fr 50px;
+  padding: 1rem;
+  background-color: #f7f8fa70;
 }
 
 .clusters {
@@ -18,12 +20,13 @@
 .cluster {
   width: 300px;
   height: 85%;
-  border: 1px solid var(--grey200);
-  box-shadow: var(--shadow300);
+  /* border: 1px solid var(--grey200); */
+  /* box-shadow: var(--shadow300); */
   border-radius: 8px;
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
   display: grid;
   grid-template-columns: 2fr 10px 2fr;
+  grid-gap: 2rem;
   align-items: center;
 }
 
@@ -80,6 +83,7 @@
   border-radius: 8px;
   box-shadow: var(--shadow200);
   align-self: start;
+  cursor: pointer;
 }
 
 .cardItem-bold {

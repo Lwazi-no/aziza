@@ -7,141 +7,35 @@
 .bodyLayout {
   display: grid;
   height: 100%;
+  grid-template-rows: 4rem 1fr;
   grid-template-columns: 2.5fr 1fr;
+  grid-template-areas:
+    "backBtn backBtn "
+    "leftSide leftSide";
+  transition: all 250ms ease-in-out;
 }
-
-.leftSide {
-  background-color: white;
-  padding: 2rem 1rem;
-}
-
-.stationStatsContainer {
-  width: 100%;
+.backBtn {
+  grid-area: backBtn;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stationStatsHeader {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #261d56;
-}
-
-.absoluteCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.attendedCallsContainer {
-  margin-top: 1rem;
-  position: relative;
-  height: 150px;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-.attendedCallsBox {
-  width: 250px;
-  height: 100px;
-  background-color: var(--accent300);
-  border-radius: 1rem;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-  border: 1px dashed #261d56;
+  color: var(--grey600);
+  align-self: center;
+  margin-left: 1rem;
+  transition: all 150ms ease-in-out;
 }
 
-.attendedCallsBox .attendedLabel {
-  font-weight: 400;
+.backBtn:hover {
+  color: var(--accent600);
+  gap: 1.5rem;
 }
-.attendedCallsBox .number {
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-.dashedLine {
-  width: 90%;
-  height: 50px;
-  border-top: 1px dashed #261d56;
-  border-left: 1px dashed #261d56;
-  border-right: 1px dashed #261d56;
-
-  border-radius: 2rem 2rem 0 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-
-.labelsRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.centeredCol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.labelsRow .coloredCircle {
-  margin-bottom: 0.75rem;
-  width: 1.3rem;
-  height: 1.3rem;
-  border: 3px solid white;
-  border-radius: 50%;
-  box-shadow: var(--shadow200);
-}
-
-.coloredCircle.rescue {
-  background-color: var(--green800);
-}
-
-.coloredCircle.nonRescue {
-  background-color: var(--purple800);
-}
-.labelsRow .chartNumber {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.labelsRow .chartLabel {
-  font-size: 0.675rem;
-  opacity: 0.8;
-}
-
-.callsChart {
-  display: flex;
-  align-items: center;
-  width: 95%;
-  height: 0.65rem;
-  margin-top: 2rem;
-  border-radius: 0.325rem;
-  background-color: var(--accent300);
-  overflow: hidden;
-}
-
-.callsChart .callsChart-rescue {
-  width: 70%;
-  height: 100%;
-  background-color: var(--green800);
-}
-
-.callsChart .callsChart-nonRescue {
-  width: 30%;
-  height: 100%;
-  background-color: var(--purple800);
+.leftSide {
+  grid-area: leftSide;
+  background-color: white;
+  padding: 1rem 1rem;
+  transition: width 150ms ease-in-out;
 }
 
 .stationPersonel {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -192,6 +86,10 @@
   padding: 1rem 0 1rem 0.25rem;
 }
 
+.stationPersonelList tbody td.active {
+  background-color: var(--accent150);
+}
+
 .stationPersonelList tbody tr {
   cursor: pointer;
 }
@@ -228,8 +126,9 @@
 }
 
 .rightSide {
+  grid-area: rightSide;
   background-color: var(--grey100);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;

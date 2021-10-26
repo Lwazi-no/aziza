@@ -1,4 +1,4 @@
-import { openModal, closeModal } from "../../src/modules/popup.js";
+showLoader();
 
 var contentCanvas = document.querySelector(".contentCanvas");
 
@@ -7,26 +7,56 @@ function replacecanvascontent(html_path) {
 }
 
 //  Navigation
-function gotoOverview() {
+
+function activeNav(thePageLink) {
+  var navLinks = document.querySelectorAll(".navLink");
+  navLinks.forEach((navLink) => {
+    navLink.classList.remove("active");
+  });
+
+  thePageLink.classList.add("active");
+}
+
+function gotoOverview(thisPage) {
   var link = "../law-enforcement/law-enforcement.html";
   replacecanvascontent(link);
+  activeNav(thisPage);
 }
-function gotoRespondersList() {
+var clickOverviewPage = (function clickOverviewPage() {
+  document.querySelectorAll(".navLink")[3].click();
+})();
+
+function gotoRespondersList(thisPage) {
   var link = "../responders-list/responders-list.html";
   replacecanvascontent(link);
+  // activeNav(thisPage);
+}
+function gotoUsers(thisPage) {
+  var link = "../users/users.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
 }
 
-gotoRespondersList();
-
-// var openUserMenu = () => {
-//   openModal("loggedInUserPopup");
-// };
+function openUserMenu() {
+  openModal("loggedInUserPopup");
+}
 
 // open user menu
-document.querySelector(".loggedInUser").addEventListener("click", function () {
-  openModal("loggedInUserPopup");
-});
+// document.querySelector(".loggedInUser").addEventListener("click", function () {
+//   openModal("loggedInUserPopup");
+// });
 
 function logout() {
   window.location.href = "../index.html";
 }
+
+// add user popup
+
+function openUserForm() {
+  openModal("addUserPopup");
+}
+var addUserTypeSelector = (function () {
+  var radioOptions = ["user", "station"];
+
+  customRadio("addUserTypeSelector", radioOptions, "userTypes");
+})();

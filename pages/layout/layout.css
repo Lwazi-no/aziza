@@ -1,5 +1,9 @@
+@import url("../../src/CommonCSS/loader.css");
+
+@import url("../../src/CommonCSS/customRadio.css");
 @import url("../../src/CommonCSS/root.css");
 @import url("../../src/CommonCSS/popup.css");
+@import url("../../src/CommonCSS/inputs.css");
 
 img {
   width: 100%;
@@ -19,7 +23,7 @@ img {
     "sideNav contentCanvas";
 
   height: 100vh;
-  background-color: white;
+  background-color: #f7f8fa20;
   position: relative;
   padding: 0 1rem;
 }
@@ -72,16 +76,17 @@ img {
 .actionBtn {
   padding: 0.75rem 2rem;
   border-radius: 4px;
-  background-color: black;
+  background-color: var(--accent600);
   color: white;
-  min-width: min(100%, 150px);
+  max-width: min(100%, 150px);
   display: grid;
   place-items: center;
   transition: all 350ms ease-in-out;
+  align-self: center;
 }
 
 .actionBtn:hover {
-  border: 1px solid black;
+  border: 1px solid var(--accent600);
   background-color: white;
   color: black;
   transform: scale(0.985);
@@ -164,7 +169,7 @@ img {
 .navLink:hover,
 .navLink.active {
   color: white;
-  background-color: black;
+  background-color: var(--accent600);
   border-radius: 0 20px 20px 0;
 }
 
@@ -178,4 +183,41 @@ img {
 }
 
 .contentCanvas {
+  box-shadow: var(--shadow400);
+  background-color: #f7f8fa40;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* add user popup */
+
+#addUserPopup,
+.modal {
+  padding: 3rem 10rem;
+}
+#userForm,
+#stationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+#stationForm {
+  display: none;
+}
+
+#userForm button {
+  margin-top: 1rem;
+}
+
+#generatePassword {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey500);
+  width: 100% !important;
+  cursor: pointer;
+  color: white;
 }

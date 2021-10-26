@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="rightContent">
-          <a href="#" class="actionBtn">Add users</a>
+          <a href="#" class="actionBtn" onclick="openUserForm()">Add users</a>
           <div class="notificationIcon">
             <i class="far fa-bell"></i>
             <div class="newNotifications"></div>
@@ -39,23 +39,23 @@
         </div>
       </div>
       <div class="sideNav">
-        <a href="#" onclick="gotoOverview()" class="navLink active">
+        <a href="#" onclick="gotoOverview(this)" class="navLink">
           <i class="fas fa-home navLink-Icon"></i>
           <span class="navLink-Text">Overview</span>
         </a>
-        <a href="#" onclick="gotoRescueCalls()" class="navLink">
+        <a href="#" onclick="gotoRescueCalls(this)" class="navLink">
           <i class="fas fa-hand-paper navLink-Icon"></i>
           <span class="navLink-Text">Rescue Calls</span>
         </a>
-        <a href="#" onclick="gotoTrack()" class="navLink">
+        <a href="#" onclick="gotoTrack(this)" class="navLink">
           <i class="fas fa-map-marker-alt navLink-Icon"></i>
           <span class="navLink-Text">Track</span>
         </a>
-        <a href="#" onclick="gotoUsers()" class="navLink">
+        <a href="#" onclick="gotoUsers(this)" class="navLink">
           <i class="fas fa-users navLink-Icon"></i>
           <span class="navLink-Text">Users</span>
         </a>
-        <a href="#" onclick="gotoSettings()" class="navLink">
+        <a href="#" onclick="gotoSettings(this)" class="navLink">
           <i class="fas fa-cog navLink-Icon"></i>
           <span class="navLink-Text">Settings</span>
         </a>
@@ -75,7 +75,119 @@
           </a>
         </div>
       </div>
+
+      <!-- add user popup -->
+      <div class="modalContainer" id="addUserPopup">
+        <div class="modal">
+          <div class="optionSelectorContainer" id="addUserTypeSelector"></div>
+
+          <form action="" id="userForm">
+            <label for="addUserFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addUserFullname"
+                id="addUserFullname"
+              />
+            </label>
+            <label for="addUserEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addUserEmail"
+                id="addUserEmail"
+                placeholder="+27"
+              />
+            </label>
+
+            <label for="addUserPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPhone"
+                id="addUserPhone"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addUserPeisa" class="inputGroup">
+              <span class="inputLabel">Peisa number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPeisa"
+                id="addUserPeisa"
+              />
+            </label>
+            <label for="addUserWorkId" class="inputGroup">
+              <span class="inputLabel">Work ID</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserWorkId"
+                id="addUserWorkId"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addUserRole" class="inputGroup">
+              <span class="inputLabel">User role</span>
+              <select class="inputField" name="addUserRole" id="addUserRole">
+                <option value="responder">Responder</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+
+            <button type="submit" class="actionBtn">Add user</button>
+          </form>
+          <form action="" id="stationForm">
+            <label for="addStationFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addStationFullname"
+                id="addStationFullname"
+              />
+            </label>
+            <label for="addStationEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addStationEmail"
+                id="addStationEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addStationPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addStationPhone"
+                id="addStationPhone"
+                placeholder="+27"
+              />
+            </label>
+
+            <input
+              type="button"
+              name="generatePassword"
+              id="generatePassword"
+              class="inputField hoverCard"
+              value="Generate Password"
+            />
+
+            <button type="submit" class="actionBtn">Add user</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <script type="module" src="./layout.js"></script>
+    <script src="../../src/modules/customRadio.js"></script>
+    <script src="../../src/modules/loader.js"></script>
+    <script src="../../src/modules/popup.js"></script>
+    <script src="./layout.js"></script>
   </body>
 </html>

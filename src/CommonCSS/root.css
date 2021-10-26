@@ -12,7 +12,8 @@
 
 :root {
   /* Colors */
-
+  --accent50: #f2edef50;
+  --accent150: #8c98a950;
   --accent100: #e0e7ff20;
   --accent300: #f2edef;
   --accent400: #e0e7ff;
@@ -31,6 +32,7 @@
 
   --shadow200: 0px 3px 4px rgba(0, 0, 0, 0.1);
   --shadow300: 0px 4px 9px rgba(0, 0, 0, 0.2);
+  --shadow400: 0px 4px 80px 20px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -46,4 +48,12 @@ img {
 button {
   cursor: pointer;
   border: none;
+}
+
+.hoverCard {
+  transition: all 150ms ease-in-out;
+}
+.hoverCard:hover {
+  background-color: var(--grey500);
+  transform: scale(0.975);
 }

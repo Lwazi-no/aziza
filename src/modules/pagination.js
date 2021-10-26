@@ -1,4 +1,4 @@
-export const paginate = function paginate(paginatedList) {
+function paginate(paginatedList) {
   // var paginatedList = document.querySelector(".paginated");
   var paginatedItems = paginatedList.children;
 
@@ -164,4 +164,4 @@ export const paginate = function paginate(paginatedList) {
     let pagination = new Pagination();
     pagination.init();
   })();
-};
+}

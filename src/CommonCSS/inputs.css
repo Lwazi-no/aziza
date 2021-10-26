@@ -1,0 +1,23 @@
+.inputField {
+  height: 40px;
+  background-color: var(--accent100);
+  border: 0.5px solid var(--accent400);
+  outline: none;
+  border-radius: 3px;
+  padding-left: 0.5rem;
+}
+
+.inputField:focus {
+  outline: 1px solid var(--accent400);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputLabel {
+  opacity: 0.5;
+  font-size: 0.8rem;
+}

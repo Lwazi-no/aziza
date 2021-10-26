@@ -1,4 +1,4 @@
-export const openModal = function openModal(ID) {
+function openModal(ID) {
   var modalContainer = document.getElementById(ID);
   modalContainer.style.display = "grid";
   window.onclick = function (event) {
@@ -7,9 +7,9 @@ export const openModal = function openModal(ID) {
       closeModal(ID);
     }
   };
-};
+}
 
-export var closeModal = function closeModal(ID) {
+function closeModal(ID) {
   var modalContainer = document.getElementById(ID);
   modalContainer.style.display = "none";
-};
+}

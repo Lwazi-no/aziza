@@ -10,43 +10,16 @@
       integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./responders-list.css" />
+    <link rel="stylesheet" href="./users.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="bodyLayout">
+      <a href="#" class="backBtn" onclick="goBack()">
+        <i class="fas fa-chevron-left"></i>
+        <span>Back</span>
+      </a>
       <div class="leftSide">
-        <div class="stationStatsContainer">
-          <span class="stationStatsHeader">Hilbrow Station Statistics</span>
-
-          <div class="attendedCallsContainer">
-            <div class="attendedCallsBox absoluteCenter">
-              <span class="attendedLabel">Total Attended Calls</span>
-              <span class="number">339,259</span>
-            </div>
-            <div class="dashedLine"></div>
-          </div>
-
-          <div class="labelsRow">
-            <div class="centeredCol">
-              <div class="coloredCircle rescue"></div>
-              <span class="chartNumber">1606</span>
-              <span class="chartLabel">Rescue calls</span>
-            </div>
-
-            <div class="centeredCol">
-              <div class="coloredCircle nonRescue"></div>
-              <span class="chartNumber">146</span>
-              <span class="chartLabel">Non Rescue calls</span>
-            </div>
-          </div>
-
-          <div class="callsChart">
-            <div class="callsChart-rescue"></div>
-            <div class="callsChart-nonRescue"></div>
-          </div>
-        </div>
-
         <div class="stationPersonel">
           <div class="personelSelectionRow">
             <div class="optionSelectorContainer" id="stationPersonelType"></div>
@@ -67,11 +40,12 @@
                 <th>Full name</th>
                 <th>Phone number</th>
                 <th>Email</th>
+                <th>Position</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="responder" onclick="openUser(this)">
                 <td>
                   <div class="userNameAndPic">
                     <div class="userPic">
@@ -82,6 +56,7 @@
                 </td>
                 <td>+27812345678</td>
                 <td>jsmith@saps.co.za</td>
+                <td>Responder</td>
                 <td>
                   <div class="userRowAction">
                     <i class="far fa-trash-alt userAction deleteUser"></i>
@@ -89,7 +64,7 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr class="admin" onclick="openUser(this)">
                 <td>
                   <div class="userNameAndPic">
                     <div class="userPic">
@@ -100,6 +75,7 @@
                 </td>
                 <td>+27812345678</td>
                 <td>jsmith@saps.co.za</td>
+                <td>Admin</td>
                 <td>
                   <div class="userRowAction">
                     <i class="far fa-trash-alt userAction deleteUser"></i>
@@ -171,7 +147,7 @@
               </div>
             </div>
 
-            <button type="submit">Save</button>
+            <button type="submit" class="hoverCard">Save</button>
           </form>
         </div>
       </div>
@@ -181,6 +157,6 @@
     <script src="../../src/modules/searchList.js"></script>
     <script src="../../src/modules/pagination.js"></script>
 
-    <script src="./responders-list.js"></script>
+    <script src="./users.js"></script>
   </body>
 </html>

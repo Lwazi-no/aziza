@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
+  color: black;
 }
 
 .invisibleInput {
@@ -40,10 +41,12 @@
 
 .optionSelector input:checked ~ .background {
   background-color: var(--grey400);
+  color: black;
   z-index: -1;
 }
 
 .optionLabel {
+  color: black;
   display: inline-flex;
   z-index: 3;
 }
