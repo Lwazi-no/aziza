@@ -11,8 +11,12 @@ function gotoOverview() {
   var link = "../law-enforcement/law-enforcement.html";
   replacecanvascontent(link);
 }
+function gotoRespondersList() {
+  var link = "../responders-list/responders-list.html";
+  replacecanvascontent(link);
+}
 
-gotoOverview();
+gotoRespondersList();
 
 // var openUserMenu = () => {
 //   openModal("loggedInUserPopup");

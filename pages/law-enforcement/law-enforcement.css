@@ -1,50 +1,11 @@
 @import url("../../src/CommonCSS/root.css");
 @import url("../../src/CommonCSS/pagination.css");
+@import url("../../src/CommonCSS/customRadio.css");
 .bodyLayout {
   display: grid;
   grid-gap: 0.5rem;
   height: 100%;
   grid-template-rows: 50px 2fr 7fr 50px;
-}
-
-.optionSelectorContainer {
-  display: flex;
-  align-items: center;
-}
-.optionSelector {
-  display: inline-flex;
-  align-items: center;
-  gap: 2rem;
-  border-radius: 8px;
-  height: 50px;
-  border: 1px solid black;
-  width: auto;
-}
-
-.optionSelector label {
-  min-width: 90px;
-  position: relative;
-  cursor: pointer;
-}
-
-.optionSelector input:checked .optionLabel::after {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--accent100);
-  z-index: 1;
-}
-
-.invisibleInput {
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-}
-
-.optionLabel {
-  z-index: 3;
 }
 
 .clusters {
@@ -148,4 +109,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.05rem;
+}
+
+.displayNone {
+  display: none;
 }

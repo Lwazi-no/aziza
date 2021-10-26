@@ -35,19 +35,34 @@ export const paginate = function paginate(paginatedList) {
   createELements();
 
   (function () {
-    //   const paginatedList = document.querySelector(".toggledList");
-
     function Pagination() {
       const prevButton = document.getElementById("paginateLeft");
       const nextButton = document.getElementById("paginateRight");
       const clickPageNumber = document.querySelectorAll(".clickPageNumber");
 
-      const numberOfRows = document.querySelector("#pageSizeSelector");
-      var valueSelected =
-        numberOfRows.options[numberOfRows.selectedIndex].value;
+      const pageSizeSelector = document.querySelector("#pageSizeSelector");
+
+      function getValue() {
+        return pageSizeSelector.options[pageSizeSelector.selectedIndex].value;
+      }
+
+      function valueSelected() {
+        pageSizeSelector.addEventListener("change", function () {
+          let SelectedValue =
+            pageSizeSelector.options[pageSizeSelector.selectedIndex].value;
+          console.log(SelectedValue);
+
+          // return { SelectedValue };
+        });
+      }
+
+      valueSelected();
+
+      // var valueSelected =
+      //   numberOfRows.options[numberOfRows.selectedIndex].value;
 
       let current_page = 1;
-      let records_per_page = numberOfRows.value;
+      let records_per_page = 10;
 
       this.init = function () {
         changePage(1);

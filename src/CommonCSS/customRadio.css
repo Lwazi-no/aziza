@@ -1,0 +1,49 @@
+.optionSelectorContainer {
+  display: flex;
+  align-items: center;
+}
+.optionSelector {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  height: 50px;
+  border: 1px solid var(--grey400);
+  width: fit-content;
+}
+
+.optionSelector label {
+  min-width: 90px;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.invisibleInput {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.optionSelector .background {
+  display: grid;
+  place-items: center;
+  width: 200px;
+  height: 48px;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+  transition: all 100ms ease-in-out;
+}
+
+.optionSelector input:checked ~ .background {
+  background-color: var(--grey400);
+  z-index: -1;
+}
+
+.optionLabel {
+  display: inline-flex;
+  z-index: 3;
+}
