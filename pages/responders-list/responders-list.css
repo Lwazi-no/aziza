@@ -11,6 +11,7 @@
 
 .leftSide {
   background-color: white;
+  padding: 0 1rem;
 }
 
 .stationStatsContainer {
@@ -76,6 +77,67 @@
   transform: translate(-50%, 0%);
 }
 
+.labelsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.centeredCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelsRow .coloredCircle {
+  margin-bottom: 0.75rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: var(--shadow200);
+}
+
+.coloredCircle.rescue {
+  background-color: var(--green800);
+}
+
+.coloredCircle.nonRescue {
+  background-color: var(--purple800);
+}
+.labelsRow .chartNumber {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.labelsRow .chartLabel {
+  font-size: 0.675rem;
+  opacity: 0.8;
+}
+
+.callsChart {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 0.65rem;
+  margin-top: 2rem;
+  border-radius: 0.325rem;
+  background-color: var(--accent300);
+  overflow: hidden;
+}
+
+.callsChart .callsChart-rescue {
+  width: 70%;
+  height: 100%;
+  background-color: var(--green800);
+}
+
+.callsChart .callsChart-nonRescue {
+  width: 30%;
+  height: 100%;
+  background-color: var(--purple800);
+}
 .rightSide {
   background-color: var(--grey100);
   display: flex;
