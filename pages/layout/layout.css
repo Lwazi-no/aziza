@@ -187,6 +187,7 @@ img {
   background-color: #f7f8fa40;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 /* add user popup */

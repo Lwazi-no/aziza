@@ -84,5 +84,9 @@ function showOnlySelected() {
       admin.style.display = "table-row";
     });
   });
+
+  var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
+    document.querySelector("#Responders").click();
+  })();
 }
 showOnlySelected();

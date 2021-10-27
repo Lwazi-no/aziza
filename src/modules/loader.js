@@ -16,3 +16,5 @@ function showLoader() {
     loaderContainer.style.display = "none";
   };
 }
+
+showLoader();

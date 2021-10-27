@@ -1,5 +1,3 @@
-showLoader();
-
 var contentCanvas = document.querySelector(".contentCanvas");
 
 function replacecanvascontent(html_path) {
@@ -22,29 +20,44 @@ function gotoOverview(thisPage) {
   replacecanvascontent(link);
   activeNav(thisPage);
 }
-var clickOverviewPage = (function clickOverviewPage() {
-  document.querySelectorAll(".navLink")[3].click();
-})();
 
 function gotoRespondersList(thisPage) {
   var link = "../responders-list/responders-list.html";
   replacecanvascontent(link);
-  // activeNav(thisPage);
+  activeNav(thisPage);
 }
+function gotoRescueCalls(thisPage) {
+  var link = "../rescue-calls/rescue-calls.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
+
+function gotoTrack(thisPage) {
+  var link = "../track/track.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
+
 function gotoUsers(thisPage) {
   var link = "../users/users.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
 
+var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
+  document.querySelectorAll(".navLink")[0].click();
+})();
+
 function openUserMenu() {
   openModal("loggedInUserPopup");
 }
 
-// open user menu
-// document.querySelector(".loggedInUser").addEventListener("click", function () {
-//   openModal("loggedInUserPopup");
-// });
+function openProfile() {
+  var link = "../users/user-profile/user-profile.html";
+  replacecanvascontent(link);
+  let thisPage = document.querySelectorAll(".navLink")[3];
+  activeNav(thisPage);
+}
 
 function logout() {
   window.location.href = "../index.html";
