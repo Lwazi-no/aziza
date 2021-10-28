@@ -28,9 +28,10 @@
   color: var(--accent600);
   gap: 1.5rem;
 }
+
 .leftSide {
   grid-area: leftSide;
-  background-color: white;
+
   padding: 1rem 1rem;
   transition: width 150ms ease-in-out;
 }

@@ -1,0 +1,16 @@
+@import url("../../src/CommonCSS/root.css");
+@import url("../../src/CommonCSS/pagination.css");
+@import url("../../src/CommonCSS/customRadio.css");
+@import url("../../src/CommonCSS/inputs.css");
+@import url("../../src/CommonCSS/switch.css");
+
+.bodyLayout {
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+  padding: 1rem;
+  grid-gap: 1rem;
+}
+
+.settingsContent {
+  background-color: aquamarine;
+}

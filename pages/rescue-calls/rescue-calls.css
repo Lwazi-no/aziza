@@ -92,11 +92,11 @@
 }
 
 .caseStatus.inProgress {
-  background-color: #ff7171;
+  background-color: #f1c123;
 }
 
 .caseStatus.active {
-  background-color: #ff717150;
+  background-color: #ff7171;
 }
 
 .userNameAndPic {

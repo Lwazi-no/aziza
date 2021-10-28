@@ -43,9 +43,14 @@ function gotoUsers(thisPage) {
   replacecanvascontent(link);
   activeNav(thisPage);
 }
+function gotoSettings(thisPage) {
+  var link = "../settings/settings.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
 
 var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
-  document.querySelectorAll(".navLink")[0].click();
+  document.querySelectorAll(".navLink")[4].click();
 })();
 
 function openUserMenu() {
