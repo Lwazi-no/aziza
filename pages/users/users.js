@@ -5,7 +5,7 @@ var generateUserTypeOptions = (function () {
 })();
 
 function goBack() {
-  // window.location.replace(document.referrer);
+  window.location.replace(document.referrer);
 }
 
 function openUser(selectedUser) {

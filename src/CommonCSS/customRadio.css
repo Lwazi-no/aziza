@@ -37,12 +37,14 @@
   background-color: white;
   border-radius: 0 8px 8px 0;
   transition: all 100ms ease-in-out;
+  box-shadow: var(--shadow300);
 }
 
 .optionSelector input:checked ~ .background {
   background-color: var(--grey400);
   color: black;
   z-index: -1;
+  box-shadow: none;
 }
 
 .optionLabel {

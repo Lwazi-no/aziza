@@ -6,6 +6,13 @@
   border-radius: 3px;
   padding-left: 0.5rem;
 }
+.inputFieldArea {
+  background-color: var(--accent100);
+  border: 0.5px solid var(--accent400);
+  outline: none;
+  border-radius: 3px;
+  padding-left: 0.5rem;
+}
 
 .inputField:focus {
   outline: 1px solid var(--accent400);
