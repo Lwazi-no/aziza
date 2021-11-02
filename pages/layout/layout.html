@@ -30,7 +30,7 @@
         <div class="rightContent">
           <a href="#" class="actionBtn" onclick="openUserForm()">Add users</a>
           <div class="notificationIcon">
-            <i class="far fa-bell"></i>
+            <i class="far fa-bell" onclick="ToggleNotifications()"></i>
             <div class="newNotifications"></div>
           </div>
           <div class="loggedInUser" onclick="openUserMenu()">
@@ -66,11 +66,11 @@
       <div class="modalContainer" id="loggedInUserPopup">
         <div class="modal" id="userMenu">
           <a href="#" class="subMenu-Item" onclick="logout()">
-            <i class="fa fa-logout"></i>
+            <i class="fas fa-sign-out-alt"></i>
             <span>Logout</span>
           </a>
           <a href="#" class="subMenu-Item" onclick="openProfile()">
-            <i class="fa fa-logout"></i>
+            <i class="fas fa-user-circle"></i>
             <span>Profile</span>
           </a>
         </div>
@@ -182,6 +182,51 @@
 
             <button type="submit" class="actionBtn">Add user</button>
           </form>
+        </div>
+      </div>
+
+      <!-- Notification button click popup -->
+      <div class="notesContainer" id="notifications">
+        <div class="row spacebetween">
+          <span class="NotificationsTitle">Notifications</span>
+        </div>
+        <div class="tasksItems">
+          <a class="task" onclick="OpenNotification()">
+            <div class="iconAndContent">
+              <p>
+                <span class="taskTitle">Add Alfred Chitlins as Admin</span
+                ><br />
+                <span class="taskContent">
+                  purpose of lorem ipsum is to create a natural looking
+                  block</span
+                >
+              </p>
+            </div>
+            <span class="taskDay">24 February 2021</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Note popup -->
+      <div class="modalContainer" id="notificationPopupContainer">
+        <div class="modal" id="notificationPopupNote">
+          <a href="#" class="notificationCloser" onclick="closeNotification()"
+            ><i class="far fa-times-circle"></i
+          ></a>
+
+          <div class="task fullNotification">
+            <div class="iconAndContent">
+              <p>
+                <span class="taskTitle">Add Alfred Chitlins as Admin</span
+                ><br />
+                <span class="taskContent">
+                  purpose of lorem ipsum is to create a natural looking
+                  block</span
+                >
+              </p>
+            </div>
+            <span class="taskDay">24 February 2021</span>
+          </div>
         </div>
       </div>
     </div>

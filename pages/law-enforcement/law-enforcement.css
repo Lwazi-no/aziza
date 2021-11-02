@@ -66,7 +66,7 @@
 }
 .stations,
 .stationsContainer {
-  margin-top: 2rem;
+  padding: 2rem 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

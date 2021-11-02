@@ -20,6 +20,7 @@
   padding: 0;
   flex-wrap: nowrap;
   color: black;
+  background-color: initial;
 }
 
 .invisibleInput {
@@ -29,7 +30,7 @@
   cursor: pointer;
 }
 
-.optionSelector .background {
+.optionSelector .backgroundDiv {
   display: grid;
   place-items: center;
   width: 200px;
@@ -40,7 +41,7 @@
   box-shadow: var(--shadow300);
 }
 
-.optionSelector input:checked ~ .background {
+.optionSelector input:checked ~ .backgroundDiv {
   background-color: var(--grey400);
   color: black;
   z-index: -1;

@@ -14,7 +14,7 @@ function customRadio(containerID, radioOptions, radioName) {
          value="${radioOptions[i]}"
          checked
        />
-       <div class="background">
+       <div class="backgroundDiv">
          <span class="optionLabel">${radioOptions[i]}</span>
        </div>
      </label>

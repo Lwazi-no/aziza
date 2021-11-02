@@ -50,7 +50,7 @@ function gotoSettings(thisPage) {
 }
 
 var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
-  document.querySelectorAll(".navLink")[4].click();
+  document.querySelectorAll(".navLink")[0].click();
 })();
 
 function openUserMenu() {
@@ -64,8 +64,22 @@ function openProfile() {
   activeNav(thisPage);
 }
 
+function ToggleNotifications() {
+  const notificationsToggle = document.querySelector(".notesContainer");
+  notificationsToggle.classList.toggle("active");
+  console.log(notificationsToggle);
+}
+
+function OpenNotification() {
+  openModal("notificationPopupContainer");
+}
+
+function closeNotification() {
+  closeModal("notificationPopupContainer");
+}
+
 function logout() {
-  window.location.href = "../index.html";
+  window.location.href = "../../index.html";
 }
 
 // add user popup
@@ -78,3 +92,24 @@ var addUserTypeSelector = (function () {
 
   customRadio("addUserTypeSelector", radioOptions, "userTypes");
 })();
+
+function showOnlySelected() {
+  var userTypes = document.querySelector(".optionSelector").children;
+  var stationForm = document.querySelector("#stationForm");
+  var userForm = document.querySelector("#userForm");
+
+  userTypes[0].addEventListener("click", function () {
+    stationForm.style.display = "none";
+    userForm.style.display = "flex";
+  });
+
+  userTypes[1].addEventListener("click", function () {
+    userForm.style.display = "none";
+    stationForm.style.display = "flex";
+  });
+
+  var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
+    userTypes[1].click();
+  })();
+}
+showOnlySelected();
