@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+      integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./responders-list.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bodyLayout">
+      <div class="leftSide">
+        <div class="stationStatsContainer">
+          <span class="stationStatsHeader">Hilbrow Station Statistics</span>
+
+          <div class="attendedCallsContainer">
+            <div class="attendedCallsBox absoluteCenter">
+              <span class="attendedLabel">Total Attended Calls</span>
+              <span class="number">339,259</span>
+            </div>
+            <div class="dashedLine"></div>
+          </div>
+
+          <div class="labelsRow">
+            <div class="centeredCol">
+              <div class="coloredCircle rescue"></div>
+              <span class="chartNumber">1606</span>
+              <span class="chartLabel">Rescue calls</span>
+            </div>
+
+            <div class="centeredCol">
+              <div class="coloredCircle nonRescue"></div>
+              <span class="chartNumber">146</span>
+              <span class="chartLabel">Non Rescue calls</span>
+            </div>
+          </div>
+
+          <div class="callsChart">
+            <div class="callsChart-rescue"></div>
+            <div class="callsChart-nonRescue"></div>
+          </div>
+        </div>
+
+        <div class="stationPersonel">
+          <div class="personelSelectionRow">
+            <div class="optionSelectorContainer" id="stationPersonelType"></div>
+            <div class="stationPersonel-search">
+              <input
+                type="text"
+                class="inputField"
+                placeholder="Search personel"
+                id="personelSearchInput"
+              />
+              <i class="fa fa-search searchIcon"></i>
+            </div>
+          </div>
+
+          <table class="stationPersonelList paginated">
+            <thead>
+              <tr>
+                <th>Full name</th>
+                <th>Phone number</th>
+                <th>Email</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="userNameAndPic">
+                    <div class="userPic">
+                      <img src="../../../src/media/man.jpg" alt="" />
+                    </div>
+                    <span>Edward Smitten</span>
+                  </div>
+                </td>
+                <td>+27812345678</td>
+                <td>jsmith@saps.co.za</td>
+                <td>
+                  <div class="userRowAction">
+                    <i class="far fa-trash-alt userAction deleteUser"></i>
+                    <i class="fas fa-user-edit userAction editUser"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="userNameAndPic">
+                    <div class="userPic">
+                      <img src="../../../src/media/man.jpg" alt="" />
+                    </div>
+                    <span>John Smith</span>
+                  </div>
+                </td>
+                <td>+27812345678</td>
+                <td>jsmith@saps.co.za</td>
+                <td>
+                  <div class="userRowAction">
+                    <i class="far fa-trash-alt userAction deleteUser"></i>
+                    <i class="fas fa-user-edit userAction editUser"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rightSide">
+        <div class="userPicture">
+          <img src="../../../src/media/police.svg" alt="" />
+        </div>
+        <span class="usersName">Hillbrow Police Station</span>
+
+        <div class="userDetails">
+          <span class="heading">Station Manager</span>
+          <div class="labelTexts">
+            <span class="labelText">Full name:</span>
+            <span class="labelText">Telephone/phone number:</span>
+            <span class="labelText">Email Address:</span>
+          </div>
+          <div class="infoTexts">
+            <span class="infoText">Miss Lerato M</span>
+            <span class="infoText">0119585241</span>
+            <span class="infoText">lerato@saps.org.za</span>
+          </div>
+        </div>
+
+        <div class="userBtns">
+          <a href="#" class="userOptionBtn hoverCard">
+            <i class="fas fa-edit"></i>
+            <span>Edit Profile</span>
+          </a>
+          <a href="#" class="userOptionBtn hoverCard">
+            <i class="fas fa-plus-square"></i>
+            <span>Add</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../src/modules/customRadio.js"></script>
+    <script src="../../../src/modules/searchList.js"></script>
+    <script src="../../../src/modules/pagination.js"></script>
+
+    <script src="./responders-list.js"></script>
+  </body>
+</html>

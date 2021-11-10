@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+      integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./responders-list.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bodyLayout">
+      <div class="leftSide">
+        <div class="stationStatsContainer">
+          <span class="stationStatsHeader">Hilbrow Station Statistics</span>
+
+          <div class="attendedCallsContainer">
+            <div class="attendedCallsBox absoluteCenter">
+              <span class="attendedLabel">Total Attended Calls</span>
+              <span class="number">339,259</span>
+            </div>
+            <div class="dashedLine"></div>
+          </div>
+
+          <div class="labelsRow">
+            <div class="centeredCol">
+              <div class="coloredCircle rescue"></div>
+              <span class="chartNumber">1606</span>
+              <span class="chartLabel">Rescue calls</span>
+            </div>
+
+            <div class="centeredCol">
+              <div class="coloredCircle nonRescue"></div>
+              <span class="chartNumber">146</span>
+              <span class="chartLabel">Non Rescue calls</span>
+            </div>
+          </div>
+
+          <div class="callsChart">
+            <div class="callsChart-rescue"></div>
+            <div class="callsChart-nonRescue"></div>
+          </div>
+        </div>
+
+        <div class="stationPersonel">
+          <div class="personelSelectionRow">
+            <div class="optionSelectorContainer" id="stationPersonelType"></div>
+            <div class="stationPersonel-search">
+              <input
+                type="text"
+                class="inputField"
+                placeholder="Search personel"
+                id="personelSearchInput"
+              />
+              <i class="fa fa-search searchIcon"></i>
+            </div>
+          </div>
+
+          <table class="stationPersonelList paginated">
+            <thead>
+              <tr>
+                <th>Full name</th>
+                <th>Phone number</th>
+                <th>Email</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="userNameAndPic">
+                    <div class="userPic">
+                      <img src="../../../src/media/man.jpg" alt="" />
+                    </div>
+                    <span>Edward Smitten</span>
+                  </div>
+                </td>
+                <td>+27812345678</td>
+                <td>jsmith@saps.co.za</td>
+                <td>
+                  <div class="userRowAction">
+                    <i class="far fa-trash-alt userAction deleteUser"></i>
+                    <i class="fas fa-user-edit userAction editUser"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="userNameAndPic">
+                    <div class="userPic">
+                      <img src="../../../src/media/man.jpg" alt="" />
+                    </div>
+                    <span>John Smith</span>
+                  </div>
+                </td>
+                <td>+27812345678</td>
+                <td>jsmith@saps.co.za</td>
+                <td>
+                  <div class="userRowAction">
+                    <i class="far fa-trash-alt userAction deleteUser"></i>
+                    <i class="fas fa-user-edit userAction editUser"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rightSide">
+        <div class="userPicture">
+          <img src="../../../src/media/man.jpg" alt="" />
+        </div>
+        <div class="userDetails">
+          <form action="" class="updateUserForm">
+            <div class="inputsContainer">
+              <div class="formRow">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  value="John Smith"
+                />
+              </div>
+              <div class="formRow">
+                <label for="phoneNumber">Phone number</label>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  value="+2782345678"
+                />
+              </div>
+              <div class="formRow">
+                <label for="emailAddress">Email Address</label>
+                <input
+                  type="email"
+                  name="emailAddress"
+                  id="emailAddress"
+                  value="johns@saps.co.za"
+                />
+              </div>
+
+              <div class="formRow">
+                <label for="role">Role</label>
+                <input
+                  type="text"
+                  name="role"
+                  id="role"
+                  list="rolesList"
+                  value="Responder"
+                />
+
+                <datalist id="rolesList">
+                  <option value="Responer"></option>
+                  <option value="Something else"></option>
+                </datalist>
+              </div>
+              <div class="formRow">
+                <span class="labelSpan">Disable account?</span>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../src/modules/customRadio.js"></script>
+    <script src="../../../src/modules/searchList.js"></script>
+    <script src="../../../src/modules/pagination.js"></script>
+
+    <script src="./responders-list.js"></script>
+  </body>
+</html>

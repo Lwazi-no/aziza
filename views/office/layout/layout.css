@@ -1,0 +1,373 @@
+@import url("../../../src/CommonCSS/loader.css");
+
+@import url("../../../src/CommonCSS/customRadio.css");
+@import url("../../../src/CommonCSS/root.css");
+@import url("../../../src/CommonCSS/popup.css");
+@import url("../../../src/CommonCSS/inputs.css");
+
+img {
+  width: 100%;
+}
+
+.gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+.bodyLayout {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 9fr;
+  grid-template-areas:
+    "topBar topBar"
+    "sideNav contentCanvas";
+
+  height: 100vh;
+  background-color: #f7f8fa20;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.topBar {
+  grid-area: topBar;
+
+  display: grid;
+  grid-template-columns: 2fr 5fr 3fr;
+  align-items: center;
+}
+
+.logoContainer {
+  height: 50px;
+  width: 50px;
+}
+
+.pageSearch {
+  border-radius: 20px;
+  height: 40px;
+  border: 1px solid var(--grey600);
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+}
+
+#pageSearch {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 0 0 1.75rem;
+  position: absolute;
+}
+
+.searchIcon {
+  position: absolute;
+  z-index: +1;
+  top: 50%;
+  left: 0.5rem;
+  transform: translate(0%, -50%);
+}
+.rightContent {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 3rem;
+}
+
+.actionBtn {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  background-color: var(--accent600);
+  color: white;
+  max-width: min(100%, 150px);
+  display: grid;
+  place-items: center;
+  transition: all 350ms ease-in-out;
+  align-self: center;
+}
+
+.actionBtn:hover {
+  border: 1px solid var(--accent600);
+  background-color: white;
+  color: black;
+  transform: scale(0.985);
+}
+
+.notificationIcon {
+  position: relative;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.newNotifications {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: brown;
+  border-radius: 50%;
+  top: 15%;
+  right: 20%;
+}
+
+.loggedInUser {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.loggedInUser img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+#loggedInUserPopup {
+  padding: 0;
+
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#loggedInUserPopup .modal {
+  width: 300px;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  top: 9vh;
+  right: 1rem;
+}
+
+#userMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.subMenu-Item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: all 150ms ease-in-out;
+}
+.subMenu-Item i {
+  color: var(--accent600);
+}
+.subMenu-Item span {
+  color: black;
+  opacity: 0.6;
+}
+
+.subMenu-Item:hover {
+  color: black;
+  /* transform: scaleX(1.1); */
+  gap: 1.5rem;
+}
+
+.subMenu-Item:hover i {
+  transform: scale(1.1);
+}
+.subMenu-Item:hover span {
+  opacity: 1;
+}
+
+.sideNav {
+  grid-area: sideNav;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 0.5rem 0 0;
+}
+
+.navLink {
+  display: flex;
+  gap: 1rem;
+  color: black;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: white;
+  background-color: var(--accent600);
+  border-radius: 0 20px 20px 0;
+}
+
+.navLink-Icon {
+  font-size: 1rem;
+}
+
+.navLink-Text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contentCanvas {
+  box-shadow: var(--shadow400);
+  background-color: #f7f8fa40;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* add user popup */
+
+#addUserPopup .modal {
+  padding: 3rem 10rem;
+  min-height: 69vh;
+}
+#userForm,
+#stationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+#stationForm {
+  display: none;
+}
+
+#userForm button {
+  margin-top: 1rem;
+}
+
+#generatePassword {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey500);
+  width: 100% !important;
+  cursor: pointer;
+  color: white;
+}
+
+/* Notification  */
+
+.NotificationsTitle {
+  font-family: var(--headFont);
+  font-weight: 500;
+}
+
+#notifications {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.1);
+  top: 8.2vh;
+  right: 5vw;
+  height: auto;
+  width: 400px;
+  color: #000;
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  flex-direction: column;
+  font-size: 14px;
+  max-height: 516px;
+}
+
+#notifications::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  background: white;
+  position: absolute;
+  top: -5px;
+  right: 0.9vw;
+}
+
+#notifications .row {
+  display: flex;
+}
+
+.spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksItems {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  overflow-y: auto;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 89px #545b6229;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: var(--accent150);
+  height: auto;
+  color: #000;
+}
+
+.task:hover {
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 3px 89px #3e434729;
+  background-color: var(--accent600);
+}
+
+.iconAndContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.taskTitle {
+  font-family: var(--headFont);
+  font-weight: 600;
+}
+
+.taskDay {
+  align-self: flex-end;
+  opacity: 0.7;
+  font-weight: 500;
+  font-family: var(--headFont);
+}
+
+#notifications.active {
+  display: flex;
+}
+
+.fullNotification {
+  width: 100%;
+  height: 100%;
+  padding: 5vh 3vh !important;
+  min-height: 300px;
+  margin: 0;
+}
+
+.fullNotification:hover {
+  background-color: var(--accent150);
+}
+
+#notificationPopupNote {
+  padding: 0;
+  width: min(100%, 1000px);
+  margin-top: -20rem;
+}
+
+.notificationCloser {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  z-index: +1;
+}
+.notificationCloser:hover {
+  transform: scale(1.1);
+  color: var(--accent600);
+}

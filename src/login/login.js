@@ -13,7 +13,7 @@
 function sendEmail() {}
 
 function login() {
-  window.location.href = "./pages/layout/layout.html";
+  window.location.href = "./views/office/layout/layout.html";
 }
 
 // login();

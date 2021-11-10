@@ -1,0 +1,214 @@
+@import url("../../../src/CommonCSS/root.css");
+@import url("../../../src/CommonCSS/pagination.css");
+@import url("../../../src/CommonCSS/customRadio.css");
+@import url("../../../src/CommonCSS/inputs.css");
+@import url("../../../src/CommonCSS/switch.css");
+.bodyLayout {
+  display: grid;
+  grid-gap: 0.5rem;
+  height: 100%;
+  grid-template-rows: 50px 2fr 7fr 50px;
+  padding: 1rem;
+  background-color: #f7f8fa70;
+}
+
+.clusters {
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+
+.cluster {
+  width: 300px;
+  height: 85%;
+  /* border: 1px solid var(--grey200); */
+  /* box-shadow: var(--shadow300); */
+  border-radius: 8px;
+  /* background-color: #e5e5e5; */
+  display: grid;
+  grid-template-columns: 2fr 10px 2fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.clusterName {
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.clusterVr {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  height: 80%;
+}
+
+.clusterContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cardItem-Label {
+  opacity: 0.5;
+  font-size: 0.65rem;
+}
+
+.cardItem {
+  font-size: 1rem;
+}
+
+.managerNumber {
+  margin-top: 0.25rem;
+}
+.stations,
+.stationsContainer {
+  padding: 2rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.station {
+  background-color: #f7f8fa;
+
+  width: min(400px, 100%);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow200);
+  align-self: start;
+  cursor: pointer;
+}
+
+.cardItem-bold {
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardRight,
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardLeft {
+  align-items: center;
+  justify-content: space-evenly;
+}
+.stationTypeImage {
+  width: 3rem;
+  height: 3rem;
+}
+
+.managerRow,
+.cardTel,
+.cardEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.displayNone {
+  display: none;
+}
+
+.stationPersonel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.personelSelectionRow {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stationPersonel-search {
+  display: flex;
+  position: relative;
+}
+
+.stationPersonel-search .inputField {
+  padding-left: 2rem;
+}
+
+.stationPersonel-search .searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
+  opacity: 00.5;
+}
+
+.stationPersonelList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stationPersonelList thead {
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.stationPersonelList thead th {
+  background-color: var(--accent300);
+  padding: 1.5rem 0 1.5rem 0.25rem;
+}
+
+.stationPersonelList tbody td {
+  margin-top: 0.15rem;
+
+  padding: 1rem 0 1rem 0.25rem;
+}
+
+.stationPersonelList tbody td.active {
+  background-color: var(--accent150);
+}
+
+.stationPersonelList tbody tr {
+  cursor: pointer;
+}
+.stationPersonelList tbody tr:hover td {
+  cursor: pointer;
+  background-color: var(--accent150);
+}
+
+.stationPersonelList tbody tr:nth-child(even) {
+  background-color: var(--accent50);
+}
+.userNameAndPic {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.userPic {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userPic img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.userRowAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
