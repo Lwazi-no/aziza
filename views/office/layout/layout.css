@@ -217,9 +217,10 @@ img {
 #addUserPopup .modal {
   padding: 3rem 10rem;
   min-height: 69vh;
+  background-color: rgba(255, 255, 255, 1);
 }
 #userForm,
-#stationForm {
+#clusterForm {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -227,7 +228,7 @@ img {
   margin-top: 3rem;
 }
 
-#stationForm {
+#clusterForm {
   display: none;
 }
 

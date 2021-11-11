@@ -5,13 +5,16 @@ function customRadio(containerID, radioOptions, radioName) {
   for (let i = 0; i < radioOptions.length; i++) {
     optionSelectorContainer.childNodes[0].innerHTML += `
 
-     <label for="${radioOptions[i]}" class="optionSelectorLabel">
+     <label for="${radioOptions[i].replace(
+       /\s+/g,
+       ""
+     )}" class="optionSelectorLabel">
        <input
          type="radio"
          class="invisibleInput"
          name="${radioName}"
-         id="${radioOptions[i]}"
-         value="${radioOptions[i]}"
+         id="${radioOptions[i].replace(/\s+/g, "")}"
+         value="${radioOptions[i].replace(/\s+/g, "")}"
          checked
        />
        <div class="backgroundDiv">

@@ -63,6 +63,10 @@
           <i class="fas fa-users navLink-Icon"></i>
           <span class="navLink-Text">Members</span>
         </a>
+        <a href="#" onclick="gotoRevenue(this)" class="navLink">
+          <i class="fas fa-cog navLink-Icon"></i>
+          <span class="navLink-Text">Revenue</span>
+        </a>
         <a href="#" onclick="gotoSettings(this)" class="navLink">
           <i class="fas fa-cog navLink-Icon"></i>
           <span class="navLink-Text">Settings</span>
@@ -149,34 +153,72 @@
 
             <button type="submit" class="actionBtn">Add user</button>
           </form>
-          <form action="" id="stationForm">
-            <label for="addStationFullname" class="inputGroup">
-              <span class="inputLabel">Full name</span>
+          <form action="" id="clusterForm">
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Name of cluster</span>
               <input
                 class="inputField"
                 type="text"
-                name="addStationFullname"
-                id="addStationFullname"
+                name="addClusterFullname"
+                id="addClusterFullname"
               />
             </label>
-            <label for="addStationEmail" class="inputGroup">
-              <span class="inputLabel">Email</span>
+            <label for="addClusterEmail" class="inputGroup">
+              <span class="inputLabel">Cluster email</span>
               <input
                 class="inputField"
                 type="email"
-                name="addStationEmail"
-                id="addStationEmail"
+                name="addClusterEmail"
+                id="addClusterEmail"
                 placeholder="+27"
               />
             </label>
-            <label for="addStationPhone" class="inputGroup">
-              <span class="inputLabel">Phone number</span>
+            <label for="addClusterPhone" class="inputGroup">
+              <span class="inputLabel">Cluster Phone number</span>
               <input
                 class="inputField"
                 type="number"
-                name="addStationPhone"
-                id="addStationPhone"
+                name="addClusterPhone"
+                id="addClusterPhone"
                 placeholder="+27"
+              />
+            </label>
+
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior peisa number</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterEmail" class="inputGroup">
+              <span class="inputLabel">Cluster Superior email address</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addClusterEmail"
+                id="addClusterEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addClusterFullname"
+                id="addClusterFullname"
               />
             </label>
 

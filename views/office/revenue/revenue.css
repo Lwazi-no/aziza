@@ -1,0 +1,51 @@
+@import url("../../../src/CommonCSS/root.css");
+.bodyLayout {
+  display: grid;
+
+  height: 100%;
+  background-color: #f7f8fa70;
+}
+
+.revenueTiles {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  justify-content: center;
+}
+
+.revenueTile {
+  width: 350px;
+  height: 150px;
+  box-shadow: var(--shadow200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.revenueTile.monthly {
+  background-color: var(--accent50);
+}
+.revenueTile.quarterly {
+  background-color: var(--accent300);
+}
+.revenueTile.annually {
+  background-color: var(--accent400);
+}
+
+.revenueTile:hover {
+  background-color: var(--accent600);
+}
+
+.revenueTile .amount {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.revenueTile .label {
+  font-weight: 400;
+}

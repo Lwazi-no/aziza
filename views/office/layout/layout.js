@@ -16,7 +16,7 @@ function activeNav(thePageLink) {
 }
 
 function gotoOverview(thisPage) {
-  var link = "../law-enforcement/law-enforcement.html";
+  var link = "../overview/overview.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
@@ -40,6 +40,11 @@ function gotoTrack(thisPage) {
 
 function gotoMembers(thisPage) {
   var link = "../users/users.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
+function gotoRevenue(thisPage) {
+  var link = "../revenue/revenue.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
@@ -88,28 +93,28 @@ function openUserForm() {
   openModal("addUserPopup");
 }
 var addUserTypeSelector = (function () {
-  var radioOptions = ["user", "station"];
+  var radioOptions = ["cluster", "user"];
 
   customRadio("addUserTypeSelector", radioOptions, "userTypes");
 })();
 
 function showOnlySelected() {
   var userTypes = document.querySelector(".optionSelector").children;
-  var stationForm = document.querySelector("#stationForm");
+  var stationForm = document.querySelector("#clusterForm");
   var userForm = document.querySelector("#userForm");
 
   userTypes[0].addEventListener("click", function () {
-    stationForm.style.display = "none";
-    userForm.style.display = "flex";
-  });
-
-  userTypes[1].addEventListener("click", function () {
     userForm.style.display = "none";
     stationForm.style.display = "flex";
   });
 
+  userTypes[1].addEventListener("click", function () {
+    stationForm.style.display = "none";
+    userForm.style.display = "flex";
+  });
+
   var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
-    userTypes[1].click();
+    userTypes[0].click();
   })();
 }
 showOnlySelected();

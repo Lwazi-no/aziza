@@ -9,6 +9,7 @@
   height: 50px;
   border: 1px solid var(--grey400);
   width: fit-content;
+  transition: all 150ms ease-in-out;
 }
 
 .optionSelector label {
@@ -41,7 +42,8 @@
   box-shadow: var(--shadow300);
 }
 
-.optionSelector input:checked ~ .backgroundDiv {
+.optionSelector input:checked ~ .backgroundDiv,
+.optionSelector input:hover ~ .backgroundDiv {
   background-color: var(--grey400);
   color: black;
   z-index: -1;
