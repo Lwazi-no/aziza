@@ -11,9 +11,11 @@ var notificationsHtml = ` <div class="notifyContainer">
         <div class="selectSociety">
             <label for="societiesList">Choose recipients:</label>
             <select multiple data-placeholder="Select recipients">                      
-              <option value="Staff">Staff</option>
-              <option value="Responders">Responders</option>
-              <option value="Admins">Admins</option>
+              <option value="Systemwide">Systemwide</option>
+              <option value="Law Enforcement">Law Enforcement</option>
+              <option value="Emergency Healthcare">Emergency Healthcare</option>
+              <option value="Users">Users</option>
+              <option value="Aziza staff">Aziza staff</option>
              
              </select>
 
