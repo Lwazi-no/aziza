@@ -20,6 +20,16 @@ function gotoOverview(thisPage) {
   replacecanvascontent(link);
   activeNav(thisPage);
 }
+function gotoLawEnforcement(thisPage) {
+  var link = "../lawEnforcement/lawEnforcement.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
+function gotoEmergency(thisPage) {
+  var link = "../emergency/emergency.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
 
 function gotoRescueCalls(thisPage) {
   var link = "../rescue-calls/rescue-calls.html";
@@ -38,8 +48,13 @@ function gotoTrack(thisPage) {
   activeNav(thisPage);
 }
 
-function gotoMembers(thisPage) {
-  var link = "../users/users.html";
+function gotoStaff(thisPage) {
+  var link = "../staff/staff.html";
+  replacecanvascontent(link);
+  activeNav(thisPage);
+}
+function gotoEndUsers(thisPage) {
+  var link = "../endUsers/endUsers.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
@@ -63,7 +78,7 @@ function openUserMenu() {
 }
 
 function openProfile() {
-  var link = "../users/user-profile/user-profile.html";
+  var link = "../user-profile/user-profile.html";
   replacecanvascontent(link);
   let thisPage = document.querySelectorAll(".navLink")[3];
   activeNav(thisPage);

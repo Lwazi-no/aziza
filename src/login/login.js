@@ -12,8 +12,11 @@
 
 function sendEmail() {}
 
-function login() {
-  window.location.href = "./views/emergency/layout/layout.html";
+function updatePassword() {
+  window.location.href = "./views/office/layout/layout.html";
 }
 
-// login();
+function login() {
+  document.querySelector(".loginWrapper").style.display = "none";
+  document.querySelector(".getSartedWrapper").style.display = "grid";
+}

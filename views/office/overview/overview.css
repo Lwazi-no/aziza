@@ -5,334 +5,74 @@
 @import url("../../../src/CommonCSS/switch.css");
 .bodyLayout {
   display: grid;
-  grid-gap: 0.5rem;
+  align-items: baseline;
+  place-items: center;
   height: 100%;
-  grid-template-columns: 2.5fr 1fr;
-  grid-template-areas: "leftSide leftSide";
-
   background-color: #f7f8fa70;
+  padding: 2rem;
 }
-
-.leftSide {
-  grid-area: leftSide;
-  display: grid;
-  grid-template-rows: 50px 2fr 7fr 50px;
-  padding: 1rem;
-  grid-gap: 1rem;
-}
-
-.rightSide {
-  grid-area: rightSide;
-  background-color: var(--grey100);
-  display: none;
-  flex-direction: column;
+.bodyRow {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 100%;
   align-items: center;
-  padding: 2rem 0;
-  gap: 2rem;
+  justify-content: center;
 }
 
-.clusters {
-  overflow-x: auto;
+.overviewCard {
+  background-color: rgb(193, 231, 231);
   display: flex;
-  align-items: center;
-  margin: 0 1.5rem;
-  gap: 2rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  width: min(100%, 600px);
+  height: 13rem;
+  box-shadow: var(--shadow200);
+  position: relative;
+  /* flex: 1 1 20%; */
 }
 
-.cluster {
-  width: 300px;
-  height: 85%;
-  border: 1px solid var(--grey200);
-  cursor: pointer;
-  border-radius: 8px;
+.overviewCardLeft {
+  background-color: transparent;
+  width: 40%;
+  height: 100%;
   display: grid;
-  grid-template-columns: 2fr 10px 2fr;
-  grid-gap: 2rem;
-  align-items: center;
+  place-items: center;
+}
+.overviewCardLeft span {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.overviewCardRight {
+  background-color: whitesmoke;
+  width: 60%;
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.overviewCardRight .cardLabel {
+  font-weight: 600;
+}
+.overviewCardRight .cardLabel {
+}
+.overviewCardRight .cardLink {
+  color: var(--blue800);
+  display: flex;
+  gap: 0.5rem;
   transition: all 150ms ease-in-out;
 }
 
-.cluster.selected,
-.cluster:hover {
-  box-shadow: var(--shadow300);
-  background-color: var(--grey400);
-  border: 1px solid var(--accent300);
+.overviewCardRight .cardLink i {
+  font-size: 0.875rem;
 }
 
-.clusterName {
-  font-size: 1.5rem;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.clusterVr {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  height: 80%;
-}
-
-.clusterContact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.cardItem-Label {
-  opacity: 0.5;
-  font-size: 0.65rem;
-}
-
-.cardItem {
-  font-size: 1rem;
-}
-
-.managerNumber {
-  margin-top: 0.25rem;
-}
-.stations,
-.stationsContainer {
-  padding: 2rem 0;
-  /* display: flex; */
-  width: 100%;
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+.overviewCardRight .cardLink:hover {
   gap: 1rem;
-  overflow-y: auto;
-}
-
-.station {
-  background-color: #f7f8fa;
-  width: min(400px, 100%);
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.5rem;
-  border-radius: 8px;
-  box-shadow: var(--shadow200);
-  align-self: start;
-  cursor: pointer;
-  position: relative;
-}
-
-.respondersCount {
-  background-color: var(--grey400);
-  box-shadow: var(--shadow200);
-  border-radius: 50%;
-  padding: 0.5rem;
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  font-weight: 600;
-}
-
-.cardItem-bold {
-  font-weight: 600;
-  text-align: center;
-}
-
-.cardRight,
-.cardLeft {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.cardLeft {
-  align-items: center;
-  justify-content: space-evenly;
-}
-.stationTypeImage {
-  width: 3rem;
-  height: 3rem;
-}
-
-.managerRow,
-.cardTel,
-.cardEmail {
-  display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
-}
-
-.displayNone {
-  display: none;
-}
-
-.stationPersonel {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.personelSelectionRow {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.stationPersonel-search {
-  display: flex;
-  position: relative;
-}
-
-.stationPersonel-search .inputField {
-  padding-left: 2rem;
-}
-
-.stationPersonel-search .searchIcon {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translate(0%, -50%);
-  opacity: 00.5;
-}
-
-.stationPersonelList {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.stationPersonelList thead {
-  font-weight: 600;
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-
-.stationPersonelList thead th {
-  background-color: var(--accent300);
-  padding: 1.5rem 0 1.5rem 0.25rem;
-}
-
-.stationPersonelList tbody td {
-  margin-top: 0.15rem;
-
-  padding: 1rem 0 1rem 0.25rem;
-}
-
-.stationPersonelList tbody td.active {
-  background-color: var(--accent150);
-}
-
-.stationPersonelList tbody tr {
-  cursor: pointer;
-}
-.stationPersonelList tbody tr:hover td {
-  cursor: pointer;
-  background-color: var(--accent150);
-}
-
-.stationPersonelList tbody tr:nth-child(even) {
-  background-color: var(--accent50);
-}
-
-.clusterStaff,
-.clusterUsers {
-  border-top: 1px solid grey;
-  padding: 1rem 0;
-}
-
-.usersLabel {
-  font-weight: 600;
-}
-.userStatusIndicator {
-  padding: 0.5rem 1rem;
-  background-color: var(--green800);
-  border-radius: 4px;
-}
-.userNameAndPic {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.userPic {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.userPic img {
-  object-fit: cover;
-  object-position: center center;
-}
-
-.sendMsgBtn {
-  display: inline-flex;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  gap: 1rem;
-  color: black;
-  border: 1px solid var(--accent600);
-  background-color: var(--accent600);
-}
-
-.sendMsgBtn:hover {
-  border: 1px solid black;
-  background-color: white;
-}
-.userRowAction {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-/* rightSide */
-
-.userPicture {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.userPicture img {
-  object-fit: cover;
-  object-position: center center;
-}
-
-.userDetails {
-  padding: 0 1rem;
-}
-.updateUserForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.inputsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  align-items: center;
-}
-
-.formRow label,
-.labelSpan {
-  opacity: 0.8;
-  margin-bottom: 0.02rem;
-}
-
-.formRow input {
-  border: none;
-  border-bottom: 1px solid var(--grey600);
-  background-color: transparent;
-  outline: none;
-}
-
-.updateUserForm button {
-  background-color: var(--accent400);
-  padding: 0.75rem 3rem;
-  border-radius: 0.3rem;
+  color: var(--blue200);
 }

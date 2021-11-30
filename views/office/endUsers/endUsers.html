@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+      integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./endUsers.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bodyLayout">
+      <a href="#" class="backBtn" onclick="goBack()">
+        <i class="fas fa-chevron-left"></i>
+        <span>Back</span>
+      </a>
+      <div class="leftSide">
+        <div class="stationPersonel">
+          <div class="personelSelectionRow">
+            <div class="optionSelectorContainer" id="stationPersonelType"></div>
+            <div class="stationPersonel-search">
+              <input
+                type="text"
+                class="inputField"
+                placeholder="Search personel"
+                id="personelSearchInput"
+              />
+              <i class="fa fa-search searchIcon"></i>
+            </div>
+          </div>
+
+          <table class="stationPersonelList paginated">
+            <thead>
+              <tr>
+                <th>User Status</th>
+                <th>Full name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="subscribed" onclick="openUser(this)">
+                <td><div class="endUserStatus inactive"></div></td>
+                <td>
+                  <div class="userNameAndPic">
+                    <div class="userPic">
+                      <img src="../../../src/media/man.jpg" alt="" />
+                    </div>
+                    <span>Edward Smitten</span>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="userRowAction">
+                    <i class="far fa-trash-alt userAction deleteUser"></i>
+                    <i class="fas fa-user-edit userAction editUser"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr class="notSubscribed" onclick="openUser(this)">
+                <td><div class="endUserStatus inactive"></div></td>
+                <td>
+                  <div class="userNameAndPic">
+                    <div class="userPic">
+                      <img src="../../../src/media/man.jpg" alt="" />
+                    </div>
+                    <span>John Smith</span>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="userRowAction">
+                    <i class="far fa-trash-alt userAction deleteUser"></i>
+                    <i class="fas fa-user-edit userAction editUser"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rightSide">
+        <div class="userPicture">
+          <img src="../../../src/media/man.jpg" alt="" />
+        </div>
+        <div class="userDetails">
+          <div class="callsRow">
+            <span class="trueCalls">True Calls 11</span>
+            <span class="falseCalls">False Calls 12</span>
+            <span class="totalCalls">Total Rescue Calls 39</span>
+          </div>
+
+          <div class="userBtnsRow">
+            <a href="#" class="secondaryBtn hoverCard">Edit User</a>
+            <a href="#" class="secondaryBtn hoverCard">Send Notification</a>
+          </div>
+          <form action="" class="updateUserForm">
+            <div class="inputsContainer">
+              <div class="formRow">
+                <label for="fullName">Full Name</label>
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  value="John Smith"
+                />
+              </div>
+              <div class="formRow">
+                <label for="phoneNumber">Phone number</label>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  value="+2782345678"
+                />
+              </div>
+              <div class="formRow">
+                <label for="emailAddress">Email Address</label>
+                <input
+                  type="email"
+                  name="emailAddress"
+                  id="emailAddress"
+                  value="johns@saps.co.za"
+                />
+              </div>
+
+              <div class="formRow">
+                <label for="location">Location</label>
+                <input
+                  type="text"
+                  class="noBorder"
+                  name="location"
+                  id="location"
+                  value="21 Smit Street, JHB"
+                  disabled
+                />
+              </div>
+              <div class="formRow">
+                <label for="subscription">Subscription</label>
+                <input
+                  type="text"
+                  class="noBorder"
+                  name="subscription"
+                  id="subscription"
+                  value="Premium"
+                  disabled
+                />
+              </div>
+              <div class="formRow">
+                <label for="status">Status</label>
+                <input
+                  type="text"
+                  class="noBorder"
+                  name="status"
+                  id="status"
+                  value="Help Alert"
+                  disabled
+                />
+              </div>
+              <div class="formRow">
+                <span class="labelSpan">Disable account?</span>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="hoverCard">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../src/modules/customRadio.js"></script>
+    <script src="../../../src/modules/searchList.js"></script>
+    <script src="../../../src/modules/pagination.js"></script>
+
+    <script src="./endUsers.js"></script>
+  </body>
+</html>

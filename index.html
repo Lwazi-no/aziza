@@ -49,40 +49,78 @@
         </div>
       </div>
       <div class="right gridCenter">
-        <div class="modalContainer" id="passwordModal">
-          <div class="modal">
-            <div class="formContainer gridCenter">
-              <span class="formPurpose hthree">Forgot passowrd</span>
-              <form action="" id="forgotForm">
-                <label for="forgotEmailAddress" class="inputGroup">
-                  <span class="inputLabel">Email</span>
-                  <input
-                    class="inputField"
-                    type="email"
-                    name="forgotEmailAddress"
-                    id="forgotEmailAddress"
-                  />
-                </label>
+        <img src="./src/media/backgroundPic.jpg" alt="" />
+      </div>
+    </div>
+    <div class="getSartedWrapper">
+      <div class="left gridCenter">
+        <div class="formContainer gridCenter">
+          <span class="formPurpose hthree">Get Started</span>
+          <form action="" id="getStartedForm">
+            <label for="getStartedPassword" class="inputGroup">
+              <span class="inputLabel">Create Password</span>
+              <input
+                class="inputField"
+                type="passowrd"
+                name="getStartedPassword"
+                id="getStartedPassword"
+              />
+            </label>
+            <label for="getStartedPasswordConfirm" class="inputGroup">
+              <span class="inputLabel">Confirm Password</span>
+              <input
+                class="inputField"
+                type="passowrd"
+                name="getStartedPasswordConfirm"
+                id="getStartedPasswordConfirm"
+              />
+            </label>
 
-                <a
-                  href="#"
-                  onclick="sendEmail()"
-                  id="SubmitBtn"
-                  class="loginActionBtn gridCenter"
-                  type="submit"
-                  class="gridCenter"
-                  >SUBMIT</a
-                >
+            <a
+              href="#"
+              onclick="updatePassword()"
+              id="getStartedBtn"
+              type="submit"
+              class="gridCenter loginActionBtn"
+              >Save and Continue</a
+            >
+          </form>
+        </div>
+      </div>
+      <div class="right gridCenter">
+        <img src="./src/media/backgroundPic.jpg" alt="" />
+      </div>
+    </div>
 
-                <a
-                  href="#"
-                  class="otherActionBtn blueOnHover"
-                  id="backToLoginBtn"
-                  >Back to login</a
-                >
-              </form>
-            </div>
-          </div>
+    <div class="modalContainer" id="passwordModal">
+      <div class="modal">
+        <div class="formContainer gridCenter">
+          <span class="formPurpose hthree">Forgot passowrd</span>
+          <form action="" id="forgotForm">
+            <label for="forgotEmailAddress" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="forgotEmailAddress"
+                id="forgotEmailAddress"
+              />
+            </label>
+
+            <a
+              href="#"
+              onclick="sendEmail()"
+              id="SubmitBtn"
+              class="loginActionBtn gridCenter"
+              type="submit"
+              class="gridCenter"
+              >SUBMIT</a
+            >
+
+            <a href="#" class="otherActionBtn blueOnHover" id="backToLoginBtn"
+              >Back to login</a
+            >
+          </form>
         </div>
       </div>
     </div>

@@ -27,6 +27,7 @@
   --blue800: #012a93;
   --purple800: #574b90;
   --green800: #55efc4;
+  --red500: rgb(167, 67, 67);
 
   /* shadows */
 
@@ -59,4 +60,19 @@ button {
 .hoverCard:hover {
   background-color: var(--grey500);
   transform: scale(0.975);
+}
+
+.ctaButton {
+  padding: 1rem 2rem;
+  background-color: var(--accent600);
+  border-radius: 0.25rem;
+  color: white;
+  box-shadow: var(--shadow200);
+  transition: all 100ms ease-in-out;
+}
+
+.ctaButton:hover {
+  transform: scale(0.975);
+  box-shadow: var(--shadow300);
+  color: black;
 }

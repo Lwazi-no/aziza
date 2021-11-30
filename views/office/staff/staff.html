@@ -10,19 +10,17 @@
       integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./users.css" />
+    <link rel="stylesheet" href="./staff.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="bodyLayout">
-      <a href="#" class="backBtn" onclick="goBack()">
-        <i class="fas fa-chevron-left"></i>
-        <span>Back</span>
-      </a>
       <div class="leftSide">
-        <div class="stationPersonel">
+        <div class="topRow"><a href="#" class="ctaButton">Add staff</a></div>
+
+        <div class="clusterStaff">
+          <span class="usersLabel">Staff members</span>
           <div class="personelSelectionRow">
-            <div class="optionSelectorContainer" id="stationPersonelType"></div>
             <div class="stationPersonel-search">
               <input
                 type="text"
@@ -33,11 +31,11 @@
               <i class="fa fa-search searchIcon"></i>
             </div>
           </div>
-
           <table class="stationPersonelList paginated">
             <thead>
               <tr>
                 <th>Full name</th>
+                <th>Staff ID</th>
                 <th>Phone number</th>
                 <th>Email</th>
                 <th>Position</th>
@@ -54,9 +52,10 @@
                     <span>Edward Smitten</span>
                   </div>
                 </td>
+                <td>#12345678</td>
                 <td>+27812345678</td>
                 <td>jsmith@saps.co.za</td>
-                <td>Responder</td>
+                <td>Admin</td>
                 <td>
                   <div class="userRowAction">
                     <i class="far fa-trash-alt userAction deleteUser"></i>
@@ -73,6 +72,7 @@
                     <span>John Smith</span>
                   </div>
                 </td>
+                <td>#7891014</td>
                 <td>+27812345678</td>
                 <td>jsmith@saps.co.za</td>
                 <td>Admin</td>
@@ -114,6 +114,10 @@
                 />
               </div>
               <div class="formRow">
+                <label for="staffID">Staff ID</label>
+                <input type="text" name="staffID" id="staffID" value="#13548" />
+              </div>
+              <div class="formRow">
                 <label for="emailAddress">Email Address</label>
                 <input
                   type="email"
@@ -134,7 +138,7 @@
                 />
 
                 <datalist id="rolesList">
-                  <option value="Responer"></option>
+                  <option value="Admin"></option>
                   <option value="Something else"></option>
                 </datalist>
               </div>
@@ -157,6 +161,6 @@
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
 
-    <script src="./users.js"></script>
+    <script src="./staff.js"></script>
   </body>
 </html>

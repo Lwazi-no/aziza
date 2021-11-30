@@ -36,6 +36,16 @@
   transition: width 150ms ease-in-out;
 }
 
+.endUserStatus {
+  height: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+.endUserStatus.inactive {
+  background-color: var(--red500);
+}
+
 .stationPersonel {
   display: flex;
   flex-direction: column;
@@ -150,6 +160,30 @@
 
 .userDetails {
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.callsRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  padding: 1rem 0.5rem;
+  background-color: var(--accent150);
+}
+
+.userBtnsRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondaryBtn {
+  background-color: var(--accent400);
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.875rem;
+  color: black;
 }
 .updateUserForm {
   display: flex;
@@ -181,6 +215,10 @@
   border-bottom: 1px solid var(--grey600);
   background-color: transparent;
   outline: none;
+}
+
+.formRow input.noBorder {
+  border: none;
 }
 
 .updateUserForm button {

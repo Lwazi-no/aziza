@@ -1,5 +1,5 @@
 var generateUserTypeOptions = (function () {
-  var radioOptions = ["Responders", "Admin"];
+  var radioOptions = ["Subscribed Users", "Non Subscribed Users"];
 
   customRadio("stationPersonelType", radioOptions, "services");
 })();
@@ -63,30 +63,32 @@ function showOnlySelected() {
 
   userTypes[0].addEventListener("click", function () {
     showAllPersonel();
-    let responders = document.querySelectorAll(
-      ".stationPersonelList tbody .responder"
+    let subscribed = document.querySelectorAll(
+      ".stationPersonelList tbody .subscribed"
     );
     allPersonel.forEach((allPerson) => {
       allPerson.style.display = "none";
     });
-    responders.forEach((responder) => {
-      responder.style.display = "table-row";
+    subscribed.forEach((subscriber) => {
+      subscriber.style.display = "table-row";
     });
   });
 
   userTypes[1].addEventListener("click", function () {
     showAllPersonel();
-    let admins = document.querySelectorAll(".stationPersonelList tbody .admin");
+    let unsubscribed = document.querySelectorAll(
+      ".stationPersonelList tbody .notSubscribed"
+    );
     allPersonel.forEach((allPerson) => {
       allPerson.style.display = "none";
     });
-    admins.forEach((admin) => {
-      admin.style.display = "table-row";
+    unsubscribed.forEach((notSubscribed) => {
+      notSubscribed.style.display = "table-row";
     });
   });
 
   var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
-    document.querySelector("#Responders").click();
+    userTypes[0].click();
   })();
 }
 showOnlySelected();
