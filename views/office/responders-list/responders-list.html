@@ -110,16 +110,16 @@
           <div class="infoTexts">
             <input
               type="text"
-              name="stationManagerName"
-              id="stationManagerName"
+              name="stationAddress"
+              id="stationAddress"
               disabled
               value="21 Hillbrow Avenue, Hillbrow, 2190"
               class="infoText"
             />
             <input
               type="text"
-              name="stationManagerNumber"
-              id="stationManagerNumber"
+              name="stationNumber"
+              id="stationNumber"
               disabled
               value="0119585241"
               class="infoText"
@@ -128,23 +128,69 @@
         </div>
 
         <div class="userBtns">
-          <a href="#" class="userOptionBtn hoverCard">
+          <a
+            href="#"
+            class="userOptionBtn hoverCard"
+            onclick="editProfile(this)"
+          >
             <i class="fas fa-edit"></i>
             <span>Edit Profile</span>
           </a>
-          <a href="#" class="userOptionBtn hoverCard">
+          <a
+            href="#"
+            class="userOptionBtn hoverCard"
+            onclick="openManagerForm()"
+          >
             <i class="fas fa-plus-square"></i>
             <span>Add</span>
           </a>
         </div>
 
-        .
+        <div class="modalContainer" id="addManagerPopup">
+          <form action="" class="modal" id="addStationManagerForm">
+            <span class="formHeading">Add Station Manager</span>
+            <label for="addUserFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addUserFullname"
+                id="addUserFullname"
+                placeholder="Name Surname"
+              />
+            </label>
+
+            <label for="addUserPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPhone"
+                id="addUserPhone"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addUserEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addUserEmail"
+                id="addUserEmail"
+                placeholder="user@mail.co.za"
+              />
+            </label>
+
+            <button type="submit" class="actionBtn">Add Manager</button>
+          </form>
+        </div>
       </div>
     </div>
 
     <script src="../../../src/modules/customRadio.js"></script>
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
+    <script src="../../../src/modules/popup.js"></script>
 
     <script src="./responders-list.js"></script>
   </body>

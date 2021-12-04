@@ -1,16 +1,14 @@
-var stationPersonelTypes = (function () {
-  var radioOptions = ["Responders", "Admin"];
-  customRadio("stationPersonelType", radioOptions, "personelType");
-})();
+function editProfile(thisBtn) {
+  var formInputs = document.querySelectorAll(".infoText");
 
-var paginatePersonel = (function () {
-  var paginatedList = document.querySelector(".paginated");
-  paginate(paginatedList);
-})();
+  formInputs.forEach(function (formInput) {
+    formInput.disabled = false;
+  });
+  formInputs[0].focus();
+  thisBtn.lastElementChild.innerText = "Save";
+  console.log(thisBtn.lastElementChild.innerText);
+}
 
-var listSearch = (function () {
-  let table = document.querySelector(".stationPersonelList");
-  let searchInputID = "personelSearchInput";
-
-  searchInTable(table, searchInputID);
-})();
+function openManagerForm() {
+  openModal("addManagerPopup");
+}

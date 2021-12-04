@@ -99,6 +99,18 @@
   background-color: var(--accent150);
 }
 
+.userStatus {
+  padding: 0.5rem 1rem;
+}
+
+.userStatus.active {
+  background-color: var(--green800);
+}
+.userStatus.disabled {
+  background-color: var(--red500);
+  color: white;
+}
+
 .stationPersonelList tbody tr:nth-child(even) {
   background-color: var(--accent50);
 }

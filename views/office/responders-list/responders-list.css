@@ -3,6 +3,7 @@
 @import url("../../../src/CommonCSS/customRadio.css");
 @import url("../../../src/CommonCSS/inputs.css");
 @import url("../../../src/CommonCSS/switch.css");
+@import url("../../../src/CommonCSS/popup.css");
 
 .bodyLayout {
   display: grid;
@@ -202,9 +203,11 @@
 }
 
 .userDetails {
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+  overflow: hidden;
 
   grid-template-areas:
     "heading heading"
@@ -230,6 +233,10 @@
   gap: 0.5rem;
 }
 
+.labelText {
+  padding: 0.5rem 0;
+}
+
 .infoTexts {
   grid-area: info;
   display: flex;
@@ -239,6 +246,7 @@
 
 input.infoText {
   border: none;
+  padding: 0.5rem;
 }
 
 .userBtns {
@@ -258,4 +266,38 @@ input.infoText {
 
 .userOptionBtn span {
   color: black;
+}
+
+#addStationManagerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 400px;
+  max-width: 90%;
+  margin-top: 3rem;
+  align-self: center;
+  margin: auto;
+}
+
+#addStationManagerForm button {
+  margin-top: 1rem;
+}
+
+.actionBtn {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  background-color: var(--accent600);
+  color: white;
+  max-width: min(100%, 150px);
+  display: grid;
+  place-items: center;
+  transition: all 350ms ease-in-out;
+  align-self: center;
+}
+
+.actionBtn:hover {
+  border: 1px solid var(--accent600);
+  background-color: white;
+  color: black;
+  transform: scale(0.985);
 }

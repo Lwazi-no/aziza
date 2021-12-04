@@ -40,8 +40,7 @@
                 <th>Staff ID</th>
                 <th>Phone number</th>
                 <th>Email</th>
-                <th>Position</th>
-                <th>Action</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -57,12 +56,9 @@
                 <td>#12345678</td>
                 <td>+27812345678</td>
                 <td>jsmith@saps.co.za</td>
-                <td>Admin</td>
+
                 <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
+                  <span class="userStatus active">Active</span>
                 </td>
               </tr>
               <tr class="admin" onclick="openUser(this)">
@@ -77,12 +73,9 @@
                 <td>#7891014</td>
                 <td>+27812345678</td>
                 <td>jsmith@saps.co.za</td>
-                <td>Admin</td>
+
                 <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
+                  <span class="userStatus disabled">Disabled</span>
                 </td>
               </tr>
             </tbody>
@@ -131,13 +124,7 @@
 
               <div class="formRow">
                 <label for="role">Role</label>
-                <input
-                  type="text"
-                  name="role"
-                  id="role"
-                  list="rolesList"
-                  value="Responder"
-                />
+                <input type="text" name="role" id="role" list="rolesList" />
 
                 <datalist id="rolesList">
                   <option value="Admin"></option>

@@ -28,3 +28,9 @@
   opacity: 1;
   font-size: 0.8rem;
 }
+
+.formHeading {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

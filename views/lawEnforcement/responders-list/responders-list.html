@@ -48,130 +48,140 @@
         </div>
 
         <div class="stationPersonel">
-          <div class="personelSelectionRow">
-            <div class="optionSelectorContainer" id="stationPersonelType"></div>
-            <div class="stationPersonel-search">
-              <input
-                type="text"
-                class="inputField"
-                placeholder="Search personel"
-                id="personelSearchInput"
-              />
-              <i class="fa fa-search searchIcon"></i>
+          <div class="personelCount">
+            <div class="personelCountItem">
+              <span class="personelItemCount">56</span>
+              <span class="personelItemLabel">Responders</span>
+            </div>
+            <div class="personelCountItem">
+              <span class="personelItemCount">16</span>
+              <span class="personelItemLabel">Administrators</span>
             </div>
           </div>
-
-          <table class="stationPersonelList paginated">
-            <thead>
-              <tr>
-                <th>Full name</th>
-                <th>Phone number</th>
-                <th>Email</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="userNameAndPic">
-                    <div class="userPic">
-                      <img src="../../../src/media/man.jpg" alt="" />
-                    </div>
-                    <span>Edward Smitten</span>
-                  </div>
-                </td>
-                <td>+27812345678</td>
-                <td>jsmith@saps.co.za</td>
-                <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="userNameAndPic">
-                    <div class="userPic">
-                      <img src="../../../src/media/man.jpg" alt="" />
-                    </div>
-                    <span>John Smith</span>
-                  </div>
-                </td>
-                <td>+27812345678</td>
-                <td>jsmith@saps.co.za</td>
-                <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
 
       <div class="rightSide">
         <div class="userPicture">
-          <img src="../../../src/media/man.jpg" alt="" />
+          <img src="../../../src/media/police.svg" alt="" />
+        </div>
+        <span class="usersName">Hillbrow Police Station</span>
+
+        <div class="userDetails">
+          <span class="heading">Station Manager</span>
+          <div class="labelTexts">
+            <span class="labelText">Full name:</span>
+            <span class="labelText">Telephone/phone number:</span>
+            <span class="labelText">Email Address:</span>
+          </div>
+          <div class="infoTexts">
+            <input
+              type="text"
+              name="stationManagerName"
+              id="stationManagerName"
+              disabled
+              value="Miss Lerato M"
+              class="infoText"
+            />
+            <input
+              type="text"
+              name="stationManagerNumber"
+              id="stationManagerNumber"
+              disabled
+              value="0119585241"
+              class="infoText"
+            />
+            <input
+              type="email"
+              name="stationManagerEmail"
+              id="stationManagerEmail"
+              disabled
+              value="lerato@saps.org.za"
+              class="infoText"
+            />
+          </div>
         </div>
         <div class="userDetails">
-          <form action="" class="updateUserForm">
-            <div class="inputsContainer">
-              <div class="formRow">
-                <label for="fullName">Full Name</label>
-                <input
-                  type="text"
-                  name="fullName"
-                  id="fullName"
-                  value="John Smith"
-                />
-              </div>
-              <div class="formRow">
-                <label for="phoneNumber">Phone number</label>
-                <input
-                  type="text"
-                  name="phoneNumber"
-                  id="phoneNumber"
-                  value="+2782345678"
-                />
-              </div>
-              <div class="formRow">
-                <label for="emailAddress">Email Address</label>
-                <input
-                  type="email"
-                  name="emailAddress"
-                  id="emailAddress"
-                  value="johns@saps.co.za"
-                />
-              </div>
+          <span class="heading">Station Details</span>
+          <div class="labelTexts">
+            <span class="labelText">Address:</span>
+            <span class="labelText">Telephone/phone number:</span>
+          </div>
+          <div class="infoTexts">
+            <input
+              type="text"
+              name="stationAddress"
+              id="stationAddress"
+              disabled
+              value="21 Hillbrow Avenue, Hillbrow, 2190"
+              class="infoText"
+            />
+            <input
+              type="text"
+              name="stationNumber"
+              id="stationNumber"
+              disabled
+              value="0119585241"
+              class="infoText"
+            />
+          </div>
+        </div>
 
-              <div class="formRow">
-                <label for="role">Role</label>
-                <input
-                  type="text"
-                  name="role"
-                  id="role"
-                  list="rolesList"
-                  value="Responder"
-                />
+        <div class="userBtns">
+          <a
+            href="#"
+            class="userOptionBtn hoverCard"
+            onclick="editProfile(this)"
+          >
+            <i class="fas fa-edit"></i>
+            <span>Edit Profile</span>
+          </a>
+          <a
+            href="#"
+            class="userOptionBtn hoverCard"
+            onclick="openManagerForm()"
+          >
+            <i class="fas fa-plus-square"></i>
+            <span>Add</span>
+          </a>
+        </div>
 
-                <datalist id="rolesList">
-                  <option value="Responer"></option>
-                  <option value="Something else"></option>
-                </datalist>
-              </div>
-              <div class="formRow">
-                <span class="labelSpan">Disable account?</span>
-                <label class="switch">
-                  <input type="checkbox" checked />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-            </div>
+        <div class="modalContainer" id="addManagerPopup">
+          <form action="" class="modal" id="addStationManagerForm">
+            <span class="formHeading">Add Station Manager</span>
+            <label for="addUserFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addUserFullname"
+                id="addUserFullname"
+                placeholder="Name Surname"
+              />
+            </label>
 
-            <button type="submit">Save</button>
+            <label for="addUserPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPhone"
+                id="addUserPhone"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addUserEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addUserEmail"
+                id="addUserEmail"
+                placeholder="user@mail.co.za"
+              />
+            </label>
+
+            <button type="submit" class="actionBtn">Add Manager</button>
           </form>
         </div>
       </div>
@@ -180,6 +190,7 @@
     <script src="../../../src/modules/customRadio.js"></script>
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
+    <script src="../../../src/modules/popup.js"></script>
 
     <script src="./responders-list.js"></script>
   </body>

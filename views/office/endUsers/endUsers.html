@@ -40,7 +40,6 @@
                 <th>User Status</th>
                 <th>Full name</th>
                 <th>Account Status</th>
-                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -55,14 +54,7 @@
                   </div>
                 </td>
 
-                <td>Active</td>
-
-                <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
-                </td>
+                <td><span class="userStatus disabled">Disabled</span></td>
               </tr>
               <tr class="notSubscribed" onclick="openUser(this)">
                 <td><div class="endUserStatus inactive"></div></td>
@@ -76,10 +68,7 @@
                 </td>
 
                 <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
+                  <span class="userStatus active">Active</span>
                 </td>
               </tr>
             </tbody>
