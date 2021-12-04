@@ -1,4 +1,5 @@
 @import url("../../../src/CommonCSS/loader.css");
+
 @import url("../../../src/CommonCSS/customRadio.css");
 @import url("../../../src/CommonCSS/root.css");
 @import url("../../../src/CommonCSS/popup.css");
@@ -39,12 +40,10 @@ img {
   height: 50px;
   width: 50px;
 }
-
 .dashboardName {
   font-weight: 600;
   font-size: 1.5rem;
 }
-
 .pageSearch {
   border-radius: 20px;
   height: 40px;
@@ -221,10 +220,9 @@ img {
 #addUserPopup .modal {
   padding: 3rem 10rem;
   min-height: 69vh;
-  background-color: rgba(255, 255, 255, 1);
 }
 #userForm,
-#clusterForm {
+#stationForm {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -232,7 +230,7 @@ img {
   margin-top: 3rem;
 }
 
-#clusterForm {
+#stationForm {
   display: none;
 }
 

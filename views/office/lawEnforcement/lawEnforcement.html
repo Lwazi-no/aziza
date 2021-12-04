@@ -30,28 +30,22 @@
             <div class="filterMenu">
               <div class="filterClass">
                 <span class="filterClassLabel">Provinces</span>
-                <div class="filterClassOptions provinces"></div>
+                <div class="filterClassOptions provincesFilter"></div>
               </div>
               <div class="filterClass">
                 <span class="filterClassLabel">Metros</span>
-                <div class="filterClassOptions provinces">
-                  <a href="#">Joburg Metro</a>
-                  <a href="#">Ekurhuleni Metro</a>
-                  <a href="#">Tshwane Metro</a>
-                </div>
+                <div class="filterClassOptions metrosFilter"></div>
               </div>
               <div class="filterClass">
                 <span class="filterClassLabel">Clusters</span>
-                <div class="filterClassOptions provinces"></div>
-              </div>
-              <div class="filterClass">
-                <span class="filterClassLabel">Stations</span>
-                <div class="filterClassOptions provinces"></div>
+                <div class="filterClassOptions clustersFilter"></div>
               </div>
             </div>
           </div>
 
-          <a href="#" class="ctaButton">Activate Cluster</a>
+          <a href="#" onclick="openClusterForm()" class="ctaButton"
+            >Activate Cluster</a
+          >
         </div>
 
         <div class="clusters">
@@ -68,48 +62,20 @@
         <div class="stationsContainer">
           <div class="stations paginated">
             <div
-              class="station police hoverCard"
-              id="hillbrowStation"
+              class="station health hoverCard"
+              id="wadeHealth"
               onclick="openStation()"
             >
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/police.svg" alt="" />
+                  <img src="../../../src/media/health.svg" alt="" />
                 </div>
-                <span class="cardItem-bold">Hillbrow Police Station</span>
+                <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
               <div class="cardRight">
                 <div class="managerRow">
-                  <span class="cardItem-Label">Station manager</span>
-                  <span class="cardItem">Lerato Moloi</span>
-                </div>
-                <div class="cardTel">
-                  <span class="cardItem-Label">Telephone</span>
-                  <span class="cardItem">+2711795064</span>
-                </div>
-                <div class="cardEmail">
-                  <span class="cardItem-Label">Email</span>
-                  <span class="cardItem">hilbrow@saps.gov.za</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="station police hoverCard"
-              id="jeppePolice"
-              onclick="openStation()"
-            >
-              <span class="respondersCount">99 </span>
-              <div class="cardLeft">
-                <div class="stationTypeImage">
-                  <img src="../../../src/media/police.svg" alt="" />
-                </div>
-                <span class="cardItem-bold">Jeppe Police Station</span>
-              </div>
-              <div class="cardRight">
-                <div class="managerRow">
-                  <span class="cardItem-Label">Station manager</span>
+                  <span class="cardItem-Label">Hospital manager</span>
                   <span class="cardItem">Lerato Moloi</span>
                 </div>
                 <div class="cardTel">
@@ -125,10 +91,96 @@
           </div>
         </div>
       </div>
+
+      <!-- add user popup -->
+      <div class="modalContainer" id="addUserPopup">
+        <div class="modal">
+          <form action="" id="clusterForm">
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Name of cluster</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterEmail" class="inputGroup">
+              <span class="inputLabel">Cluster email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addClusterEmail"
+                id="addClusterEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addClusterPhone" class="inputGroup">
+              <span class="inputLabel">Cluster Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addClusterPhone"
+                id="addClusterPhone"
+                placeholder="+27"
+              />
+            </label>
+
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior peisa number</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterEmail" class="inputGroup">
+              <span class="inputLabel">Cluster Superior email address</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addClusterEmail"
+                id="addClusterEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+
+            <input
+              type="button"
+              name="generatePassword"
+              id="generatePassword"
+              class="inputField hoverCard"
+              value="Generate Password"
+            />
+
+            <button type="submit" class="actionBtn">Activate CLuster</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="../../../src/modules/pagination.js"></script>
-
-    <script src="./lawEnforcement.js"></script>
+    <script src="../../../src/modules/loader.js"></script>
+    <script src="../../../src/modules/popup.js"></script>
+    <script src="./emergency.js"></script>
   </body>
 </html>

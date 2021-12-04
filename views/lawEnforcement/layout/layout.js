@@ -16,27 +16,17 @@ function activeNav(thePageLink) {
 }
 
 function gotoOverview(thisPage) {
-  var link = "../overview/overview.html";
-  replacecanvascontent(link);
-  activeNav(thisPage);
-}
-function gotoLawEnforcement(thisPage) {
-  var link = "../lawEnforcement/lawEnforcement.html";
-  replacecanvascontent(link);
-  activeNav(thisPage);
-}
-function gotoEmergency(thisPage) {
-  var link = "../emergency/emergency.html";
+  var link = "../law-enforcement/law-enforcement.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
 
-function gotoRescueCalls(thisPage) {
-  var link = "../rescue-calls/rescue-calls.html";
+function gotoRespondersList(thisPage) {
+  var link = "../responders-list/responders-list.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
-function gotoRescues(thisPage) {
+function gotoRescueCalls(thisPage) {
   var link = "../rescue-calls/rescue-calls.html";
   replacecanvascontent(link);
   activeNav(thisPage);
@@ -48,28 +38,13 @@ function gotoTrack(thisPage) {
   activeNav(thisPage);
 }
 
-function gotoStaff(thisPage) {
-  var link = "../staff/staff.html";
-  replacecanvascontent(link);
-  activeNav(thisPage);
-}
-function gotoEndUsers(thisPage) {
-  var link = "../endUsers/endUsers.html";
-  replacecanvascontent(link);
-  activeNav(thisPage);
-}
-function gotoRevenue(thisPage) {
-  var link = "../revenue/revenue.html";
+function gotoUsers(thisPage) {
+  var link = "../users/users.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
 function gotoSettings(thisPage) {
   var link = "../settings/settings.html";
-  replacecanvascontent(link);
-  activeNav(thisPage);
-}
-function gotoNotifications(thisPage) {
-  var link = "../notifications/notifications.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
@@ -83,7 +58,7 @@ function openUserMenu() {
 }
 
 function openProfile() {
-  var link = "../user-profile/user-profile.html";
+  var link = "../users/user-profile/user-profile.html";
   replacecanvascontent(link);
   let thisPage = document.querySelectorAll(".navLink")[3];
   activeNav(thisPage);
@@ -113,28 +88,28 @@ function openUserForm() {
   openModal("addUserPopup");
 }
 var addUserTypeSelector = (function () {
-  var radioOptions = ["cluster", "user"];
+  var radioOptions = ["user", "station"];
 
   customRadio("addUserTypeSelector", radioOptions, "userTypes");
 })();
 
 function showOnlySelected() {
   var userTypes = document.querySelector(".optionSelector").children;
-  var stationForm = document.querySelector("#clusterForm");
+  var stationForm = document.querySelector("#stationForm");
   var userForm = document.querySelector("#userForm");
 
   userTypes[0].addEventListener("click", function () {
-    userForm.style.display = "none";
-    stationForm.style.display = "flex";
-  });
-
-  userTypes[1].addEventListener("click", function () {
     stationForm.style.display = "none";
     userForm.style.display = "flex";
   });
 
+  userTypes[1].addEventListener("click", function () {
+    userForm.style.display = "none";
+    stationForm.style.display = "flex";
+  });
+
   var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
-    userTypes[0].click();
+    userTypes[1].click();
   })();
 }
 showOnlySelected();

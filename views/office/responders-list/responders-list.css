@@ -146,84 +146,33 @@
   gap: 2rem;
 }
 
-.personelSelectionRow {
+.personelCount {
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.personelCountItem {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-.stationPersonel-search {
-  display: flex;
-  position: relative;
-}
-
-.stationPersonel-search .inputField {
-  padding-left: 2rem;
-}
-
-.stationPersonel-search .searchIcon {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translate(0%, -50%);
-  opacity: 00.5;
-}
-
-.stationPersonelList {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.stationPersonelList thead {
-  font-weight: 600;
-  text-align: left;
-  margin-bottom: 0.5rem;
-}
-
-.stationPersonelList thead th {
-  background-color: var(--accent300);
-  padding: 1.5rem 0 1.5rem 0.25rem;
-}
-
-.stationPersonelList tbody td {
-  margin-top: 0.15rem;
-
-  padding: 1rem 0 1rem 0.25rem;
-}
-
-.stationPersonelList tbody tr {
-  cursor: pointer;
-}
-.stationPersonelList tbody tr:hover td {
-  cursor: pointer;
-  background-color: var(--accent150);
-}
-
-.stationPersonelList tbody tr:nth-child(even) {
-  background-color: var(--accent50);
-}
-.userNameAndPic {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.userPic {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: rgb(193, 231, 231);
   overflow: hidden;
+  border-radius: 1rem;
+  width: min(100%, 200px);
+  height: 13rem;
+  box-shadow: var(--shadow200);
 }
 
-.userPic img {
-  object-fit: cover;
-  object-position: center center;
+.personelItemCount {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-.userRowAction {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.personelItemLabel {
+  font-weight: 600;
 }
 
 .rightSide {
@@ -286,6 +235,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+input.infoText {
+  border: none;
 }
 
 .userBtns {

@@ -30,28 +30,22 @@
             <div class="filterMenu">
               <div class="filterClass">
                 <span class="filterClassLabel">Provinces</span>
-                <div class="filterClassOptions provinces"></div>
+                <div class="filterClassOptions provincesFilter"></div>
               </div>
               <div class="filterClass">
                 <span class="filterClassLabel">Metros</span>
-                <div class="filterClassOptions provinces">
-                  <a href="#">Joburg Metro</a>
-                  <a href="#">Ekurhuleni Metro</a>
-                  <a href="#">Tshwane Metro</a>
-                </div>
+                <div class="filterClassOptions metrosFilter"></div>
               </div>
               <div class="filterClass">
                 <span class="filterClassLabel">Clusters</span>
-                <div class="filterClassOptions provinces"></div>
-              </div>
-              <div class="filterClass">
-                <span class="filterClassLabel">Stations</span>
-                <div class="filterClassOptions provinces"></div>
+                <div class="filterClassOptions clustersFilter"></div>
               </div>
             </div>
           </div>
 
-          <a href="#" class="ctaButton">Activate Cluster</a>
+          <a href="#" onclick="openClusterForm()" class="ctaButton"
+            >Activate Cluster</a
+          >
         </div>
 
         <div class="clusters">
@@ -97,10 +91,96 @@
           </div>
         </div>
       </div>
+
+      <!-- add user popup -->
+      <div class="modalContainer" id="addUserPopup">
+        <div class="modal">
+          <form action="" id="clusterForm">
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Name of cluster</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterEmail" class="inputGroup">
+              <span class="inputLabel">Cluster email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addClusterEmail"
+                id="addClusterEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addClusterPhone" class="inputGroup">
+              <span class="inputLabel">Cluster Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addClusterPhone"
+                id="addClusterPhone"
+                placeholder="+27"
+              />
+            </label>
+
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior peisa number</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+            <label for="addClusterEmail" class="inputGroup">
+              <span class="inputLabel">Cluster Superior email address</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addClusterEmail"
+                id="addClusterEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addClusterFullname" class="inputGroup">
+              <span class="inputLabel">Cluster Superior phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addClusterFullname"
+                id="addClusterFullname"
+              />
+            </label>
+
+            <input
+              type="button"
+              name="generatePassword"
+              id="generatePassword"
+              class="inputField hoverCard"
+              value="Generate Password"
+            />
+
+            <button type="submit" class="actionBtn">Activate CLuster</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="../../../src/modules/pagination.js"></script>
-
+    <script src="../../../src/modules/loader.js"></script>
+    <script src="../../../src/modules/popup.js"></script>
     <script src="./emergency.js"></script>
   </body>
 </html>

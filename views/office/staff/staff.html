@@ -16,7 +16,9 @@
   <body>
     <div class="bodyLayout">
       <div class="leftSide">
-        <div class="topRow"><a href="#" class="ctaButton">Add staff</a></div>
+        <div class="topRow">
+          <a href="#" onclick="openUserForm()" class="ctaButton">Add staff</a>
+        </div>
 
         <div class="clusterStaff">
           <span class="usersLabel">Staff members</span>
@@ -155,12 +157,59 @@
           </form>
         </div>
       </div>
+
+      <div class="modalContainer" id="addUserPopup">
+        <div class="modal">
+          <form action="" id="userForm">
+            <label for="addUserFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addUserFullname"
+                id="addUserFullname"
+              />
+            </label>
+            <label for="addUserEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addUserEmail"
+                id="addUserEmail"
+                placeholder="user@aziza.co.za"
+              />
+            </label>
+
+            <label for="addUserPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPhone"
+                id="addUserPhone"
+                placeholder="+27"
+              />
+            </label>
+
+            <label for="addUserRole" class="inputGroup">
+              <span class="inputLabel">User role</span>
+              <select class="inputField" name="addUserRole" id="addUserRole">
+                <option value="admin">Admin</option>
+                <option value="otherLevel">Other level</option>
+              </select>
+            </label>
+
+            <button type="submit" class="actionBtn">Add user</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="../../../src/modules/customRadio.js"></script>
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
-
+    <script src="../../../src/modules/popup.js"></script>
     <script src="./staff.js"></script>
   </body>
 </html>

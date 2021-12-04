@@ -48,67 +48,16 @@
         </div>
 
         <div class="stationPersonel">
-          <div class="personelSelectionRow">
-            <div class="optionSelectorContainer" id="stationPersonelType"></div>
-            <div class="stationPersonel-search">
-              <input
-                type="text"
-                class="inputField"
-                placeholder="Search personel"
-                id="personelSearchInput"
-              />
-              <i class="fa fa-search searchIcon"></i>
+          <div class="personelCount">
+            <div class="personelCountItem">
+              <span class="personelItemCount">56</span>
+              <span class="personelItemLabel">Responders</span>
+            </div>
+            <div class="personelCountItem">
+              <span class="personelItemCount">16</span>
+              <span class="personelItemLabel">Administrators</span>
             </div>
           </div>
-
-          <table class="stationPersonelList paginated">
-            <thead>
-              <tr>
-                <th>Full name</th>
-                <th>Phone number</th>
-                <th>Email</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="userNameAndPic">
-                    <div class="userPic">
-                      <img src="../../../src/media/man.jpg" alt="" />
-                    </div>
-                    <span>Edward Smitten</span>
-                  </div>
-                </td>
-                <td>+27812345678</td>
-                <td>jsmith@saps.co.za</td>
-                <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="userNameAndPic">
-                    <div class="userPic">
-                      <img src="../../../src/media/man.jpg" alt="" />
-                    </div>
-                    <span>John Smith</span>
-                  </div>
-                </td>
-                <td>+27812345678</td>
-                <td>jsmith@saps.co.za</td>
-                <td>
-                  <div class="userRowAction">
-                    <i class="far fa-trash-alt userAction deleteUser"></i>
-                    <i class="fas fa-user-edit userAction editUser"></i>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
 
@@ -126,9 +75,55 @@
             <span class="labelText">Email Address:</span>
           </div>
           <div class="infoTexts">
-            <span class="infoText">Miss Lerato M</span>
-            <span class="infoText">0119585241</span>
-            <span class="infoText">lerato@saps.org.za</span>
+            <input
+              type="text"
+              name="stationManagerName"
+              id="stationManagerName"
+              disabled
+              value="Miss Lerato M"
+              class="infoText"
+            />
+            <input
+              type="text"
+              name="stationManagerNumber"
+              id="stationManagerNumber"
+              disabled
+              value="0119585241"
+              class="infoText"
+            />
+            <input
+              type="email"
+              name="stationManagerEmail"
+              id="stationManagerEmail"
+              disabled
+              value="lerato@saps.org.za"
+              class="infoText"
+            />
+          </div>
+        </div>
+        <div class="userDetails">
+          <span class="heading">Station Details</span>
+          <div class="labelTexts">
+            <span class="labelText">Address:</span>
+            <span class="labelText">Telephone/phone number:</span>
+          </div>
+          <div class="infoTexts">
+            <input
+              type="text"
+              name="stationManagerName"
+              id="stationManagerName"
+              disabled
+              value="21 Hillbrow Avenue, Hillbrow, 2190"
+              class="infoText"
+            />
+            <input
+              type="text"
+              name="stationManagerNumber"
+              id="stationManagerNumber"
+              disabled
+              value="0119585241"
+              class="infoText"
+            />
           </div>
         </div>
 
@@ -142,6 +137,8 @@
             <span>Add</span>
           </a>
         </div>
+
+        .
       </div>
     </div>
 

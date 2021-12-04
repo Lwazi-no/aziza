@@ -3,46 +3,37 @@
 @import url("../../../src/CommonCSS/customRadio.css");
 @import url("../../../src/CommonCSS/inputs.css");
 @import url("../../../src/CommonCSS/switch.css");
-@import url("../../../src/CommonCSS/popup.css");
+
 .bodyLayout {
   display: grid;
-  grid-gap: 0.5rem;
   height: 100%;
+  grid-template-rows: 4rem 1fr;
   grid-template-columns: 2.5fr 1fr;
-  grid-template-areas: "leftSide leftSide";
-  background-color: #f7f8fa70;
+  grid-template-areas:
+    "backBtn backBtn "
+    "leftSide leftSide";
+  transition: all 250ms ease-in-out;
+}
+.backBtn {
+  grid-area: backBtn;
+  display: flex;
+  gap: 1rem;
+  color: var(--grey600);
+  align-self: center;
+  margin-left: 1rem;
+  transition: all 150ms ease-in-out;
+}
+
+.backBtn:hover {
+  color: var(--accent600);
+  gap: 1.5rem;
 }
 
 .leftSide {
   grid-area: leftSide;
-  display: grid;
-  grid-template-rows: 50px 7fr 50px;
-  padding: 1rem;
-  grid-gap: 1rem;
-}
 
-.rightSide {
-  grid-area: rightSide;
-  background-color: var(--grey100);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  gap: 2rem;
-}
-
-.displayNone {
-  display: none;
-}
-.topRow {
-  display: flex;
-  justify-content: end;
-  height: fit-content;
-}
-.ctaButton {
-  display: inline-block;
-  width: fit-content;
-  height: fit-content;
+  padding: 1rem 1rem;
+  transition: width 150ms ease-in-out;
 }
 
 .stationPersonel {
@@ -53,9 +44,8 @@
 
 .personelSelectionRow {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .stationPersonel-search {
@@ -112,20 +102,6 @@
 .stationPersonelList tbody tr:nth-child(even) {
   background-color: var(--accent50);
 }
-
-.clusterStaff,
-.clusterUsers {
-  padding: 1rem 0;
-}
-
-.usersLabel {
-  font-weight: 600;
-}
-.userStatusIndicator {
-  padding: 0.5rem 1rem;
-  background-color: var(--green800);
-  border-radius: 4px;
-}
 .userNameAndPic {
   display: flex;
   gap: 1rem;
@@ -144,27 +120,21 @@
   object-position: center center;
 }
 
-.sendMsgBtn {
-  display: inline-flex;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  gap: 1rem;
-  color: black;
-  border: 1px solid var(--accent600);
-  background-color: var(--accent600);
-}
-
-.sendMsgBtn:hover {
-  border: 1px solid black;
-  background-color: white;
-}
 .userRowAction {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-/* rightSide */
+.rightSide {
+  grid-area: rightSide;
+  background-color: var(--grey100);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+}
 
 .userPicture {
   width: 10rem;
@@ -217,57 +187,4 @@
   background-color: var(--accent400);
   padding: 0.75rem 3rem;
   border-radius: 0.3rem;
-}
-
-/* add user popup */
-
-#addUserPopup .modal {
-  padding: 3rem 10rem;
-  min-height: 69vh;
-  background-color: rgba(255, 255, 255, 1);
-}
-#userForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  width: 400px;
-  max-width: 100%;
-  margin-top: 3rem;
-}
-
-#clusterForm {
-  display: none;
-}
-
-#userForm button {
-  margin-top: 1rem;
-}
-
-#generatePassword {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--grey500);
-  width: 100% !important;
-  cursor: pointer;
-  color: white;
-}
-
-.actionBtn {
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
-  background-color: var(--accent600);
-  color: white;
-  max-width: min(100%, 150px);
-  display: grid;
-  place-items: center;
-  transition: all 350ms ease-in-out;
-  align-self: center;
-}
-
-.actionBtn:hover {
-  border: 1px solid var(--accent600);
-  background-color: white;
-  color: black;
-  transform: scale(0.985);
 }

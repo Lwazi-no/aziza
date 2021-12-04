@@ -42,8 +42,14 @@
   border-radius: 50%;
   margin-left: 2rem;
 }
-.endUserStatus.inactive {
-  background-color: var(--red500);
+.endUserStatus.okay {
+  background-color: green;
+}
+.endUserStatus.health {
+  background-color: orange;
+}
+.endUserStatus.rescue {
+  background-color: red;
 }
 
 .stationPersonel {

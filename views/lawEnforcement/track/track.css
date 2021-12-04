@@ -1,0 +1,145 @@
+@import url("../../../src/CommonCSS/root.css");
+@import url("../../../src/CommonCSS/pagination.css");
+@import url("../../../src/CommonCSS/customRadio.css");
+@import url("../../../src/CommonCSS/inputs.css");
+@import url("../../../src/CommonCSS/switch.css");
+
+.bodyLayout {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 2.5fr;
+  grid-template-areas: "leftSide rightSide";
+  transition: all 250ms ease-in-out;
+}
+
+.leftSide {
+  grid-area: leftSide;
+  background-color: white;
+  padding: 1rem 1rem;
+  transition: width 150ms ease-in-out;
+  margin-top: 2rem;
+}
+
+.stationPersonel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.personelSelectionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trackRespondersLabel {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.stationPersonel-search {
+  display: flex;
+  position: relative;
+}
+
+.stationPersonel-search .inputField {
+  padding-left: 2rem;
+}
+
+.stationPersonel-search .searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
+  opacity: 00.5;
+}
+
+.stationPersonelList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stationPersonelList thead {
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.stationPersonelList thead th {
+  background-color: var(--accent300);
+  padding: 1.5rem 0 1.5rem 0.25rem;
+}
+
+.stationPersonelList tbody td {
+  margin-top: 0.15rem;
+
+  padding: 1rem 0 1rem 0.25rem;
+}
+
+.stationPersonelList tbody td.active {
+  background-color: var(--accent150);
+}
+
+.stationPersonelList tbody tr {
+  cursor: pointer;
+}
+.stationPersonelList tbody tr:hover td {
+  cursor: pointer;
+  background-color: var(--accent150);
+}
+
+.stationPersonelList tbody tr:nth-child(even) {
+  background-color: var(--accent50);
+}
+.userNameAndPic {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.userPic {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userPic img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.rightSide {
+  grid-area: rightSide;
+  background-color: var(--grey400);
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.fa-expand {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  z-index: 2;
+}
+
+.fa-expand:hover {
+  color: black;
+  opacity: 1;
+  transform: scale(1.18);
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

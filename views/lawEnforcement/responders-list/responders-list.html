@@ -10,16 +10,43 @@
       integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./endUsers.css" />
+    <link rel="stylesheet" href="./responders-list.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="bodyLayout">
-      <a href="#" class="backBtn" onclick="goBack()">
-        <i class="fas fa-chevron-left"></i>
-        <span>Back</span>
-      </a>
       <div class="leftSide">
+        <div class="stationStatsContainer">
+          <span class="stationStatsHeader">Hilbrow Station Statistics</span>
+
+          <div class="attendedCallsContainer">
+            <div class="attendedCallsBox absoluteCenter">
+              <span class="attendedLabel">Total Attended Calls</span>
+              <span class="number">339,259</span>
+            </div>
+            <div class="dashedLine"></div>
+          </div>
+
+          <div class="labelsRow">
+            <div class="centeredCol">
+              <div class="coloredCircle rescue"></div>
+              <span class="chartNumber">1606</span>
+              <span class="chartLabel">Rescue calls</span>
+            </div>
+
+            <div class="centeredCol">
+              <div class="coloredCircle nonRescue"></div>
+              <span class="chartNumber">146</span>
+              <span class="chartLabel">Non Rescue calls</span>
+            </div>
+          </div>
+
+          <div class="callsChart">
+            <div class="callsChart-rescue"></div>
+            <div class="callsChart-nonRescue"></div>
+          </div>
+        </div>
+
         <div class="stationPersonel">
           <div class="personelSelectionRow">
             <div class="optionSelectorContainer" id="stationPersonelType"></div>
@@ -37,15 +64,14 @@
           <table class="stationPersonelList paginated">
             <thead>
               <tr>
-                <th>User Status</th>
                 <th>Full name</th>
-                <th>Account Status</th>
+                <th>Phone number</th>
+                <th>Email</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="subscribed" onclick="openUser(this)">
-                <td><div class="endUserStatus rescue"></div></td>
+              <tr>
                 <td>
                   <div class="userNameAndPic">
                     <div class="userPic">
@@ -54,9 +80,8 @@
                     <span>Edward Smitten</span>
                   </div>
                 </td>
-
-                <td>Active</td>
-
+                <td>+27812345678</td>
+                <td>jsmith@saps.co.za</td>
                 <td>
                   <div class="userRowAction">
                     <i class="far fa-trash-alt userAction deleteUser"></i>
@@ -64,8 +89,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="notSubscribed" onclick="openUser(this)">
-                <td><div class="endUserStatus inactive"></div></td>
+              <tr>
                 <td>
                   <div class="userNameAndPic">
                     <div class="userPic">
@@ -74,7 +98,8 @@
                     <span>John Smith</span>
                   </div>
                 </td>
-
+                <td>+27812345678</td>
+                <td>jsmith@saps.co.za</td>
                 <td>
                   <div class="userRowAction">
                     <i class="far fa-trash-alt userAction deleteUser"></i>
@@ -92,16 +117,6 @@
           <img src="../../../src/media/man.jpg" alt="" />
         </div>
         <div class="userDetails">
-          <div class="callsRow">
-            <span class="trueCalls">True Calls 11</span>
-            <span class="falseCalls">False Calls 12</span>
-            <span class="totalCalls">Total Rescue Calls 39</span>
-          </div>
-
-          <div class="userBtnsRow">
-            <a href="#" class="secondaryBtn hoverCard">Edit User</a>
-            <a href="#" class="secondaryBtn hoverCard">Send Notification</a>
-          </div>
           <form action="" class="updateUserForm">
             <div class="inputsContainer">
               <div class="formRow">
@@ -133,37 +148,19 @@
               </div>
 
               <div class="formRow">
-                <label for="location">Location</label>
+                <label for="role">Role</label>
                 <input
                   type="text"
-                  class="noBorder"
-                  name="location"
-                  id="location"
-                  value="21 Smit Street, JHB"
-                  disabled
+                  name="role"
+                  id="role"
+                  list="rolesList"
+                  value="Responder"
                 />
-              </div>
-              <div class="formRow">
-                <label for="subscription">Subscription</label>
-                <input
-                  type="text"
-                  class="noBorder"
-                  name="subscription"
-                  id="subscription"
-                  value="Premium"
-                  disabled
-                />
-              </div>
-              <div class="formRow">
-                <label for="status">Status</label>
-                <input
-                  type="text"
-                  class="noBorder"
-                  name="status"
-                  id="status"
-                  value="Help Alert"
-                  disabled
-                />
+
+                <datalist id="rolesList">
+                  <option value="Responer"></option>
+                  <option value="Something else"></option>
+                </datalist>
               </div>
               <div class="formRow">
                 <span class="labelSpan">Disable account?</span>
@@ -174,7 +171,7 @@
               </div>
             </div>
 
-            <button type="submit" class="hoverCard">Save</button>
+            <button type="submit">Save</button>
           </form>
         </div>
       </div>
@@ -184,6 +181,6 @@
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
 
-    <script src="./endUsers.js"></script>
+    <script src="./responders-list.js"></script>
   </body>
 </html>

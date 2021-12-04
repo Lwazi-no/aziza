@@ -26,3 +26,7 @@ function openUser(selectedUser) {
   allUsers.forEach(removeActive);
   thisUser.forEach(addActive);
 }
+
+function openUserForm() {
+  openModal("addUserPopup");
+}
