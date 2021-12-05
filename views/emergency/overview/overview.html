@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+      integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./overview.css" />
+    <title>Overview</title>
+  </head>
+  <body>
+    <div class="bodyLayout">
+      <div class="optionSelectorContainer" id="thisRadio"></div>
+
+      <div class="clusters">
+        <div class="cluster" id="joburgCluster">
+          <div class="clusterName">Joburg Cluster</div>
+          <div class="clusterVr"></div>
+          <div class="clusterContact">
+            <span class="cardItem-Label">Cluster manager</span>
+            <span class="cardItem">Lerato Moloi</span>
+            <span class="cardItem">+2711795064</span>
+          </div>
+        </div>
+      </div>
+      <div class="stationsContainer">
+        <div class="stations paginated">
+          <div
+            class="station health hoverCard"
+            id="hillbrowStation"
+            onclick="openStation()"
+          >
+            <div class="cardLeft">
+              <div class="stationTypeImage"></div>
+              <span class="cardItem-bold">Fionna Wade Health Center</span>
+            </div>
+            <div class="cardRight">
+              <div class="managerRow">
+                <span class="cardItem-Label">Hospital manager</span>
+                <span class="cardItem">Lerato Moloi</span>
+              </div>
+              <div class="cardTel">
+                <span class="cardItem-Label">Telephone</span>
+                <span class="cardItem">+2711795064</span>
+              </div>
+              <div class="cardEmail">
+                <span class="cardItem-Label">Email</span>
+                <span class="cardItem">hilbrow@saps.gov.za</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../../src/modules/pagination.js"></script>
+    <script src="./overview.js"></script>
+  </body>
+</html>

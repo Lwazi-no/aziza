@@ -67,14 +67,14 @@
 }
 
 .casesList tbody tr {
-  cursor: pointer;
+  /* cursor: pointer; */
   border: 1px solid var(--grey400);
   border-radius: 0.5rem;
 }
-.casesList tbody tr:hover td {
+/* .casesList tbody tr:hover td {
   cursor: pointer;
   background-color: var(--accent150);
-}
+} */
 
 .casesList tbody tr:nth-child(even) {
   background-color: var(--accent50);
@@ -153,6 +153,10 @@
 
 .respondersHeader {
   font-weight: 600;
+}
+
+.victimToBeAssigned {
+  opacity: 0.6;
 }
 
 .respondersList {

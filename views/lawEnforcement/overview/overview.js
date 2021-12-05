@@ -1,7 +1,3 @@
-var radioOptions = ["EmergencyServices", "Users"];
-
-customRadio("thisRadio", radioOptions, "services");
-
 function stationIcons() {
   var healthStations = document.querySelectorAll(".station.health");
   var policeStations = document.querySelectorAll(".station.police");

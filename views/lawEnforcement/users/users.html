@@ -15,10 +15,9 @@
   </head>
   <body>
     <div class="bodyLayout">
-      <a href="#" class="backBtn" onclick="goBack()">
-        <i class="fas fa-chevron-left"></i>
-        <span>Back</span>
-      </a>
+      <div class="row">
+        <a href="#" class="actionBtn" onclick="openUserForm()">Add users</a>
+      </div>
       <div class="leftSide">
         <div class="stationPersonel">
           <div class="personelSelectionRow">
@@ -74,7 +73,7 @@
                 <td>jsmith@saps.co.za</td>
                 <td>Admin</td>
                 <td>
-                  <span class="userStatus active">Active</span>
+                  <span class="userStatus disabled">Active</span>
                 </td>
               </tr>
             </tbody>
@@ -116,14 +115,24 @@
                   value="johns@saps.co.za"
                 />
               </div>
+              <div class="formRow">
+                <label for="persalNumber">Persal Number</label>
+                <input type="text" name="persalNumber" id="persalNumber" />
+              </div>
 
               <div class="formRow">
                 <label for="role">Role</label>
-                <input type="text" name="role" id="role" list="rolesList" />
+                <input
+                  type="text"
+                  name="role"
+                  id="role"
+                  list="rolesList"
+                  value="Responder"
+                />
 
                 <datalist id="rolesList">
-                  <option value="Responder"></option>
-                  <option value="Admin"></option>
+                  <option value="Responer"></option>
+                  <option value="Something else"></option>
                 </datalist>
               </div>
               <div class="formRow">
@@ -139,11 +148,121 @@
           </form>
         </div>
       </div>
+
+      <!-- add user popup -->
+      <div class="modalContainer" id="addUserPopup">
+        <div class="modal">
+          <div class="optionSelectorContainer" id="addUserTypeSelector"></div>
+
+          <form action="" id="userForm">
+            <label for="addUserFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addUserFullname"
+                id="addUserFullname"
+              />
+            </label>
+            <label for="addUserEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addUserEmail"
+                id="addUserEmail"
+                placeholder="+27"
+              />
+            </label>
+
+            <label for="addUserPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPhone"
+                id="addUserPhone"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addUserPeisa" class="inputGroup">
+              <span class="inputLabel">Peisa number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserPeisa"
+                id="addUserPeisa"
+              />
+            </label>
+            <label for="addUserWorkId" class="inputGroup">
+              <span class="inputLabel">Work ID</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addUserWorkId"
+                id="addUserWorkId"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addUserRole" class="inputGroup">
+              <span class="inputLabel">User role</span>
+              <select class="inputField" name="addUserRole" id="addUserRole">
+                <option value="responder">Responder</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+
+            <button type="submit" class="actionBtn">Add user</button>
+          </form>
+          <form action="" id="stationForm">
+            <label for="addStationFullname" class="inputGroup">
+              <span class="inputLabel">Full name</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addStationFullname"
+                id="addStationFullname"
+              />
+            </label>
+            <label for="addStationEmail" class="inputGroup">
+              <span class="inputLabel">Email</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addStationEmail"
+                id="addStationEmail"
+                placeholder="+27"
+              />
+            </label>
+            <label for="addStationPhone" class="inputGroup">
+              <span class="inputLabel">Phone number</span>
+              <input
+                class="inputField"
+                type="number"
+                name="addStationPhone"
+                id="addStationPhone"
+                placeholder="+27"
+              />
+            </label>
+
+            <input
+              type="button"
+              name="generatePassword"
+              id="generatePassword"
+              class="inputField hoverCard"
+              value="Generate Password"
+            />
+
+            <button type="submit" class="actionBtn">Add user</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="../../../src/modules/customRadio.js"></script>
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
+    <script src="../../../src/modules/popup.js"></script>
 
     <script src="./users.js"></script>
   </body>

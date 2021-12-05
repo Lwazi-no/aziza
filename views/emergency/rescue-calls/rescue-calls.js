@@ -1,5 +1,5 @@
 var caseTypes = (function () {
-  var radioOptions = ["ActiveCases", "AttendedCases"];
+  var radioOptions = ["Active Calls", "Attended Calls"];
   customRadio("stationPersonelType", radioOptions, "personelType");
 })();
 
@@ -37,7 +37,7 @@ function showOnlySelected() {
   </tr>
   <tr>
     <td>
-      <span class="caseStatus active">Active</span>
+      <span class="caseStatus active">Unassigned</span>
     </td>
     <td>
       <div class="userNameAndPic">
@@ -57,7 +57,7 @@ function showOnlySelected() {
 <tr>
   <th>Date & time</th>
   <th>Victim Fullnames</th>
-  <th>Incident</th>
+  
   <th>Responder</th>
 </tr>
 </thead>
@@ -74,9 +74,7 @@ function showOnlySelected() {
       <span>Edward Smitten</span>
     </div>
   </td>
-  <td>
-    <span class="incidentType">Rape</span>
-  </td>
+  
   <td><span class="attender">Thabo Neo</span></td>
 </tr>
 </tbody>`;

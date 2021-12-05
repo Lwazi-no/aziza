@@ -4,8 +4,8 @@ var generateUserTypeOptions = (function () {
   customRadio("stationPersonelType", radioOptions, "services");
 })();
 
-function goBack() {
-  window.location.replace(document.referrer);
+function openUserForm() {
+  openModal("addUserPopup");
 }
 
 function openUser(selectedUser) {

@@ -16,7 +16,7 @@ function activeNav(thePageLink) {
 }
 
 function gotoOverview(thisPage) {
-  var link = "../law-enforcement/law-enforcement.html";
+  var link = "../overview/overview.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }
@@ -43,8 +43,8 @@ function gotoUsers(thisPage) {
   replacecanvascontent(link);
   activeNav(thisPage);
 }
-function gotoSettings(thisPage) {
-  var link = "../settings/settings.html";
+function gotoTerms(thisPage) {
+  var link = "../terms/terms.html";
   replacecanvascontent(link);
   activeNav(thisPage);
 }

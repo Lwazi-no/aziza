@@ -36,14 +36,16 @@ img {
   align-items: center;
 }
 
-.logoContainer {
-  height: 50px;
-  width: 50px;
-}
 .dashboardName {
   font-weight: 600;
   font-size: 1.5rem;
 }
+
+.logoContainer {
+  height: 50px;
+  width: 50px;
+}
+
 .pageSearch {
   border-radius: 20px;
   height: 40px;
