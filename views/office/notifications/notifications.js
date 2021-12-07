@@ -1,37 +1,4 @@
-var notificationsHtml = ` <div class="notifyContainer">
-<div class="sendNotificationWrapper">
-    <span class="pageHeader">Send a notification</span>
-    <form action="" class="sendNoteForm">
-        <div class="selectSociety">
-            <label for="societiesList">Choose recipients:</label>
-            <select multiple data-placeholder="Select recipients">                      
-              <option value="Systemwide">Systemwide</option>
-              <option value="Law Enforcement">Law Enforcement</option>
-              <option value="Emergency Healthcare">Emergency Healthcare</option>
-              <option value="Users">Users</option>
-              <option value="Aziza staff">Aziza staff</option>
-             
-             </select>
-
-            <div class="selectedSocieties ">
-            </div>
-        </div>
-        <div class="typeMessage ">
-            <label for="notificationMessage ">Type notification</label>
-            <textarea id="notificationMessage " class="inputFieldArea" name="notificationMessage " id=" " cols="30 " rows="10 "></textarea>
-        </div>
-        <div class="sendTheNotification ">
-
-            <button type="submit" value="Send">Send</Button>
-        </div>
-    </form>
-</div>
-
-</div>`;
-
 var notificationsFunction = function () {
-  document.querySelector("#notifications").innerHTML = notificationsHtml;
-
   var select = document.querySelector("select[multiple]");
   var selectOptions = select.querySelectorAll("option");
 

@@ -270,3 +270,42 @@ var paginatePersonel = (function () {
 function openClusterForm() {
   openModal("addUserPopup");
 }
+
+function stationForm() {
+  var provinceList = document.querySelector("#provinceList");
+  var metroList = document.querySelector("#metroList");
+  var clusterList = document.querySelector("#clusterList");
+  var stationList = document.querySelector("#stationList");
+
+  stationsList.forEach(function (stationsListItem) {
+    provinceList.insertAdjacentHTML(
+      "beforeend",
+      `<option value="${stationsListItem.province}" id="${stationsListItem.province}"></option>`
+    );
+
+    var selectedProvince = document.querySelector(
+      `#${stationsListItem.province}`
+    );
+
+    selectedProvince.addEventListener("click", (e) => {
+      let clickedProvince = stationsList.find(
+        ({ province }) => province === e.target.innerText
+      );
+      let provinceMetros = clickedProvince.metros;
+
+      provinceMetros.forEach(function (provinceMetro) {
+        metroList.insertAdjacentHTML(
+          "beforeend",
+          `<option value="${provinceMetro.metroName.replace(
+            /\s+/g,
+            ""
+          )}"></option>`
+        );
+      });
+    });
+  });
+
+  console.log(metroList);
+}
+
+stationForm();

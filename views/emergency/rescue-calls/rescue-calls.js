@@ -32,7 +32,7 @@ function showOnlySelected() {
       </div>
     </td>
     <td>
-      <a href="#" class="userRowAction track">Track</a>
+      <a href="../track/track.html"  class="userRowAction track">Track</a>
     </td>
   </tr>
   <tr>

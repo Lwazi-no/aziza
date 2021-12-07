@@ -4,10 +4,6 @@ var generateUserTypeOptions = (function () {
   customRadio("stationPersonelType", radioOptions, "services");
 })();
 
-function goBack() {
-  window.location.replace(document.referrer);
-}
-
 function openUser(selectedUser) {
   var allUsers = document.querySelectorAll("tbody tr td");
   var rightSide = document.querySelector(".rightSide");
@@ -37,6 +33,10 @@ function openUser(selectedUser) {
 
   allUsers.forEach(removeActive);
   thisUser.forEach(addActive);
+}
+
+function openNotificationForm() {
+  openModal("notificationForm");
 }
 
 var paginatePersonel = (function () {

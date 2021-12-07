@@ -44,7 +44,7 @@
           </div>
 
           <a href="#" onclick="openClusterForm()" class="ctaButton"
-            >Activate Cluster</a
+            >Add station</a
           >
         </div>
 
@@ -95,72 +95,105 @@
       <!-- add user popup -->
       <div class="modalContainer" id="addUserPopup">
         <div class="modal">
+          <span class="formHeader">Add Station</span>
           <form action="" id="clusterForm">
-            <label for="addClusterFullname" class="inputGroup">
-              <span class="inputLabel">Name of cluster</span>
+            <label for="addStationProvince" class="inputGroup">
+              <span class="inputLabel">Province</span>
               <input
                 class="inputField"
                 type="text"
-                name="addClusterFullname"
-                id="addClusterFullname"
+                list="provinceList"
+                name="addStationProvince"
+                id="addStationProvince"
               />
+
+              <datalist id="provinceList"> </datalist>
             </label>
-            <label for="addClusterEmail" class="inputGroup">
-              <span class="inputLabel">Cluster email</span>
+            <label for="addstationMetro" class="inputGroup">
+              <span class="inputLabel">Metro</span>
               <input
                 class="inputField"
-                type="email"
-                name="addClusterEmail"
-                id="addClusterEmail"
-                placeholder="+27"
+                type="text"
+                list="metroList"
+                name="addstationMetro"
+                id="addstationMetro"
+              />
+
+              <datalist id="metroList"> </datalist>
+            </label>
+            <label for="addStationCluster" class="inputGroup">
+              <span class="inputLabel">Cluster</span>
+              <input
+                class="inputField"
+                type="text"
+                list="clusterList"
+                name="addStationCluster"
+                id="addStationCluster"
+              />
+
+              <datalist id="clusterList"> </datalist>
+            </label>
+            <label for="addStationStation" class="inputGroup">
+              <span class="inputLabel">Station</span>
+              <input
+                class="inputField"
+                type="text"
+                list="stationList"
+                name="addStationStation"
+                id="addStationStation"
+              />
+
+              <datalist id="stationList"> </datalist>
+            </label>
+
+            <span class="formHeader">Station Details</span>
+            <label for="addStationAddress" class="inputGroup">
+              <span class="inputLabel">Address</span>
+              <input
+                class="inputField"
+                type="text"
+                name="addStationAddress"
+                id="addStationAddress"
               />
             </label>
-            <label for="addClusterPhone" class="inputGroup">
-              <span class="inputLabel">Cluster Phone number</span>
+            <label for="addStationTelephone" class="inputGroup">
+              <span class="inputLabel">Station Phone number</span>
               <input
                 class="inputField"
                 type="number"
-                name="addClusterPhone"
-                id="addClusterPhone"
+                name="addStationTelephone"
+                id="addStationTelephone"
                 placeholder="+27"
               />
             </label>
 
-            <label for="addClusterFullname" class="inputGroup">
-              <span class="inputLabel">Cluster Superior full name</span>
+            <span class="formHeader">Station Manager</span>
+
+            <label for="addStationManagerName" class="inputGroup">
+              <span class="inputLabel">Manager full name</span>
               <input
                 class="inputField"
                 type="text"
-                name="addClusterFullname"
-                id="addClusterFullname"
+                name="addStationManagerName"
+                id="addStationManagerName"
               />
             </label>
-            <label for="addClusterFullname" class="inputGroup">
-              <span class="inputLabel">Cluster Superior peisa number</span>
-              <input
-                class="inputField"
-                type="text"
-                name="addClusterFullname"
-                id="addClusterFullname"
-              />
-            </label>
-            <label for="addClusterEmail" class="inputGroup">
-              <span class="inputLabel">Cluster Superior email address</span>
-              <input
-                class="inputField"
-                type="email"
-                name="addClusterEmail"
-                id="addClusterEmail"
-                placeholder="+27"
-              />
-            </label>
-            <label for="addClusterFullname" class="inputGroup">
-              <span class="inputLabel">Cluster Superior phone number</span>
+            <label for="addStationManagerTelephone" class="inputGroup">
+              <span class="inputLabel">Manager Phone number</span>
               <input
                 class="inputField"
                 type="number"
-                name="addClusterFullname"
-                id="addClusterFullname"
+                name="addStationManagerTelephone"
+                id="addStationManagerTelephone"
+              />
+            </label>
+            <label for="addStationManagerEmail" class="inputGroup">
+              <span class="inputLabel">Manager email address</span>
+              <input
+                class="inputField"
+                type="email"
+                name="addStationManagerEmail"
+                id="addStationManagerEmail"
               />
             </label>
 

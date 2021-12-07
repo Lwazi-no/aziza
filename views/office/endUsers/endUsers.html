@@ -78,15 +78,11 @@
         </div>
         <div class="userDetails">
           <div class="callsRow">
-            <span class="trueCalls">True Calls 11</span>
+            <span class="trueCalls">Valid Calls 11</span>
             <span class="falseCalls">False Calls 12</span>
             <span class="totalCalls">Total Rescue Calls 39</span>
           </div>
 
-          <div class="userBtnsRow">
-            <a href="#" class="secondaryBtn hoverCard">Edit User</a>
-            <a href="#" class="secondaryBtn hoverCard">Send Notification</a>
-          </div>
           <form action="" class="updateUserForm">
             <div class="inputsContainer">
               <div class="formRow">
@@ -159,15 +155,68 @@
               </div>
             </div>
 
-            <button type="submit" class="hoverCard">Save</button>
+            <div class="userBtnsRow">
+              <a
+                href="#"
+                class="secondaryBtn hoverCard"
+                onclick="openNotificationForm()"
+                >Send Notification</a
+              >
+              <button type="submit" class="hoverCard">Save</button>
+            </div>
           </form>
         </div>
+      </div>
+
+      <div class="modalContainer" id="notificationForm">
+        <form action="" class="modal">
+          <span class="sendNotificationTo"
+            >Send Notifdication to : <br />
+            <strong>John Smith</strong></span
+          >
+          <div class="notificationType">
+            <span class="notificationTypeLabel"
+              >Select Notification Type :<br
+            /></span>
+
+            <input
+              type="radio"
+              id="general"
+              name="notificationType"
+              value="General"
+            />
+            <label for="general">General</label><br />
+            <input
+              type="radio"
+              id="safetyTips"
+              name="notificationType"
+              value="Safety Tips"
+            />
+            <label for="safetyTips">Safety Tips</label><br />
+          </div>
+
+          <div class="typeMessage">
+            <label for="notificationMessage ">Type notification</label>
+            <textarea
+              id="notificationMessage "
+              class="inputFieldArea"
+              name="notificationMessage "
+              id=" "
+              cols="30 "
+              rows="10 "
+            ></textarea>
+          </div>
+          <div class="sendTheNotification">
+            <button type="submit" value="Send">Send</button>
+          </div>
+        </form>
       </div>
     </div>
 
     <script src="../../../src/modules/customRadio.js"></script>
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
+    <script src="../../../src/modules/popup.js"></script>
 
     <script src="./endUsers.js"></script>
   </body>

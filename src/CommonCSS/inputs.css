@@ -13,6 +13,9 @@
   border-radius: 3px;
   padding-left: 0.5rem;
 }
+textarea {
+  padding: 0.5rem;
+}
 
 .inputField:focus {
   outline: 1px solid var(--accent400);

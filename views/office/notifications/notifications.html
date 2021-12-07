@@ -17,18 +17,70 @@
   </head>
   <body>
     <div class="bodyLayout">
-      <div class="optionSelectorContainer" id="stationPersonelType"></div>
-
       <div class="settingsContent">
-        <div class="wysiwyg" id="terms"></div>
-        <div class="wysiwyg" id="privacy"></div>
-        <div class="notifications" id="notifications"></div>
+        <div class="notifications" id="notifications">
+          <div class="notifyContainer">
+            <div class="sendNotificationWrapper">
+              <span class="pageHeader">Send a notification</span>
+              <form action="" class="sendNoteForm">
+                <div class="selectSociety">
+                  <label for="societiesList">Choose recipients:</label>
+                  <select multiple data-placeholder="Select recipients">
+                    <option value="Systemwide">Systemwide</option>
+                    <option value="Law Enforcement">Law Enforcement</option>
+                    <option value="Emergency Healthcare">
+                      Emergency Healthcare
+                    </option>
+                    <option value="Users">Users</option>
+                    <option value="Aziza staff">Aziza staff</option>
+                  </select>
+
+                  <div class="selectedSocieties"></div>
+                </div>
+
+                <div class="notificationType">
+                  <span class="notificationTypeLabel"
+                    >Select Notification Type :<br
+                  /></span>
+
+                  <input
+                    type="radio"
+                    id="general"
+                    name="notificationType"
+                    value="General"
+                  />
+                  <label for="general">General</label><br />
+                  <input
+                    type="radio"
+                    id="safetyTips"
+                    name="notificationType"
+                    value="Safety Tips"
+                  />
+                  <label for="safetyTips">Safety Tips</label><br />
+                </div>
+
+                <div class="typeMessage">
+                  <label for="notificationMessage ">Type notification</label>
+                  <textarea
+                    id="notificationMessage "
+                    class="inputFieldArea"
+                    name="notificationMessage "
+                    id=" "
+                    cols="30 "
+                    rows="10 "
+                  ></textarea>
+                </div>
+                <div class="sendTheNotification">
+                  <button type="submit" value="Send">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="../../../src/modules/customRadio.js"></script>
-    <script src="../../../src/modules/searchList.js"></script>
-    <script src="../../../src/modules/pagination.js"></script>
-    <script src="../../../src/modules/wyswyg.js"></script>
+
     <script src="./notifications.js"></script>
   </body>
 </html>
+00

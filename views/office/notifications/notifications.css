@@ -51,21 +51,34 @@
   max-width: 400px;
 }
 
+.notificationType {
+  margin: 1rem 0;
+}
+
+.notificationType input {
+  cursor: pointer;
+}
+
+#general {
+  margin: 1rem 0 0.75rem 0;
+}
+
 .typeMessage {
   margin: 2rem 0.1rem;
   width: 100%;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 .typeMessage textarea {
-  width: min(800px, 95%);
+  width: min(1800px, 100%);
+  min-height: 300px;
 }
 
 #notificationMessage {
   padding: 0.375rem;
+  max-width: 100%;
 }
 
 .sendTheNotification button {

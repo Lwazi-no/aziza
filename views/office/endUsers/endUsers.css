@@ -3,6 +3,7 @@
 @import url("../../../src/CommonCSS/customRadio.css");
 @import url("../../../src/CommonCSS/inputs.css");
 @import url("../../../src/CommonCSS/switch.css");
+@import url("../../../src/CommonCSS/popup.css");
 
 .bodyLayout {
   display: grid;
@@ -194,6 +195,7 @@
 .userBtnsRow {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .secondaryBtn {
@@ -243,4 +245,59 @@
   background-color: var(--accent400);
   padding: 0.75rem 3rem;
   border-radius: 0.3rem;
+}
+
+/* Send Notification */
+
+#notificationForm .modal {
+  width: min(500px, 100%);
+}
+
+.sendNotificationTo {
+  font-size: 1.5rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+.notificationType {
+  margin: 1rem 0;
+}
+
+.notificationType input {
+  cursor: pointer;
+}
+
+#general {
+  margin: 1rem 0 0.75rem 0;
+}
+
+.typeMessage {
+  margin: 2rem 0.1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.typeMessage textarea {
+  width: min(1800px, 100%);
+  min-height: 300px;
+}
+
+#notificationMessage {
+  padding: 0.375rem;
+  max-width: 100%;
+}
+
+.sendTheNotification button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-color: var(--accent600);
+  cursor: pointer;
 }
