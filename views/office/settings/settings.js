@@ -1,5 +1,5 @@
 var generateUserTypeOptions = (function () {
-  var radioOptions = ["TermsOfUse", "PrivacyPolicy"];
+  var radioOptions = ["Terms Of Use", "Privacy Policy"];
 
   customRadio("stationPersonelType", radioOptions, "services");
 })();
