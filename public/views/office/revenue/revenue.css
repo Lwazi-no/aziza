@@ -80,6 +80,7 @@
 
 .statsItem-chart {
   display: none;
+  /* This is to remove the line graph */
   width: 100%;
   position: relative;
 }
