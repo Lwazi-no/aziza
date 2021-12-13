@@ -1,51 +1,160 @@
 @import url("../../../src/CommonCSS/root.css");
 .bodyLayout {
   display: grid;
-
-  height: 100%;
-  background-color: #f7f8fa70;
-}
-
-.revenueTiles {
-  display: flex;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  grid-template-rows: 60px 1fr;
   gap: 2rem;
-  margin: 2rem 0;
-
-  justify-content: center;
+  height: 100%;
+  padding: 3rem;
 }
 
-.revenueTile {
-  width: 350px;
-  height: 150px;
-  box-shadow: var(--shadow200);
+.selector {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 300px;
+  padding: 0 3rem 0 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem;
+}
+
+.selectorIcon {
+  color: black;
+}
+
+.selectOptions {
+  border: none;
+  width: 10rem;
+}
+
+.statsAndRate {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.stats {
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  cursor: pointer;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+  min-width: fit-content;
 }
-
-.revenueTile.monthly {
-  background-color: var(--accent50);
-}
-.revenueTile.quarterly {
-  background-color: var(--accent300);
-}
-.revenueTile.annually {
-  background-color: var(--accent400);
-}
-
-.revenueTile:hover {
-  background-color: var(--accent600);
-}
-
-.revenueTile .amount {
-  font-size: 2.5rem;
+.heading {
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
-.revenueTile .label {
+.statsItem {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.statsItem-topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 2rem;
+}
+
+.statsItem-name {
+  opacity: 0.8;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statsItem-figure {
   font-weight: 400;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statsItem-chart {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+
+.statsItem-chart-hundred {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 0.375rem;
+  position: absolute;
+}
+
+.statsItem-chart-percent {
+  width: 60%;
+  position: absolute;
+  height: 0.375rem;
+  border-radius: 0.25rem;
+  background-color: var(--green800);
+}
+.rates {
+  /* border: 0.5px solid rgba(0, 0, 0, 0.2); */
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow300);
+  background-color: var(--accent150);
+  max-width: 30rem;
+}
+
+.rates .statsItem {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.currentRateContainer {
+  width: min(15rem, 80%);
+  aspect-ratio: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+  box-shadow: var(--shadow200);
+  display: grid;
+  place-items: center;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.currentRateContainer label {
+  height: 1rem;
+}
+
+.currentRate {
+  font-size: 2.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.curretRateEditBtn {
+  background-color: var(--accent600);
+  width: fit-content;
+  padding: 1rem 3rem;
+  display: flex;
+  align-self: center;
+  margin-top: 0.75rem;
+  border-radius: 0.5rem;
+  color: black;
+}
+
+.curretRateEditBtn:hover {
+  background-color: var(--grey200);
+  transform: scale(0.975);
+  box-shadow: var(--shadow200);
 }

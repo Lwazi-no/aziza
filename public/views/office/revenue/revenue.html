@@ -16,18 +16,90 @@
   </head>
   <body>
     <div class="bodyLayout">
-      <div class="revenueTiles">
-        <div class="revenueTile monthly">
-          <span class="amount">R235 000</span>
-          <span class="label">Monthly</span>
+      <div class="selector">
+        <i class="selectorIcon far fa-calendar-alt"></i>
+        <select class="selectOptions">
+          <option value="Monthly">Monthly</option>
+          <option value="Quartely">Quartely</option>
+          <option value="Yearly">Yearly</option>
+        </select>
+      </div>
+
+      <div class="statsAndRate">
+        <div class="stats">
+          <span class="heading">Statistics</span>
+          <div class="statsItem">
+            <div class="statsItem-topRow">
+              <span class="statsItem-name">Total number of users</span>
+              <span class="statsItem-figure">3.45k</span>
+            </div>
+
+            <div class="statsItem-chart">
+              <div class="statsItem-chart-hundred"></div>
+              <div class="statsItem-chart-percent"></div>
+            </div>
+          </div>
+          <div class="statsItem">
+            <div class="statsItem-topRow">
+              <span class="statsItem-name">Subscibed users</span>
+              <span class="statsItem-figure">2800</span>
+            </div>
+
+            <div class="statsItem-chart">
+              <div class="statsItem-chart-hundred"></div>
+              <div class="statsItem-chart-percent"></div>
+            </div>
+          </div>
+          <div class="statsItem">
+            <div class="statsItem-topRow">
+              <span class="statsItem-name">Not subscribed users</span>
+              <span class="statsItem-figure">160</span>
+            </div>
+
+            <div class="statsItem-chart">
+              <div class="statsItem-chart-hundred"></div>
+              <div class="statsItem-chart-percent"></div>
+            </div>
+          </div>
+          <div class="statsItem">
+            <div class="statsItem-topRow">
+              <span class="statsItem-name">New users</span>
+              <span class="statsItem-figure">3.45k</span>
+            </div>
+
+            <div class="statsItem-chart">
+              <div class="statsItem-chart-hundred"></div>
+              <div class="statsItem-chart-percent"></div>
+            </div>
+          </div>
+          <div class="statsItem">
+            <div class="statsItem-topRow">
+              <span class="statsItem-name">Uninstalls</span>
+              <span class="statsItem-figure">39</span>
+            </div>
+
+            <div class="statsItem-chart">
+              <div class="statsItem-chart-hundred"></div>
+              <div class="statsItem-chart-percent"></div>
+            </div>
+          </div>
         </div>
-        <div class="revenueTile quarterly">
-          <span class="amount">R235 000</span>
-          <span class="label">Quarterly</span>
-        </div>
-        <div class="revenueTile annually">
-          <span class="amount">R235 000</span>
-          <span class="label">Annually</span>
+        <div class="rates">
+          <span class="heading">Rate</span>
+
+          <div class="statsItem">
+            <span class="statsItem-figure">Edit Rate</span>
+            <span class="statsItem-name">21 Oct 2021 - R9.99 per month</span>
+          </div>
+
+          <div class="currentRateContainer">
+            <label for="currentRate">Current Rate</label>
+            <input class="currentRate" id="currentRate" value="9.99" disabled />
+          </div>
+
+          <a href="#" class="curretRateEditBtn" onclick="editRate(this)">
+            Edit rate
+          </a>
         </div>
       </div>
     </div>
@@ -37,3 +109,5 @@
     <script src="./revenue.js"></script>
   </body>
 </html>
+
+2020778259
