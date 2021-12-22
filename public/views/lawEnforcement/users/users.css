@@ -157,6 +157,14 @@
   align-items: center;
   padding: 2rem 0;
   gap: 2rem;
+  position: relative;
+}
+
+.closerBtn {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  cursor: pointer;
 }
 
 .userPicture {
@@ -210,4 +218,15 @@
   background-color: var(--accent400);
   padding: 0.75rem 3rem;
   border-radius: 0.3rem;
+}
+
+#addUserPopup .modal {
+  width: min(800px, 95%);
+  padding: 6rem 4rem;
+}
+
+#userForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

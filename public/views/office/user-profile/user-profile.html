@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fontawesome -->
@@ -15,14 +16,20 @@
   </head>
   <body>
     <div class="bodyLayout">
-      <a href="#" class="backBtn" onclick="goBack()">
-        <i class="fas fa-chevron-left"></i>
-        <span>Back</span>
-      </a>
       <div class="profileContainer">
         <label for="updateUserPic" class="userPicture">
-          <img src="../../../../src/media/man.jpg" alt="" />
-          <input type="file" name="updateUserPic" id="updateUserPic" />
+          <img
+            id="selectedImage"
+            src="../../../../public/src/media/man.jpg"
+            alt=""
+          />
+          <input
+            type="file"
+            name="updateUserPic"
+            id="updateUserPic"
+            onchange="PreviewImage()"
+            disabled
+          />
         </label>
         <div class="userDetails">
           <form action="" class="updateUserForm">
@@ -35,6 +42,7 @@
                   name="fullName"
                   id="fullName"
                   value="John Smith"
+                  disabled
                 />
               </label>
 
@@ -46,6 +54,7 @@
                   name="phoneNumber"
                   id="phoneNumber"
                   value="+2782345678"
+                  disabled
                 />
               </label>
 
@@ -57,6 +66,16 @@
                   name="emailAddress"
                   id="emailAddress"
                   value="johns@saps.co.za"
+                  disabled
+              /></label>
+              <label class="inputGroup" for="persalNumber"
+                ><span class="inputLabel">Persal Number</span>
+                <input
+                  class="inputField"
+                  type="email"
+                  name="persalNumber"
+                  id="persalNumber"
+                  disabled
               /></label>
 
               <label class="inputGroup" for="role"
@@ -79,7 +98,9 @@
               </label>
             </div>
 
-            <button type="submit">Update user</button>
+            <button id="editBtn" type="button" onclick="editUser()">
+              Edit
+            </button>
           </form>
         </div>
       </div>

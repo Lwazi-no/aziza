@@ -4,7 +4,7 @@ var stationsList = [
     province: "Gauteng",
     metros: [
       {
-        metroName: "Joburg Metro",
+        metroName: "JoburgMetro",
 
         clusters: [
           {
@@ -44,7 +44,7 @@ var stationsList = [
         ],
       },
       {
-        metroName: "Ekurhuleni Metro",
+        metroName: "EkurhuleniMetro",
 
         clusters: [
           {
@@ -87,6 +87,91 @@ var stationsList = [
   },
   {
     province: "Limpopo",
+    metros: [
+      {
+        metroName: "Ga-Kibi Metro",
+
+        clusters: [
+          {
+            clusterName: "Joburg Cluster",
+            stations: [
+              {
+                stationName: "CBD",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+              {
+                stationName: "HIllbrow",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+            ],
+          },
+          {
+            clusterName: "Another Cluster",
+            stations: [
+              {
+                stationName: "CBD",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+              {
+                stationName: "HIllbrow",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        metroName: "Polokwane Metro",
+
+        clusters: [
+          {
+            clusterName: "Polok Cluster",
+            stations: [
+              {
+                stationName: "CBD",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+              {
+                stationName: "HIllbrow",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+            ],
+          },
+          {
+            clusterName: "Another Cluster",
+            stations: [
+              {
+                stationName: "CBD",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+              {
+                stationName: "HIllbrow",
+                stationManagerName: "Nomgqibelo Ncibisa",
+                stationManagerNumber: "071 728 1113",
+                stationManagerEmail: "nncamisile@saps.com",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    province: "KwazuluNatal",
     metros: [
       {
         metroName: "Ga-Kibi Metro",
@@ -271,41 +356,54 @@ function openClusterForm() {
   openModal("addUserPopup");
 }
 
-function stationForm() {
-  var provinceList = document.querySelector("#provinceList");
-  var metroList = document.querySelector("#metroList");
-  var clusterList = document.querySelector("#clusterList");
+function loadProvinces() {
+  var provinceContainer = document.querySelector("#provinceList");
+
   var stationList = document.querySelector("#stationList");
 
   stationsList.forEach(function (stationsListItem) {
-    provinceList.insertAdjacentHTML(
+    provinceContainer.insertAdjacentHTML(
       "beforeend",
-      `<option value="${stationsListItem.province}" id="${stationsListItem.province}"></option>`
+      `<option value="${stationsListItem.province}" id="${stationsListItem.province}" ></option>`
     );
-
-    var selectedProvince = document.querySelector(
-      `#${stationsListItem.province}`
-    );
-
-    selectedProvince.addEventListener("click", (e) => {
-      let clickedProvince = stationsList.find(
-        ({ province }) => province === e.target.innerText
-      );
-      let provinceMetros = clickedProvince.metros;
-
-      provinceMetros.forEach(function (provinceMetro) {
-        metroList.insertAdjacentHTML(
-          "beforeend",
-          `<option value="${provinceMetro.metroName.replace(
-            /\s+/g,
-            ""
-          )}"></option>`
-        );
-      });
-    });
   });
-
-  console.log(metroList);
 }
 
-stationForm();
+loadProvinces();
+
+function loadMetros(thisProvince) {
+  var metroContainer = document.querySelector("#metroList");
+
+  let clickedProvince = stationsList.find(
+    ({ province }) => province === thisProvince.value
+  );
+  let selectedProvinceMetros = clickedProvince.metros;
+
+  selectedProvinceMetros.forEach(function (provinceMetro) {
+    metroContainer.insertAdjacentHTML(
+      "beforeend",
+      `<option value="${provinceMetro.metroName}" id="${provinceMetro.metroName}" ></option>`
+    );
+  });
+}
+function loadClusters(thisMetro) {
+  var clusterContainer = document.querySelector("#clusterList");
+
+  let selectedMetro = `"${thisMetro.value}"`;
+  let clickedProvince = stationsList.find(
+    ({ metroName }) => metroName === thisMetro.value
+  );
+
+  // console.log(selectedMetro);
+
+  console.log(thisMetro.value);
+  console.log(clickedProvince);
+  // let selectedProvinceMetros = clickedProvince.metros;
+
+  // selectedProvinceMetros.forEach(function (provinceMetro) {
+  //   clusterContainer.insertAdjacentHTML(
+  //     "beforeend",
+  //     `<option value="${provinceMetro.metroName}" id="${provinceMetro.metroName}" ></option>`
+  //   );
+  // });
+}

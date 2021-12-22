@@ -65,9 +65,7 @@ function openProfile() {
 }
 
 function ToggleNotifications() {
-  const notificationsToggle = document.querySelector(".notesContainer");
-  notificationsToggle.classList.toggle("active");
-  console.log(notificationsToggle);
+  openModal("notificationsContainer");
 }
 
 function OpenNotification() {

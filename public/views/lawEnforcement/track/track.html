@@ -10,6 +10,11 @@
       integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4="
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjxesVJcR_Qbuom5-jagFr8rxXqsDrqs0"
+      async
+      defer
+    ></script>
 
     <link rel="stylesheet" href="./track.css" />
     <title>Document</title>
@@ -65,20 +70,18 @@
         </div>
       </div>
       <div class="rightSide">
-        <i class="fas fa-expand" onclick="expandMap()"></i>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14343.197799512365!2d28.077140099999998!3d-26.007386200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1635328513501!5m2!1sen!2sza"
-          width="1000"
-          height="1000"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+        <a href="#" class="mapSizeBtn" onclick="expandMapToggle()">
+          <i class="fas fa-expand"></i
+        ></a>
+
+        <div id="map"></div>
       </div>
     </div>
+
     <script src="../../../src/modules/customRadio.js"></script>
     <script src="../../../src/modules/searchList.js"></script>
     <script src="../../../src/modules/pagination.js"></script>
+
     <script src="./track.js"></script>
   </body>
 </html>

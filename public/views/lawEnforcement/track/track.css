@@ -12,12 +12,19 @@
   transition: all 250ms ease-in-out;
 }
 
+.bodyLayout.fullMap {
+  grid-template-areas: "rightSide rightSide";
+}
 .leftSide {
   grid-area: leftSide;
   background-color: white;
   padding: 1rem 1rem;
   transition: width 150ms ease-in-out;
   margin-top: 2rem;
+  display: block;
+}
+.leftSide.fullMap {
+  display: none;
 }
 
 .stationPersonel {
@@ -112,18 +119,16 @@
 
 .rightSide {
   grid-area: rightSide;
-  background-color: var(--grey400);
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
   gap: 2rem;
   position: relative;
   overflow: hidden;
 }
 
-.fa-expand {
+.mapSizeBtn {
   position: absolute;
-  top: 0.5rem;
+  top: 3.5rem;
   left: 0.5rem;
   font-size: 1.5rem;
   opacity: 0.8;
@@ -132,14 +137,13 @@
   z-index: 2;
 }
 
-.fa-expand:hover {
+.mapSizeBtn:hover {
   color: black;
   opacity: 1;
   transform: scale(1.18);
 }
 
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+#map {
+  width: 100%;
+  height: 100%;
 }

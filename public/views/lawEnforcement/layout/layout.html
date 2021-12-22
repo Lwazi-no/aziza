@@ -20,14 +20,8 @@
         <div class="imageContainer logoContainer">
           <img src="../../../src/Media/logo.svg" alt="" />
         </div>
-        <span class="dashboardName">Aziza Law Enforcement</span>
-        <div class="searchWrapper gridCenter">
-          <div class="pageSearch">
-            <input type="search" name="pageSearch" id="pageSearch" />
-
-            <i class="fa fa-search searchIcon"></i>
-          </div>
-        </div>
+        <span class="dashboardName">Aziza Health</span>
+        <div class="searchWrapper gridCenter"></div>
         <div class="rightContent">
           <div class="notificationIcon">
             <i class="far fa-bell" onclick="ToggleNotifications()"></i>
@@ -77,24 +71,26 @@
       </div>
 
       <!-- Notification button click popup -->
-      <div class="notesContainer" id="notifications">
-        <div class="row spacebetween">
-          <span class="NotificationsTitle">Notifications</span>
-        </div>
-        <div class="tasksItems">
-          <a class="task" onclick="OpenNotification()">
-            <div class="iconAndContent">
-              <p>
-                <span class="taskTitle">Add Alfred Chitlins as Admin</span
-                ><br />
-                <span class="taskContent">
-                  purpose of lorem ipsum is to create a natural looking
-                  block</span
-                >
-              </p>
-            </div>
-            <span class="taskDay">24 February 2021</span>
-          </a>
+      <div class="modalContainer" id="notificationsContainer">
+        <div class="modal" id="notifications">
+          <div class="row spacebetween">
+            <span class="NotificationsTitle">Notifications</span>
+          </div>
+          <div class="tasksItems">
+            <a class="task" onclick="OpenNotification()">
+              <div class="iconAndContent">
+                <p>
+                  <span class="taskTitle">Add Alfred Chitlins as Admin</span
+                  ><br />
+                  <span class="taskContent">
+                    purpose of lorem ipsum is to create a natural looking
+                    block</span
+                  >
+                </p>
+              </div>
+              <span class="taskDay">24 February 2021</span>
+            </a>
+          </div>
         </div>
       </div>
 

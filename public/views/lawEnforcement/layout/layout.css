@@ -252,13 +252,17 @@ img {
 
 /* Notification  */
 
+#notificationsContainer {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .NotificationsTitle {
   font-family: var(--headFont);
   font-weight: 500;
 }
 
 #notifications {
-  display: none;
+  /* display: none; */
   position: absolute;
   z-index: 200;
   box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.1);

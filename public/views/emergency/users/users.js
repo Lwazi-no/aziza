@@ -10,11 +10,13 @@ function openUserForm() {
 
 function openUser(selectedUser) {
   var allUsers = document.querySelectorAll("tbody tr td");
-  var rightSide = document.querySelector(".rightSide");
-  var bodyLayout = document.querySelector(".bodyLayout");
+  let rightSide = document.querySelector(".rightSide");
+  let bodyLayout = document.querySelector(".bodyLayout");
   var thisUser = selectedUser.querySelectorAll("td");
 
   rightSide.style.display = "flex";
+
+  document.querySelector(".row").style.display = "none";
 
   bodyLayout.style = `
    display: grid;
@@ -37,6 +39,22 @@ function openUser(selectedUser) {
 
   allUsers.forEach(removeActive);
   thisUser.forEach(addActive);
+}
+
+function closeUser() {
+  let rightSide = document.querySelector(".rightSide");
+  let bodyLayout = document.querySelector(".bodyLayout");
+  bodyLayout.style = `
+  display: grid;
+  height: 100%;
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-areas:
+    "row row "
+    "leftSide leftSide";
+  transition: all 250ms ease-in-out;`;
+
+  rightSide.style.display = "none";
 }
 
 var paginatePersonel = (function () {

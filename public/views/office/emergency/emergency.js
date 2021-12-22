@@ -1,177 +1,275 @@
 var bodyLayout = document.querySelector(".bodyLayout");
-var stationsList = [
-  {
-    province: "Gauteng",
-    metros: [
-      {
-        metroName: "Joburg Metro",
+// var stationsList = [
+//   {
+//     province: "Gauteng",
+//     metros: [
+//       {
+//         metroName: "JoburgMetro",
 
-        clusters: [
-          {
-            clusterName: "Joburg Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-          {
-            clusterName: "Another Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        metroName: "Ekurhuleni Metro",
+//         clusters: [
+//           {
+//             clusterName: "Joburg Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//           {
+//             clusterName: "Another Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         metroName: "EkurhuleniMetro",
 
-        clusters: [
-          {
-            clusterName: "Joburg Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-          {
-            clusterName: "Another Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    province: "Limpopo",
-    metros: [
-      {
-        metroName: "Ga-Kibi Metro",
+//         clusters: [
+//           {
+//             clusterName: "Joburg Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//           {
+//             clusterName: "Another Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     province: "Limpopo",
+//     metros: [
+//       {
+//         metroName: "Ga-Kibi Metro",
 
-        clusters: [
-          {
-            clusterName: "Joburg Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-          {
-            clusterName: "Another Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        metroName: "Polokwane Metro",
+//         clusters: [
+//           {
+//             clusterName: "Joburg Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//           {
+//             clusterName: "Another Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         metroName: "Polokwane Metro",
 
-        clusters: [
-          {
-            clusterName: "Polok Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-          {
-            clusterName: "Another Cluster",
-            stations: [
-              {
-                stationName: "CBD",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-              {
-                stationName: "HIllbrow",
-                stationManagerName: "Nomgqibelo Ncibisa",
-                stationManagerNumber: "071 728 1113",
-                stationManagerEmail: "nncamisile@saps.com",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+//         clusters: [
+//           {
+//             clusterName: "Polok Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//           {
+//             clusterName: "Another Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     province: "KwazuluNatal",
+//     metros: [
+//       {
+//         metroName: "Ga-Kibi Metro",
+
+//         clusters: [
+//           {
+//             clusterName: "Joburg Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//           {
+//             clusterName: "Another Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         metroName: "Polokwane Metro",
+
+//         clusters: [
+//           {
+//             clusterName: "Polok Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//           {
+//             clusterName: "Another Cluster",
+//             stations: [
+//               {
+//                 stationName: "CBD",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//               {
+//                 stationName: "HIllbrow",
+//                 stationManagerName: "Nomgqibelo Ncibisa",
+//                 stationManagerNumber: "071 728 1113",
+//                 stationManagerEmail: "nncamisile@saps.com",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ];
+
+var clustersList = [
+  (Gauteng = [
+    ({ joburg } = [
+      { clusterName: "jONe" },
+      { clusterName: "jTwo" },
+      { clusterName: "jThree" },
+    ]),
+    (tshwane = [jONe, jTwo, jThree]),
+  ]),
+  (Limpopo = [(polokwane = [jONe, jTwo, jThree])]),
 ];
 
+console.log(clustersList[0]);
 function toggleFilters() {
   var filterMenu = document.querySelector(".filterMenu");
   var filterRowLabel = document.querySelector(".filterRowLabel");
@@ -271,41 +369,55 @@ function openClusterForm() {
   openModal("addUserPopup");
 }
 
-function stationForm() {
-  var provinceList = document.querySelector("#provinceList");
-  var metroList = document.querySelector("#metroList");
-  var clusterList = document.querySelector("#clusterList");
+openClusterForm();
+function loadProvinces() {
+  var provinceContainer = document.querySelector("#provinceList");
+
   var stationList = document.querySelector("#stationList");
 
   stationsList.forEach(function (stationsListItem) {
-    provinceList.insertAdjacentHTML(
+    provinceContainer.insertAdjacentHTML(
       "beforeend",
-      `<option value="${stationsListItem.province}" id="${stationsListItem.province}"></option>`
+      `<option value="${stationsListItem.province}" id="${stationsListItem.province}" ></option>`
     );
-
-    var selectedProvince = document.querySelector(
-      `#${stationsListItem.province}`
-    );
-
-    selectedProvince.addEventListener("click", (e) => {
-      let clickedProvince = stationsList.find(
-        ({ province }) => province === e.target.innerText
-      );
-      let provinceMetros = clickedProvince.metros;
-
-      provinceMetros.forEach(function (provinceMetro) {
-        metroList.insertAdjacentHTML(
-          "beforeend",
-          `<option value="${provinceMetro.metroName.replace(
-            /\s+/g,
-            ""
-          )}"></option>`
-        );
-      });
-    });
   });
-
-  console.log(metroList);
 }
 
-stationForm();
+loadProvinces();
+
+function loadMetros(thisProvince) {
+  var metroContainer = document.querySelector("#metroList");
+
+  let clickedProvince = stationsList.find(
+    ({ province }) => province === thisProvince.value
+  );
+  let selectedProvinceMetros = clickedProvince.metros;
+
+  selectedProvinceMetros.forEach(function (provinceMetro) {
+    metroContainer.insertAdjacentHTML(
+      "beforeend",
+      `<option value="${provinceMetro.metroName}" id="${provinceMetro.metroName}" ></option>`
+    );
+  });
+}
+function loadClusters(thisMetro) {
+  var clusterContainer = document.querySelector("#clusterList");
+
+  let selectedMetro = `"${thisMetro.value}"`;
+  let clickedProvince = stationsList.find(
+    ({ metroName }) => metroName === thisMetro.value
+  );
+
+  // console.log(selectedMetro);
+
+  console.log(thisMetro.value);
+  console.log(clickedProvince);
+  // let selectedProvinceMetros = clickedProvince.metros;
+
+  // selectedProvinceMetros.forEach(function (provinceMetro) {
+  //   clusterContainer.insertAdjacentHTML(
+  //     "beforeend",
+  //     `<option value="${provinceMetro.metroName}" id="${provinceMetro.metroName}" ></option>`
+  //   );
+  // });
+}

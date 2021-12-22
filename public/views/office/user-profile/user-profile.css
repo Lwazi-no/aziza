@@ -1,8 +1,7 @@
-@import url("../../../../src/CommonCSS/root.css");
-@import url("../../../../src/CommonCSS/pagination.css");
-@import url("../../../../src/CommonCSS/customRadio.css");
-@import url("../../../../src/CommonCSS/inputs.css");
-@import url("../../../../src/CommonCSS/switch.css");
+@import url("../../../../public/src/CommonCSS/root.css");
+@import url("../../../../public/src/CommonCSS/pagination.css");
+@import url("../../../../public/src/CommonCSS/customRadio.css");
+@import url("../../../../public/src/CommonCSS/inputs.css");
 
 .bodyLayout {
   display: flex;
