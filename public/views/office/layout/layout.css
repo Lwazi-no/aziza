@@ -115,6 +115,13 @@ img {
 .loggedInUserContainer {
   display: flex;
   align-items: center;
+  gap: 1rem;
+}
+
+.userGreetingEmail {
+  font-size: 0.875rem;
+  opacity: 0.4;
+  font-weight: 500;
 }
 
 .loggedInUser {
