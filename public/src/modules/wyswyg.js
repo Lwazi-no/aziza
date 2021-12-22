@@ -418,6 +418,7 @@ var wysiwyg = function () {
   // define vars
   const editor = document.getElementsByClassName("editor")[0];
   const toolbar = editor.getElementsByClassName("toolbar")[0];
+  const toolbarOne = editor.getElementsByClassName("toolbar")[1];
   const buttons = toolbar.querySelectorAll(".btn:not(.has-submenu)");
   const contentArea = editor.getElementsByClassName("content-area")[0];
   const visuellView = contentArea.getElementsByClassName("visuell-view")[0];
@@ -446,6 +447,9 @@ var wysiwyg = function () {
       }
     });
   }
+
+  toolbar.style.display = "none";
+  toolbarOne.style.display = "none";
 
   // this function toggles between visual and html view
   function execCodeAction(button, editor) {
