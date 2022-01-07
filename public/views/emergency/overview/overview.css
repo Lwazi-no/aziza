@@ -4,12 +4,13 @@
 @import url("../../../src/CommonCSS/inputs.css");
 @import url("../../../src/CommonCSS/switch.css");
 .bodyLayout {
-  display: grid;
-  grid-gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   height: 100%;
-  grid-template-rows: 50px 2fr 7fr 50px;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #f7f8fa70;
+  overflow: auto;
 }
 
 .clusters {
@@ -17,11 +18,12 @@
   display: flex;
   align-items: center;
   margin: 0 1.5rem;
+  height: fit-content;
 }
 
 .cluster {
   width: 300px;
-  height: 85%;
+  height: 100%;
   /* border: 1px solid var(--grey200); */
   /* box-shadow: var(--shadow300); */
   border-radius: 8px;
@@ -67,6 +69,7 @@
 
 .overviewContent {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 4rem;
   padding: 2rem 4rem;
 }

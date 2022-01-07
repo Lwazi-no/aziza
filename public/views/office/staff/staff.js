@@ -30,3 +30,15 @@ function openUser(selectedUser) {
 function openUserForm() {
   openModal("addUserPopup");
 }
+
+function editUser() {
+  var inputFields = document.querySelectorAll(".editable");
+
+  var editBtn = document.querySelector("#editBtn");
+  inputFields.forEach((inputField) => {
+    inputField.disabled = false;
+  });
+
+  editBtn.textContent = "Save";
+  inputFields[0].focus();
+}

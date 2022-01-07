@@ -1,5 +1,5 @@
 var generateUserTypeOptions = (function () {
-  var radioOptions = ["TermsOfUse", "PrivacyPolicy"];
+  var radioOptions = ["Terms Of Use", "Privacy Policy"];
 
   customRadio("stationPersonelType", radioOptions, "services");
 })();
@@ -16,19 +16,11 @@ wysiwyg();
 
 function showOnlySelected() {
   var settingsSelector = document.querySelector(".optionSelector").children;
-  let allPersonel = document.querySelectorAll(".stationPersonelList tbody tr");
-
-  function showAllPersonel() {
-    allPersonel.forEach((allPerson) => {
-      allPerson.style.display = "table-row";
-    });
-  }
 
   var terms = document.querySelector("#terms");
   var privacy = document.querySelector("#privacy");
 
   settingsSelector[0].addEventListener("click", function () {
-    showAllPersonel();
     terms.style.display = "block";
     privacy.style.display = "none";
   });
@@ -38,7 +30,7 @@ function showOnlySelected() {
     privacy.style.display = "block";
   });
 
-  var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
+  var clickOnLoad = (function clickOnLoad() {
     settingsSelector[0].click();
   })();
 }

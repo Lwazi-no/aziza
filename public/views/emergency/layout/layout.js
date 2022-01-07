@@ -85,29 +85,3 @@ function logout() {
 function openUserForm() {
   openModal("addUserPopup");
 }
-var addUserTypeSelector = (function () {
-  var radioOptions = ["user", "station"];
-
-  customRadio("addUserTypeSelector", radioOptions, "userTypes");
-})();
-
-function showOnlySelected() {
-  var userTypes = document.querySelector(".optionSelector").children;
-  var stationForm = document.querySelector("#stationForm");
-  var userForm = document.querySelector("#userForm");
-
-  userTypes[0].addEventListener("click", function () {
-    stationForm.style.display = "none";
-    userForm.style.display = "flex";
-  });
-
-  userTypes[1].addEventListener("click", function () {
-    userForm.style.display = "none";
-    stationForm.style.display = "flex";
-  });
-
-  var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
-    userTypes[1].click();
-  })();
-}
-showOnlySelected();

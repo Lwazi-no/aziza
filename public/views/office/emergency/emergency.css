@@ -8,6 +8,7 @@
   display: grid;
   height: 100%;
   background-color: #f7f8fa70;
+  overflow: hidden;
 }
 
 .leftSide {
@@ -194,6 +195,9 @@
   overflow-y: auto;
 }
 
+.stationsContainer {
+  max-height: 50vh;
+}
 .station {
   background-color: #f7f8fa;
   width: min(400px, 100%);

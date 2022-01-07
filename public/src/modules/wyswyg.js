@@ -1,218 +1,7 @@
 const editorHTML = `
 
 <div class="editor">
-  <div class="toolbar">
-    <div class="line">
-      <div class="box">
-        <span
-          class="btn icon smaller"
-          data-action="bold"
-          data-tag-name="b"
-          title="Bold"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25432.svg"
-          />
-        </span>
-        <span
-          class="btn icon smaller"
-          data-action="italic"
-          data-tag-name="i"
-          title="Italic"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25392.svg"
-          />
-        </span>
-        <span
-          class="btn icon smaller"
-          data-action="underline"
-          data-tag-name="u"
-          title="Underline"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25433.svg"
-          />
-        </span>
-        <span
-          class="btn icon smaller"
-          data-action="strikeThrough"
-          data-tag-name="strike"
-          title="Strike through"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25626.svg"
-          />
-        </span>
-      </div>
-
-      <div class="box">
-        <span class="btn icon has-submenu">
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25351.svg"
-          />
-          <div class="submenu">
-            <span
-              class="btn icon"
-              data-action="justifyLeft"
-              data-style="textAlign:left"
-              title="Justify left"
-            >
-              <img
-                loading="lazy"
-                src="https://image.flaticon.com/icons/svg/25/25351.svg"
-              />
-            </span>
-            <span
-              class="btn icon"
-              data-action="justifyCenter"
-              data-style="textAlign:center"
-              title="Justify center"
-            >
-              <img
-                loading="lazy"
-                src="https://image.flaticon.com/icons/svg/25/25440.svg"
-              />
-            </span>
-            <span
-              class="btn icon"
-              data-action="justifyRight"
-              data-style="textAlign:right"
-              title="Justify right"
-            >
-              <img
-                loading="lazy"
-                src="https://image.flaticon.com/icons/svg/25/25288.svg"
-              />
-            </span>
-            <span
-              class="btn icon"
-              data-action="formatBlock"
-              data-style="textAlign:justify"
-              title="Justify block"
-            >
-              <img
-                loading="lazy"
-                src="https://image.flaticon.com/icons/svg/25/25181.svg"
-              />
-            </span>
-          </div>
-        </span>
-        <span
-          class="btn icon"
-          data-action="insertOrderedList"
-          data-tag-name="ol"
-          title="Insert ordered list"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25242.svg"
-          />
-        </span>
-        <span
-          class="btn icon"
-          data-action="insertUnorderedList"
-          data-tag-name="ul"
-          title="Insert unordered list"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25648.svg"
-          />
-        </span>
-        <span class="btn icon" data-action="outdent" title="Outdent">
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25410.svg"
-          />
-        </span>
-        <span class="btn icon" data-action="indent" title="Indent">
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25233.svg"
-          />
-        </span>
-      </div>
-      <div class="box">
-        <span
-          class="btn icon"
-          data-action="insertHorizontalRule"
-          title="Insert horizontal rule"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25232.svg"
-          />
-        </span>
-      </div>
-    </div>
-    <div class="line">
-      <div class="box">
-        <span
-          class="btn icon smaller"
-          data-action="undo"
-          title="Undo"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25249.svg"
-          />
-        </span>
-        <span
-          class="btn icon"
-          data-action="removeFormat"
-          title="Remove format"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25454.svg"
-          />
-        </span>
-      </div>
-
-      <div class="box">
-        <span
-          class="btn icon smaller"
-          data-action="createLink"
-          title="Insert Link"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25385.svg"
-          />
-        </span>
-        <span
-          class="btn icon smaller"
-          data-action="unlink"
-          data-tag-name="a"
-          title="Unlink"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25341.svg"
-          />
-        </span>
-      </div>
-
-      <div class="box">
-        <span
-          class="btn icon"
-          data-action="code"
-          title="Show HTML-Code"
-        >
-          <img
-            loading="lazy"
-            src="https://image.flaticon.com/icons/svg/25/25185.svg"
-          />
-        </span>
-      </div>
-    </div>
-  </div>
+  
   <div class="content-area">
     <div class="visuell-view privacy" contenteditable>
       <p>&nbsp;</p>
@@ -419,37 +208,37 @@ var wysiwyg = function () {
   const editor = document.getElementsByClassName("editor")[0];
   const toolbar = editor.getElementsByClassName("toolbar")[0];
   const toolbarOne = editor.getElementsByClassName("toolbar")[1];
-  const buttons = toolbar.querySelectorAll(".btn:not(.has-submenu)");
+  // const buttons = toolbar.querySelectorAll(".btn:not(.has-submenu)");
   const contentArea = editor.getElementsByClassName("content-area")[0];
   const visuellView = contentArea.getElementsByClassName("visuell-view")[0];
   const htmlView = contentArea.getElementsByClassName("html-view")[0];
   const modal = document.getElementsByClassName("tinyModal")[0];
 
   // add active tag event
-  document.addEventListener("selectionchange", selectionChange);
+  // document.addEventListener("selectionchange", selectionChange);
 
   // add toolbar button actions
-  for (let i = 0; i < buttons.length; i++) {
-    let button = buttons[i];
+  // for (let i = 0; i < buttons.length; i++) {
+  //   let button = buttons[i];
 
-    button.addEventListener("click", function (e) {
-      let action = this.dataset.action;
+  //   button.addEventListener("click", function (e) {
+  //     let action = this.dataset.action;
 
-      switch (action) {
-        case "code":
-          execCodeAction(this, editor);
-          break;
-        case "createLink":
-          execLinkAction();
-          break;
-        default:
-          execDefaultAction(action);
-      }
-    });
-  }
+  //     switch (action) {
+  //       case "code":
+  //         execCodeAction(this, editor);
+  //         break;
+  //       case "createLink":
+  //         execLinkAction();
+  //         break;
+  //       default:
+  //         execDefaultAction(action);
+  //     }
+  //   });
+  // }
 
-  toolbar.style.display = "none";
-  toolbarOne.style.display = "none";
+  // toolbar.style.display = "none";
+  // toolbarOne.style.display = "none";
 
   // this function toggles between visual and html view
   function execCodeAction(button, editor) {
@@ -555,14 +344,14 @@ var wysiwyg = function () {
   }
 
   // sets the current format buttons active/inactive
-  function selectionChange() {
-    for (let i = 0; i < buttons.length; i++) {
-      let button = buttons[i];
-      button.classList.remove("active");
-    }
+  // function selectionChange() {
+  //   for (let i = 0; i < buttons.length; i++) {
+  //     let button = buttons[i];
+  //     button.classList.remove("active");
+  //   }
 
-    parentTagActive(window.getSelection().anchorNode.parentNode);
-  }
+  //   parentTagActive(window.getSelection().anchorNode.parentNode);
+  // }
 
   function parentTagActive(elem) {
     if (elem.classList.contains("visuell-view")) return false;

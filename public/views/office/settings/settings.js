@@ -16,19 +16,11 @@ wysiwyg();
 
 function showOnlySelected() {
   var settingsSelector = document.querySelector(".optionSelector").children;
-  let allPersonel = document.querySelectorAll(".stationPersonelList tbody tr");
-
-  function showAllPersonel() {
-    allPersonel.forEach((allPerson) => {
-      allPerson.style.display = "table-row";
-    });
-  }
 
   var terms = document.querySelector("#terms");
   var privacy = document.querySelector("#privacy");
 
   settingsSelector[0].addEventListener("click", function () {
-    showAllPersonel();
     terms.style.display = "block";
     privacy.style.display = "none";
   });
@@ -37,12 +29,8 @@ function showOnlySelected() {
     terms.style.display = "none";
     privacy.style.display = "block";
   });
-  settingsSelector[2].addEventListener("click", function () {
-    terms.style.display = "none";
-    privacy.style.display = "none";
-  });
 
-  var clickOnLoad = (function cliclickOnLoadckOverviewPage() {
+  var clickOnLoad = (function clickOnLoad() {
     settingsSelector[0].click();
   })();
 }

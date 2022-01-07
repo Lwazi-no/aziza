@@ -93,6 +93,7 @@
               <div class="formRow">
                 <label for="fullName">Full Name</label>
                 <input
+                  class="editable"
                   type="text"
                   name="fullName"
                   id="fullName"
@@ -102,6 +103,7 @@
               <div class="formRow">
                 <label for="phoneNumber">Phone number</label>
                 <input
+                  class="editable"
                   type="text"
                   name="phoneNumber"
                   id="phoneNumber"
@@ -111,6 +113,7 @@
               <div class="formRow">
                 <label for="staffID">Staff ID</label>
                 <input
+                  class="editable"
                   type="text"
                   name="staffID"
                   id="staffID"
@@ -120,6 +123,7 @@
               <div class="formRow">
                 <label for="emailAddress">Email Address</label>
                 <input
+                  class="editable"
                   type="email"
                   name="emailAddress"
                   id="emailAddress"
@@ -145,7 +149,14 @@
               </div>
             </div>
 
-            <button type="submit" class="hoverCard">Save</button>
+            <button
+              type="button"
+              id="editBtn"
+              class="hoverCard"
+              onclick="editUser()"
+            >
+              Edit
+            </button>
           </form>
         </div>
       </div>
