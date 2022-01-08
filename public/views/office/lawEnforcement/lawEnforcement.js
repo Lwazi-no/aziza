@@ -65,7 +65,36 @@ function loadProvinces() {
       `<option value ="${eachProvince}"><option>`
     );
   });
-  console.log(provinceDatalist);
 }
 
 loadProvinces();
+
+function loadMunicipalities(thisProvince) {
+  var municipalityDatalist = document.querySelector("#metroList");
+  var selectedProvince = `${thisProvince.value}`;
+  provinceMunicipalities = Object.keys(
+    stationsList.Provinces[selectedProvince].Municipaties
+  );
+
+  provinceMunicipalities.forEach(function (eachMunicipality) {
+    municipalityDatalist.insertAdjacentHTML(
+      "beforeend",
+      `<option value ="${eachMunicipality}"><option>`
+    );
+  });
+}
+function loadRegions(thisMunicipality) {
+  var regionDatalist = document.querySelector("#clusterList");
+  var regionProvince = document.querySelector("#addStationProvince").value;
+  var selectedMunicipality = `${thisMunicipality.value}`;
+  municipalityRegions =
+    stationsList.Provinces[regionProvince].Municipaties[selectedMunicipality]
+      .Regions;
+
+  municipalityRegions.forEach(function (eachRegion) {
+    regionDatalist.insertAdjacentHTML(
+      "beforeend",
+      `<option value ="${eachRegion}"><option>`
+    );
+  });
+}

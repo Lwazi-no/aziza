@@ -327,42 +327,29 @@
               <datalist id="provinceList"></datalist>
             </label>
             <label for="addstationMetro" class="inputGroup">
-              <span class="inputLabel">Metro</span>
+              <span class="inputLabel">Municipality</span>
               <input
                 class="inputField"
                 type="text"
                 list="metroList"
                 name="addstationMetro"
                 id="addstationMetro"
-                oninput="loadClusters(this)"
+                oninput="loadRegions(this)"
               />
 
               <datalist id="metroList"></datalist>
             </label>
             <label for="addStationCluster" class="inputGroup">
-              <span class="inputLabel">Cluster</span>
+              <span class="inputLabel">Region</span>
               <input
                 class="inputField"
                 type="text"
                 list="clusterList"
                 name="addStationCluster"
                 id="addStationCluster"
-                oninput="loadStations(this)"
               />
 
               <datalist id="clusterList"></datalist>
-            </label>
-            <label for="addStationStation" class="inputGroup">
-              <span class="inputLabel">Station</span>
-              <input
-                class="inputField"
-                type="text"
-                list="stationList"
-                name="addStationStation"
-                id="addStationStation"
-              />
-
-              <datalist id="stationList"></datalist>
             </label>
 
             <span class="formHeader">Station Details</span>
