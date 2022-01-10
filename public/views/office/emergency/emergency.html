@@ -20,25 +20,26 @@
       <div class="leftSide">
         <div class="topRow">
           <div class="filterRow">
-            <div class="filterRowLabel" onclick="toggleFilters()">
+            <div class="filterRowLabel" onclick="openFilters()">
               <i class="fas fa-filter"></i>
               <span>Filter</span>
             </div>
 
             <div class="appliedFilters"></div>
-
-            <div class="filterMenu">
-              <div class="filterClass">
-                <span class="filterClassLabel">Provinces</span>
-                <div class="filterClassOptions provincesFilter"></div>
-              </div>
-              <div class="filterClass">
-                <span class="filterClassLabel">Metros</span>
-                <div class="filterClassOptions metrosFilter"></div>
-              </div>
-              <div class="filterClass">
-                <span class="filterClassLabel">Clusters</span>
-                <div class="filterClassOptions clustersFilter"></div>
+            <div class="modalContainer" id="filterMenu">
+              <div class="filterMenu modal" id="filterMenuModal">
+                <div class="filterClass">
+                  <span class="filterClassLabel">Provinces</span>
+                  <div class="filterClassOptions provincesFilter"></div>
+                </div>
+                <div class="filterClass">
+                  <span class="filterClassLabel">Municipality</span>
+                  <div class="filterClassOptions metrosFilter"></div>
+                </div>
+                <div class="filterClass">
+                  <span class="filterClassLabel">Region</span>
+                  <div class="filterClassOptions clustersFilter"></div>
+                </div>
               </div>
             </div>
           </div>

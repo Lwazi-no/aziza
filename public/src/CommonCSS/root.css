@@ -49,6 +49,10 @@ img {
   height: 100%;
 }
 
+a {
+  color: black;
+}
+
 button {
   cursor: pointer;
   border: none;

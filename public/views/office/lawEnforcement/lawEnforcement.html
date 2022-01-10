@@ -20,25 +20,26 @@
       <div class="leftSide">
         <div class="topRow">
           <div class="filterRow">
-            <div class="filterRowLabel" onclick="toggleFilters()">
+            <div class="filterRowLabel" onclick="openFilters()">
               <i class="fas fa-filter"></i>
               <span>Filter</span>
             </div>
 
             <div class="appliedFilters"></div>
-
-            <div class="filterMenu">
-              <div class="filterClass">
-                <span class="filterClassLabel">Provinces</span>
-                <div class="filterClassOptions provincesFilter"></div>
-              </div>
-              <div class="filterClass">
-                <span class="filterClassLabel">Metros</span>
-                <div class="filterClassOptions metrosFilter"></div>
-              </div>
-              <div class="filterClass">
-                <span class="filterClassLabel">Clusters</span>
-                <div class="filterClassOptions clustersFilter"></div>
+            <div class="modalContainer" id="filterMenu">
+              <div class="filterMenu modal" id="filterMenuModal">
+                <div class="filterClass">
+                  <span class="filterClassLabel">Provinces</span>
+                  <div class="filterClassOptions provincesFilter"></div>
+                </div>
+                <div class="filterClass">
+                  <span class="filterClassLabel">Municipality</span>
+                  <div class="filterClassOptions metrosFilter"></div>
+                </div>
+                <div class="filterClass">
+                  <span class="filterClassLabel">Region</span>
+                  <div class="filterClassOptions clustersFilter"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -69,7 +70,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -96,7 +97,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -123,7 +124,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -150,7 +151,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -177,7 +178,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -204,7 +205,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -231,7 +232,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -258,7 +259,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -285,7 +286,7 @@
               <span class="respondersCount">99 </span>
               <div class="cardLeft">
                 <div class="stationTypeImage">
-                  <img src="../../../src/media/health.svg" alt="" />
+                  <img src="../../../src/media/police.svg" alt="" />
                 </div>
                 <span class="cardItem-bold">Fionna Wade Health Center</span>
               </div>
@@ -321,48 +322,35 @@
                 list="provinceList"
                 name="addStationProvince"
                 id="addStationProvince"
-                oninput="loadMetros(this)"
+                oninput="loadMunicipalities(this)"
               />
 
               <datalist id="provinceList"></datalist>
             </label>
             <label for="addstationMetro" class="inputGroup">
-              <span class="inputLabel">Metro</span>
+              <span class="inputLabel">Municipality</span>
               <input
                 class="inputField"
                 type="text"
                 list="metroList"
                 name="addstationMetro"
                 id="addstationMetro"
-                oninput="loadClusters(this)"
+                oninput="loadRegions(this)"
               />
 
               <datalist id="metroList"></datalist>
             </label>
             <label for="addStationCluster" class="inputGroup">
-              <span class="inputLabel">Cluster</span>
+              <span class="inputLabel">Region</span>
               <input
                 class="inputField"
                 type="text"
                 list="clusterList"
                 name="addStationCluster"
                 id="addStationCluster"
-                oninput="loadStations(this)"
               />
 
               <datalist id="clusterList"></datalist>
-            </label>
-            <label for="addStationStation" class="inputGroup">
-              <span class="inputLabel">Station</span>
-              <input
-                class="inputField"
-                type="text"
-                list="stationList"
-                name="addStationStation"
-                id="addStationStation"
-              />
-
-              <datalist id="stationList"></datalist>
             </label>
 
             <span class="formHeader">Station Details</span>

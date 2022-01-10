@@ -1,11 +1,8 @@
 var bodyLayout = document.querySelector(".bodyLayout");
 var provinces = Object.keys(stationsList.Provinces);
 
-function toggleFilters() {
-  var filterMenu = document.querySelector(".filterMenu");
-  var filterRowLabel = document.querySelector(".filterRowLabel");
-  filterRowLabel.classList.toggle("active");
-  filterMenu.classList.toggle("active");
+function openFilters() {
+  openModal("filterMenu");
 }
 
 function includeFilters() {
@@ -13,30 +10,73 @@ function includeFilters() {
     ".filterClassOptions.provincesFilter"
   );
   var metroFilter = document.querySelector(".filterClassOptions.metrosFilter");
-  var clusterFilter = document.querySelector(
+  var regionsFilter = document.querySelector(
     ".filterClassOptions.clustersFilter"
   );
 
   provinces.forEach(function (eachProvince) {
     provinceFilter.insertAdjacentHTML(
       "beforeend",
-      `<a href="#" class="filterItem provinceFilterItem ${eachProvince}">${eachProvince}</a>`
+      `<a href="#" class="filterItem provinceFilterItem">${eachProvince}</a>`
     );
   });
+  var provinceFilterItems = document.querySelectorAll(".provinceFilterItem");
 
-  var selectedFilters = document.querySelectorAll(".filterItem");
-  var filtersItemsCloseBtn = document.querySelectorAll(".filterItem:after");
-
-  selectedFilters.forEach(function (included) {
-    included.addEventListener("click", () => {
-      var appliedFilters = document.querySelector(".appliedFilters");
-
-      appliedFilters.insertAdjacentHTML(
-        "beforeend",
-        ` <span class="selectedfilterItem">${included.innerText}
-        <a class="selectedfilterItemCloseBtn" onclick="return this.parentNode.remove()" href="#">X</a>
-        </span>`
+  provinceFilterItems.forEach(function (theProvince) {
+    theProvince.addEventListener("click", (clickedProvince) => {
+      var theProvinceMunicipalities = Object.keys(
+        stationsList.Provinces[clickedProvince.target.textContent].Municipaties
       );
+      clickedProvince.target.parentNode.childNodes.forEach(function (
+        allProvinces
+      ) {
+        allProvinces.classList.remove("selectedFilter");
+      });
+
+      clickedProvince.target.classList.add("selectedFilter");
+      metroFilter.innerHTML = "";
+      theProvinceMunicipalities.forEach(function (provinceMunicipal) {
+        metroFilter.insertAdjacentHTML(
+          "beforeend",
+          `<a href="#" class="filterItem municipalFilterItem" >${provinceMunicipal}</a>`
+        );
+      });
+
+      var municipalFilterItems = document.querySelectorAll(
+        ".municipalFilterItem"
+      );
+
+      municipalFilterItems.forEach(function (municipalItem) {
+        municipalItem.addEventListener("click", (clickedMunicipal) => {
+          clickedMunicipal.target.parentNode.childNodes.forEach(function (
+            allMuniciapls
+          ) {
+            allMuniciapls.classList.remove("selectedFilter");
+          });
+          clickedMunicipal.target.classList.add("selectedFilter");
+          var municipalRegions =
+            stationsList.Provinces[clickedProvince.target.textContent]
+              .Municipaties[clickedMunicipal.target.textContent].Regions;
+          regionsFilter.innerHTML = "";
+          municipalRegions.forEach(function (munipalRegion) {
+            regionsFilter.insertAdjacentHTML(
+              "beforeend",
+              `<a href="#" class="filterItem regionFilterItem" >${munipalRegion}</a>`
+            );
+
+            var regions = document.querySelectorAll(".regionFilterItem");
+
+            regions.forEach(function (region) {
+              region.addEventListener("click", (e) => {
+                e.target.parentNode.childNodes.forEach(function (allRegions) {
+                  allRegions.classList.remove("selectedFilter");
+                });
+                e.target.classList.add("selectedFilter");
+              });
+            });
+          });
+        });
+      });
     });
   });
 }

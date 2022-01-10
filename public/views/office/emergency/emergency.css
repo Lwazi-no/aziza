@@ -79,12 +79,20 @@
   place-items: center;
 }
 
+#filterMenu {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.filterMenuModal {
+  width: fit-content;
+}
+
 .filterMenu {
   position: absolute;
   top: 4.5rem;
   left: 1rem;
   width: auto;
-  display: none;
+  display: flex;
   gap: 1rem;
   background-color: var(--grey400);
   padding: 1rem 2rem;
@@ -120,6 +128,12 @@
   font-weight: 600;
   border-bottom: 1px solid black;
   padding: 0.5rem;
+}
+
+.filterItem:hover,
+.selectedFilter {
+  background-color: var(--accent600);
+  padding-left: 1rem !important;
 }
 
 .clusters {
@@ -184,8 +198,6 @@
 }
 .stations,
 .stationsContainer {
-  padding: 2rem 0;
-  /* display: flex; */
   width: 100%;
   display: inline-flex;
   align-items: flex-start;
@@ -196,7 +208,7 @@
 }
 
 .stationsContainer {
-  max-height: 50vh;
+  max-height: 65vh;
 }
 .station {
   background-color: #f7f8fa;
