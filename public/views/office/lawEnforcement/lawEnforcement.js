@@ -25,7 +25,8 @@ function includeFilters() {
   provinceFilterItems.forEach(function (theProvince) {
     theProvince.addEventListener("click", (clickedProvince) => {
       var theProvinceMunicipalities = Object.keys(
-        stationsList.Provinces[clickedProvince.target.textContent].Municipaties
+        stationsList.Provinces[clickedProvince.target.textContent]
+          .Municipalities
       );
       clickedProvince.target.parentNode.childNodes.forEach(function (
         allProvinces
@@ -56,7 +57,7 @@ function includeFilters() {
           clickedMunicipal.target.classList.add("selectedFilter");
           var municipalRegions =
             stationsList.Provinces[clickedProvince.target.textContent]
-              .Municipaties[clickedMunicipal.target.textContent].Regions;
+              .Municipalities[clickedMunicipal.target.textContent].Regions;
           regionsFilter.innerHTML = "";
           municipalRegions.forEach(function (munipalRegion) {
             regionsFilter.insertAdjacentHTML(

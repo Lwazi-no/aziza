@@ -1,7 +1,7 @@
 var stationsList = {
   Provinces: {
     "Eastern Cape": {
-      Municipaties: {
+      Municipalities: {
         "Buffalo City Metropolitan": {
           Regions: [
             "Beacon Day",
@@ -934,7 +934,7 @@ var stationsList = {
       },
     },
 
-    "Westen Cape": {
+    "Western Cape": {
       Municipalities: {
         "City of Cape Town Metropolitan": {
           Regions: [
