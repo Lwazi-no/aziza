@@ -114,7 +114,7 @@ function loadMunicipalities(thisProvince) {
   var municipalityDatalist = document.querySelector("#metroList");
   var selectedProvince = `${thisProvince.value}`;
   provinceMunicipalities = Object.keys(
-    stationsList.Provinces[selectedProvince].Municipaties
+    stationsList.Provinces[selectedProvince].Municipalities
   );
 
   provinceMunicipalities.forEach(function (eachMunicipality) {
@@ -129,7 +129,7 @@ function loadRegions(thisMunicipality) {
   var regionProvince = document.querySelector("#addStationProvince").value;
   var selectedMunicipality = `${thisMunicipality.value}`;
   municipalityRegions =
-    stationsList.Provinces[regionProvince].Municipaties[selectedMunicipality]
+    stationsList.Provinces[regionProvince].Municipalities[selectedMunicipality]
       .Regions;
 
   municipalityRegions.forEach(function (eachRegion) {
